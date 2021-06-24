@@ -15,6 +15,6 @@ class Dnsping < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/dnsping version")
     output = shell_output("#{bin}/dnsping -c 1 www.google.com 8.8.8.8")
-    assert_match /^# target/, output.lines.last
+    assert_match(/^# target/, output.lines.last)
   end
 end
