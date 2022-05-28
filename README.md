@@ -1,4 +1,4 @@
-# Fortio Dnsping
+# Fortio Taps
 
 ## How do I install these formulae?
 `brew install fortio/tap/<formula>`
