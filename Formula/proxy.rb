@@ -5,21 +5,21 @@
 class Proxy < Formula
   desc "TLS ingress reverse proxy and multiplexer with autocert and simple routing rules"
   homepage "https://fortio.org/"
-  version "1.1.6"
+  version "1.1.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/proxy/releases/download/v1.1.6/proxy_1.1.6_Mac_x86_64.tar.gz"
-      sha256 "3cd1c81f5e34972e20380edccec1cbe179e1bb4c463f75d20c628e2b68eb101b"
+      url "https://github.com/fortio/proxy/releases/download/v1.1.7/proxy_1.1.7_Mac_x86_64.tar.gz"
+      sha256 "7c4e6e84d24d6134c0fabea5205ff41170cf91b50264dccc66e07c195e92e4c0"
 
       def install
         bin.install "proxy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/proxy/releases/download/v1.1.6/proxy_1.1.6_Mac_arm64.tar.gz"
-      sha256 "b08f63da035350959186d79095d6cc56de4082eedcc0fa3fd9fb291bd365a446"
+      url "https://github.com/fortio/proxy/releases/download/v1.1.7/proxy_1.1.7_Mac_arm64.tar.gz"
+      sha256 "a50cd3a7e864d5e15d4d145e9256ce947e780e15adae78c2d903fe379fb0a2c9"
 
       def install
         bin.install "proxy"
@@ -29,16 +29,16 @@ class Proxy < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/proxy/releases/download/v1.1.6/proxy_1.1.6_Linux_x86_64.tar.gz"
-      sha256 "c228cc13e755cce42f75db10f85c0d8b43eb31ce57f15f7d3d2bd5c0e078feb0"
+      url "https://github.com/fortio/proxy/releases/download/v1.1.7/proxy_1.1.7_Linux_x86_64.tar.gz"
+      sha256 "dc1ebead8b26d88d9e8fe926f7812579a4dcf00cbfbec7ce219a29c045cf9dc1"
 
       def install
         bin.install "proxy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/proxy/releases/download/v1.1.6/proxy_1.1.6_Linux_arm64.tar.gz"
-      sha256 "81321a2a28d26f673e9f3ccd599e0e96b8e35ee84af881c095ed2cdc694f14cd"
+      url "https://github.com/fortio/proxy/releases/download/v1.1.7/proxy_1.1.7_Linux_arm64.tar.gz"
+      sha256 "28950bf0e65cf7fc987ed495856a3d2176f62197c3da2779d0b3410eced82933"
 
       def install
         bin.install "proxy"
@@ -47,6 +47,6 @@ class Proxy < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/dnsping version")
+    assert_match version.to_s, shell_output("#{bin}/proxy -version")
   end
 end
