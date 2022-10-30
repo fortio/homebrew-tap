@@ -5,21 +5,21 @@
 class Dnsping < Formula
   desc "Fortio DNSping checks packet loss and latency issues with DNS servers"
   homepage "https://fortio.org/"
-  version "1.2.6"
+  version "1.2.9"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/dnsping/releases/download/v1.2.6/dnsping_1.2.6_Mac_arm64.tar.gz"
-      sha256 "0a51aadbc03429eda56026def094e851c8bf27d023436f23161c48c5c6a5130a"
+      url "https://github.com/fortio/dnsping/releases/download/v1.2.9/dnsping_1.2.9_Mac_arm64.tar.gz"
+      sha256 "d927cabd70a13936af88b5ae77c9ae31d45a2cb751d8a6f2a5287ab1314e55e8"
 
       def install
         bin.install "dnsping"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/dnsping/releases/download/v1.2.6/dnsping_1.2.6_Mac_x86_64.tar.gz"
-      sha256 "ce7fa2d9684aca6fff9d6008b150827753db7907f33bff102a6731de2bc83427"
+      url "https://github.com/fortio/dnsping/releases/download/v1.2.9/dnsping_1.2.9_Mac_x86_64.tar.gz"
+      sha256 "16acb52e6ae5cfd1798a32e6a7b448b43330d5d06df29fa74b0e485c1c95f5b2"
 
       def install
         bin.install "dnsping"
@@ -29,16 +29,16 @@ class Dnsping < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/dnsping/releases/download/v1.2.6/dnsping_1.2.6_Linux_x86_64.tar.gz"
-      sha256 "1cf8cb15a136d8724c761f4ec7f7ec6359753d6b50dce05ad64fd38ac9602e34"
+      url "https://github.com/fortio/dnsping/releases/download/v1.2.9/dnsping_1.2.9_Linux_x86_64.tar.gz"
+      sha256 "5c0487d77ea482811ef36101784748c5ddd7e24a5db099670b4af38609505151"
 
       def install
         bin.install "dnsping"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/dnsping/releases/download/v1.2.6/dnsping_1.2.6_Linux_arm64.tar.gz"
-      sha256 "43e67a70caf248922843a49d177fb633add82550f961b34cfd7c3abc5b18be8f"
+      url "https://github.com/fortio/dnsping/releases/download/v1.2.9/dnsping_1.2.9_Linux_arm64.tar.gz"
+      sha256 "d142df89fec9085911e1aa471e0cc1a380e5fef255a41391af1a724f2ff998e7"
 
       def install
         bin.install "dnsping"
