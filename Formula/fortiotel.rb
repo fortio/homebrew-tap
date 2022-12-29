@@ -5,21 +5,21 @@
 class Fortiotel < Formula
   desc "Fortio + open telemetry tracing"
   homepage "https://fortio.org/"
-  version "1.0.0"
+  version "1.0.4"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.0.0/fortiotel_1.0.0_Mac_arm64.tar.gz"
-      sha256 "caee9445dcddee0df23afbcede67fc66fb72577cf3abf2d9ee45e390d3a20946"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/fortiotel/releases/download/v1.0.4/fortiotel_1.0.4_Mac_x86_64.tar.gz"
+      sha256 "cfc890a352a0dfccc689092df437b34a25c85c799ef7481dc968495484e1c6f9"
 
       def install
         bin.install "fortiotel"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.0.0/fortiotel_1.0.0_Mac_x86_64.tar.gz"
-      sha256 "7660a46950e4b7ee8b3c0c33c4b266b0672dde625c6838f0452ced89ab8e4e95"
+    if Hardware::CPU.arm?
+      url "https://github.com/fortio/fortiotel/releases/download/v1.0.4/fortiotel_1.0.4_Mac_arm64.tar.gz"
+      sha256 "42bebb2835488345c5b9c065da108a357a68b8faf43a029a65ea7ec2a6be2b9c"
 
       def install
         bin.install "fortiotel"
@@ -29,16 +29,16 @@ class Fortiotel < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.0.0/fortiotel_1.0.0_Linux_arm64.tar.gz"
-      sha256 "2cb3a8ac1650b77eed367acac2b2f5ee8591635fa37c3dbce6b37a75bbf98ba9"
+      url "https://github.com/fortio/fortiotel/releases/download/v1.0.4/fortiotel_1.0.4_Linux_arm64.tar.gz"
+      sha256 "015d1c6016f872a46b064afc06b90a9801f762d403944befc46c1b8131d62b3a"
 
       def install
         bin.install "fortiotel"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.0.0/fortiotel_1.0.0_Linux_x86_64.tar.gz"
-      sha256 "a669e14dc9ef0f02b35efaa9cd22507040c4e180e1c0338beedcd277a0af5b1e"
+      url "https://github.com/fortio/fortiotel/releases/download/v1.0.4/fortiotel_1.0.4_Linux_x86_64.tar.gz"
+      sha256 "d49da9f98b34df6608bdd9ff6ce995cc4c4b63642b88e4c9adbedc32b09f5a50"
 
       def install
         bin.install "fortiotel"
