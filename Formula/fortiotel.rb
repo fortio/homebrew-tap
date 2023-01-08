@@ -5,21 +5,21 @@
 class Fortiotel < Formula
   desc "Fortio + open telemetry tracing"
   homepage "https://fortio.org/"
-  version "1.2.1"
+  version "1.2.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.2.1/fortiotel_1.2.1_Mac_arm64.tar.gz"
-      sha256 "14ca431acd86fe169ebc651d3537f949bafc99b2ef32a702e66e022e055b36f9"
+      url "https://github.com/fortio/fortiotel/releases/download/v1.2.2/fortiotel_1.2.2_Mac_arm64.tar.gz"
+      sha256 "61d7d78adada4dc59b18a8fdceae459d462bdca44360ba9f4bcedbe1ff526418"
 
       def install
         bin.install "fortiotel"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.2.1/fortiotel_1.2.1_Mac_x86_64.tar.gz"
-      sha256 "54aea11a70badb7f61b637b0ae13b8da6f5b26c7a358a059f6cb9d1464294a79"
+      url "https://github.com/fortio/fortiotel/releases/download/v1.2.2/fortiotel_1.2.2_Mac_x86_64.tar.gz"
+      sha256 "88dd0b4b2afe558a641701d382ee50d1e02c4d4dcfe668c76375f3dd30f47608"
 
       def install
         bin.install "fortiotel"
@@ -28,17 +28,17 @@ class Fortiotel < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.2.1/fortiotel_1.2.1_Linux_x86_64.tar.gz"
-      sha256 "588c400f7e82915cce4644643da2aa8a78bf9bddfd95e79cef4526bc3b8928f9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/fortiotel/releases/download/v1.2.2/fortiotel_1.2.2_Linux_arm64.tar.gz"
+      sha256 "2d8fc017a626f25da7f90c3feb04a93e06e8395ff1e6e468f7ba92e140840d8f"
 
       def install
         bin.install "fortiotel"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.2.1/fortiotel_1.2.1_Linux_arm64.tar.gz"
-      sha256 "575d0331b0d302a9091a3cf47d582323ffc2fbfe603f984ff2807e6798d39b70"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/fortiotel/releases/download/v1.2.2/fortiotel_1.2.2_Linux_x86_64.tar.gz"
+      sha256 "fe3e0a108d042e38d83821f0ef352a2b0f3dea253dc4afe570bb4227d1ad62c6"
 
       def install
         bin.install "fortiotel"
