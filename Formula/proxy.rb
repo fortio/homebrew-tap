@@ -5,21 +5,21 @@
 class Proxy < Formula
   desc "TLS ingress reverse proxy and multiplexer with autocert and simple routing rules"
   homepage "https://fortio.org/"
-  version "1.6.2"
+  version "1.8.0"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/fortio/proxy/releases/download/v1.6.2/proxy_1.6.2_Mac_arm64.tar.gz"
-      sha256 "f8934a5d12965af49616ac3ddcb3d067297ad5cf5ac0546739ab1c920d799e7e"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/proxy/releases/download/v1.8.0/proxy_1.8.0_Mac_x86_64.tar.gz"
+      sha256 "3c0dd0d415f7e3ef65ba03c97190f0da2a12de46341da3488af54a34a83ae83b"
 
       def install
         bin.install "proxy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/proxy/releases/download/v1.6.2/proxy_1.6.2_Mac_x86_64.tar.gz"
-      sha256 "e2deb677c5dbf5ee540c2f7e480c53f13ca3bfa5a0d8de34bf13e0634826ef8e"
+    if Hardware::CPU.arm?
+      url "https://github.com/fortio/proxy/releases/download/v1.8.0/proxy_1.8.0_Mac_arm64.tar.gz"
+      sha256 "69d38c414a9071137747d13a877b585bf7c6b82cdd375f38d21c4ef402c2fc76"
 
       def install
         bin.install "proxy"
@@ -29,16 +29,16 @@ class Proxy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/proxy/releases/download/v1.6.2/proxy_1.6.2_Linux_arm64.tar.gz"
-      sha256 "8fea85efa6864b3fbf3a569c0da23fee3f0ad01f3dea6ec6e1f55b66a8f99b4e"
+      url "https://github.com/fortio/proxy/releases/download/v1.8.0/proxy_1.8.0_Linux_arm64.tar.gz"
+      sha256 "2b786f3c6ce56e3fccbb35179c4afda42389389bb188b0877dafba8b022f5908"
 
       def install
         bin.install "proxy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/proxy/releases/download/v1.6.2/proxy_1.6.2_Linux_x86_64.tar.gz"
-      sha256 "c0f662bcc9ef7fcd05c41c56acc5574ef6bf7e0dec0caf8345f1811a14920ffa"
+      url "https://github.com/fortio/proxy/releases/download/v1.8.0/proxy_1.8.0_Linux_x86_64.tar.gz"
+      sha256 "507ea8b5c34d46b177d0b9c10d7035d414923e3e3eaaeaf02008d2578ac8c271"
 
       def install
         bin.install "proxy"
