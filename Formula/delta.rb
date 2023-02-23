@@ -5,21 +5,21 @@
 class Delta < Formula
   desc "Fortio delta tool"
   homepage "https://fortio.org/"
-  version "1.2.0"
+  version "1.2.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/delta/releases/download/v1.2.0/delta_1.2.0_darwin_arm64.tar.gz"
-      sha256 "dae3c3c06532fad54073ed87662ad6931c02b2e3ff80f52425c81258d47ba53a"
+      url "https://github.com/fortio/delta/releases/download/v1.2.1/delta_1.2.1_darwin_arm64.tar.gz"
+      sha256 "72bca7346784d3bf2a0ee41dfe807b51fed5b39c028b615625046c0f0cd52e98"
 
       def install
         bin.install "delta"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/delta/releases/download/v1.2.0/delta_1.2.0_darwin_amd64.tar.gz"
-      sha256 "e69c680cac4b6ea942d10727c7a1f2683aa15c8e1e6e1c54725af586158af508"
+      url "https://github.com/fortio/delta/releases/download/v1.2.1/delta_1.2.1_darwin_amd64.tar.gz"
+      sha256 "f43743f2a08179b8faa1f5a78f24d01ebe91094792edc1960bd923b137581646"
 
       def install
         bin.install "delta"
@@ -29,16 +29,16 @@ class Delta < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/delta/releases/download/v1.2.0/delta_1.2.0_linux_amd64.tar.gz"
-      sha256 "62fa8755f8c50b0a31cc0ae9d35d9a6518309658f235906808497dac2fa38a64"
+      url "https://github.com/fortio/delta/releases/download/v1.2.1/delta_1.2.1_linux_amd64.tar.gz"
+      sha256 "112f8aa503227d9ece77b5edb7145da1b2480f0d8f73c858a1b830b3371f6d41"
 
       def install
         bin.install "delta"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/delta/releases/download/v1.2.0/delta_1.2.0_linux_arm64.tar.gz"
-      sha256 "70e20f4fe54393bc2879a9e2e2dfb88fad8faeacefdd3f95279ac0d9e0feecaa"
+      url "https://github.com/fortio/delta/releases/download/v1.2.1/delta_1.2.1_linux_arm64.tar.gz"
+      sha256 "e07c2b0e37dc931f8f834e16e4e6430767148367d4ffd282aab69b348705b2dd"
 
       def install
         bin.install "delta"
