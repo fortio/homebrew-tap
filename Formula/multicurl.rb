@@ -5,21 +5,21 @@
 class Multicurl < Formula
   desc "Fortio multi curl"
   homepage "https://fortio.org/"
-  version "1.10.2"
+  version "1.11.0"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/multicurl/releases/download/v1.10.2/multicurl_1.10.2_darwin_amd64.tar.gz"
-      sha256 "51dfc98f4c47c01465e417b62ec62c8b0561c84abfa3490ab3c325e5ebf06a96"
+    if Hardware::CPU.arm?
+      url "https://github.com/fortio/multicurl/releases/download/v1.11.0/multicurl_1.11.0_darwin_arm64.tar.gz"
+      sha256 "3eb6b8bf0481c33cfa7cfd691326c44346fadefd57d964b9310d5cec8158c6ff"
 
       def install
         bin.install "multicurl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/fortio/multicurl/releases/download/v1.10.2/multicurl_1.10.2_darwin_arm64.tar.gz"
-      sha256 "971d9d663875398d9b20cb53720eaf056f65215efa638db2f51c8bd519931745"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/multicurl/releases/download/v1.11.0/multicurl_1.11.0_darwin_amd64.tar.gz"
+      sha256 "23ee041ac99fc0e08d9407160ae828a3ff4e3ee59decc25499e166d784d382fe"
 
       def install
         bin.install "multicurl"
@@ -29,16 +29,16 @@ class Multicurl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/multicurl/releases/download/v1.10.2/multicurl_1.10.2_linux_arm64.tar.gz"
-      sha256 "01bc54a5ff6da49a1f14aa2961fb68e4c29781b85bc09b1b4275b4ba46f81d3e"
+      url "https://github.com/fortio/multicurl/releases/download/v1.11.0/multicurl_1.11.0_linux_arm64.tar.gz"
+      sha256 "bcb3694c5ad22cabbf5c0a9da971d08fc73f0a040a1364530ee905ec10023d29"
 
       def install
         bin.install "multicurl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/multicurl/releases/download/v1.10.2/multicurl_1.10.2_linux_amd64.tar.gz"
-      sha256 "2a7af4abcb4c7bfb9037af8232f063912ea5ba50938b3303b89e7ffbf04c0d41"
+      url "https://github.com/fortio/multicurl/releases/download/v1.11.0/multicurl_1.11.0_linux_amd64.tar.gz"
+      sha256 "b1e4fc96f82157a36d2d9c58019b4d19d91f110ef5e9d27308f1fb7c9b69a0cb"
 
       def install
         bin.install "multicurl"
