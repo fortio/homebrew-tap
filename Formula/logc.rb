@@ -5,21 +5,21 @@
 class Logc < Formula
   desc "Fortio log JSON to (colorized) text converter"
   homepage "https://fortio.org/"
-  version "1.0.0"
+  version "1.0.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/logc/releases/download/v1.0.0/logc_1.0.0_darwin_arm64.tar.gz"
-      sha256 "4f302b627676a9dc0d925796dcb7f439ffed6f538b3c493928c72e25c07a755a"
+      url "https://github.com/fortio/logc/releases/download/v1.0.1/logc_1.0.1_darwin_arm64.tar.gz"
+      sha256 "41cc08ee6521005102f1edbcbc86eb9950e4e9d6c190c4f4a9aaeda975272e0b"
 
       def install
         bin.install "logc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/logc/releases/download/v1.0.0/logc_1.0.0_darwin_amd64.tar.gz"
-      sha256 "3da4f53b27eac3229906ec9d01b79fa4ec38b1da7051fd0fc2f8e7fe0bfbb589"
+      url "https://github.com/fortio/logc/releases/download/v1.0.1/logc_1.0.1_darwin_amd64.tar.gz"
+      sha256 "eb27770105797e9016b8eab3bb0932ccb9851dc7933899d464daed684f883bf5"
 
       def install
         bin.install "logc"
@@ -28,17 +28,17 @@ class Logc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/logc/releases/download/v1.0.0/logc_1.0.0_linux_arm64.tar.gz"
-      sha256 "f900164cad7dd0ce37c5a804d920e791fc739f64f9a27c78f12e7c99e3ac7fbf"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/logc/releases/download/v1.0.1/logc_1.0.1_linux_amd64.tar.gz"
+      sha256 "85665590d64c2741a7216aac56eb06f6a51b39e1521804b21bc79960f02a9c06"
 
       def install
         bin.install "logc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/logc/releases/download/v1.0.0/logc_1.0.0_linux_amd64.tar.gz"
-      sha256 "67a3c29b4fbde4f26f0d456e468668d7f1109bfeb4d27abfb434c7f7f21fb23d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/logc/releases/download/v1.0.1/logc_1.0.1_linux_arm64.tar.gz"
+      sha256 "cb1f65a457dc7ccf01d10cd6c8c03ad2f0f05aaeb20bc3712ae9383d071f102f"
 
       def install
         bin.install "logc"
