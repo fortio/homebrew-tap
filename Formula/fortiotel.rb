@@ -5,21 +5,21 @@
 class Fortiotel < Formula
   desc "Fortio + open telemetry tracing"
   homepage "https://fortio.org/"
-  version "1.9.0"
+  version "1.9.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.9.0/fortiotel_1.9.0_Mac_arm64.tar.gz"
-      sha256 "cfdee0c0acd3049e32ce7d79539e8d3830dfb8757c3b98ef3c147dfd42bff3ed"
+      url "https://github.com/fortio/fortiotel/releases/download/v1.9.1/fortiotel_1.9.1_Mac_arm64.tar.gz"
+      sha256 "6a36d05d1ebe3984d108bb096b8375385c25400d6e14f064318a285e0258c856"
 
       def install
         bin.install "fortiotel"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.9.0/fortiotel_1.9.0_Mac_x86_64.tar.gz"
-      sha256 "a32edf217e78914581856edae36807ab0857f1be214f6ecc8c4cce0ad54681c3"
+      url "https://github.com/fortio/fortiotel/releases/download/v1.9.1/fortiotel_1.9.1_Mac_x86_64.tar.gz"
+      sha256 "ec5e2868fba88b9d8d885addff4276e422672d10904b299ba05ea0c3069a1482"
 
       def install
         bin.install "fortiotel"
@@ -29,16 +29,16 @@ class Fortiotel < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.9.0/fortiotel_1.9.0_Linux_arm64.tar.gz"
-      sha256 "006ff6e108cd5a5af34514aaab5d7afbe3743baab6e1c6b999034aa75a711a3b"
+      url "https://github.com/fortio/fortiotel/releases/download/v1.9.1/fortiotel_1.9.1_Linux_arm64.tar.gz"
+      sha256 "895cbf7900fbc431d30eafd9687e22a9e3e68db6eafbb2cf00429a764c16369f"
 
       def install
         bin.install "fortiotel"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.9.0/fortiotel_1.9.0_Linux_x86_64.tar.gz"
-      sha256 "654b40e4db728d654712e30ddf68a9cedd4db0d139c5468e373a3e4f144634dd"
+      url "https://github.com/fortio/fortiotel/releases/download/v1.9.1/fortiotel_1.9.1_Linux_x86_64.tar.gz"
+      sha256 "6166a1cd8d054d7aae7eb36133890d5e535c74d1fd815ac41a517941bab8f75a"
 
       def install
         bin.install "fortiotel"
