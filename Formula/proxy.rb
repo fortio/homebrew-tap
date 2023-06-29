@@ -5,21 +5,21 @@
 class Proxy < Formula
   desc "TLS ingress reverse proxy and multiplexer with autocert and simple routing rules"
   homepage "https://fortio.org/"
-  version "1.14.2-pre2"
+  version "1.14.2-pre3"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre2/proxy_Darwin_arm64.tar.gz"
-      sha256 "4e5f5207d8682135654bc8cb0c736fc6271927e8364ddcf3fd5470f54665ec75"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre3/proxy_1.14.2-pre3_darwin_amd64.tar.gz"
+      sha256 "f493fbf0220da571455b6e7b043bb9efbc0b687b4f0d60e5c09ea5209fb414f3"
 
       def install
         bin.install "proxy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre2/proxy_Darwin_x86_64.tar.gz"
-      sha256 "0ce372e9653bed9a15b5172334e3b22b7aa684784ab8230d7c0ee0fef6cbb891"
+    if Hardware::CPU.arm?
+      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre3/proxy_1.14.2-pre3_darwin_arm64.tar.gz"
+      sha256 "31bd80e232b051fb818c4d385eaf12419d2ca2b7adc19e21a38aa5928bfbe27b"
 
       def install
         bin.install "proxy"
@@ -28,17 +28,17 @@ class Proxy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre2/proxy_Linux_arm64.tar.gz"
-      sha256 "791089dc157ce3f6b06756e4c5a58c82b556800ec4a7fb43ba9351b218810f6c"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre3/proxy_1.14.2-pre3_linux_amd64.tar.gz"
+      sha256 "cff7ab7e996bf9bf300d257e4b096f7eb5ce6737d5c515c78b180a064b689421"
 
       def install
         bin.install "proxy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre2/proxy_Linux_x86_64.tar.gz"
-      sha256 "27be15ab5e9b7ea6c1b887de398a305f1aaa61ef6508a78881442c612d85d18e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre3/proxy_1.14.2-pre3_linux_arm64.tar.gz"
+      sha256 "3749239fc55d1309f05c2837010c2acdc091025cd37b6ed197838d43071fb07c"
 
       def install
         bin.install "proxy"
