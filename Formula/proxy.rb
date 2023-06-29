@@ -5,21 +5,21 @@
 class Proxy < Formula
   desc "TLS ingress reverse proxy and multiplexer with autocert and simple routing rules"
   homepage "https://fortio.org/"
-  version "1.14.2-pre1"
+  version "1.14.2-pre2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre1/proxy_Darwin_arm64.tar.gz"
-      sha256 "2b240393de9625099aba576dcac0a21315a80aafcbe1d021768e13c8308c7b4f"
+      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre2/proxy_Darwin_arm64.tar.gz"
+      sha256 "4e5f5207d8682135654bc8cb0c736fc6271927e8364ddcf3fd5470f54665ec75"
 
       def install
         bin.install "proxy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre1/proxy_Darwin_x86_64.tar.gz"
-      sha256 "0a48ce9ad980ad523396b7d5d590b38a393524462d112e317d4c438d66826b50"
+      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre2/proxy_Darwin_x86_64.tar.gz"
+      sha256 "0ce372e9653bed9a15b5172334e3b22b7aa684784ab8230d7c0ee0fef6cbb891"
 
       def install
         bin.install "proxy"
@@ -29,16 +29,16 @@ class Proxy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre1/proxy_Linux_arm64.tar.gz"
-      sha256 "2e121860feaa9e3e9bddcd289d713ab224547c13be5eabfc1aa5362242dfb0ff"
+      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre2/proxy_Linux_arm64.tar.gz"
+      sha256 "791089dc157ce3f6b06756e4c5a58c82b556800ec4a7fb43ba9351b218810f6c"
 
       def install
         bin.install "proxy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre1/proxy_Linux_x86_64.tar.gz"
-      sha256 "46698ee3c8347dc45809a46c69655ffe0d8298bca9452e427cf745a604279f06"
+      url "https://github.com/fortio/proxy/releases/download/v1.14.2-pre2/proxy_Linux_x86_64.tar.gz"
+      sha256 "27be15ab5e9b7ea6c1b887de398a305f1aaa61ef6508a78881442c612d85d18e"
 
       def install
         bin.install "proxy"
