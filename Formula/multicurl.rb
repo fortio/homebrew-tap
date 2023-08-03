@@ -5,21 +5,21 @@
 class Multicurl < Formula
   desc "Fortio multi curl"
   homepage "https://fortio.org/"
-  version "1.15.0"
+  version "1.15.1"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/fortio/multicurl/releases/download/v1.15.0/multicurl_1.15.0_darwin_arm64.tar.gz"
-      sha256 "3a7cefb180bcd39d7afa2f57baa84a7e5de9a4f2c2085fca2c2a59c13ecf508e"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/multicurl/releases/download/v1.15.1/multicurl_1.15.1_darwin_amd64.tar.gz"
+      sha256 "d2d666eda4de28eca7c9878b997b73267cf3b1ce395e3cab195fb17a3f8409b3"
 
       def install
         bin.install "multicurl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/multicurl/releases/download/v1.15.0/multicurl_1.15.0_darwin_amd64.tar.gz"
-      sha256 "4f0af81780497f30ba177b923ba9bbdbc9f938e4c25dddb31781fcbaf815b177"
+    if Hardware::CPU.arm?
+      url "https://github.com/fortio/multicurl/releases/download/v1.15.1/multicurl_1.15.1_darwin_arm64.tar.gz"
+      sha256 "73ac867f31da0f99d4428294f7b8f31d9b5a9c0d74c07dbb7285c930cd65ec82"
 
       def install
         bin.install "multicurl"
@@ -28,17 +28,17 @@ class Multicurl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/multicurl/releases/download/v1.15.0/multicurl_1.15.0_linux_arm64.tar.gz"
-      sha256 "85e594e5e67cbfc7d0675c7bb9fa485f98ae13f4901e5f3358dfc42c63d43eeb"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/multicurl/releases/download/v1.15.1/multicurl_1.15.1_linux_amd64.tar.gz"
+      sha256 "91626cad3f1ea83692f5308f3b787ef7e2c556c801a359ea0c7ff60cec8fe22c"
 
       def install
         bin.install "multicurl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/multicurl/releases/download/v1.15.0/multicurl_1.15.0_linux_amd64.tar.gz"
-      sha256 "3270e1409525626863d33b30585584134aa6e3fccff7d8b95510aced0e737144"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/multicurl/releases/download/v1.15.1/multicurl_1.15.1_linux_arm64.tar.gz"
+      sha256 "a1aba2ba55da537285006693e2e1fde18c3a8617898ff9167a188ec3ff00e251"
 
       def install
         bin.install "multicurl"
