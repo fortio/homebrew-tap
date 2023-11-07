@@ -5,21 +5,21 @@
 class SlackProxy < Formula
   desc "Proxy for applications aiming to dispatch messages to Slack nicely"
   homepage "https://fortio.org/"
-  version "0.3.0"
+  version "0.4.0"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/fortio/slack-proxy/releases/download/v0.3.0/slack-proxy_0.3.0_darwin_arm64.tar.gz"
-      sha256 "1e686218e8ef0a52ea046002029789fa86973d6c00fcdae4d0fa2ea624eeea5a"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/slack-proxy/releases/download/v0.4.0/slack-proxy_0.4.0_darwin_amd64.tar.gz"
+      sha256 "ddbe6fa45abf847448f2ff9a8e6fe9459e6ac594b2ae8a9e32de721ba0ffd277"
 
       def install
         bin.install "slack-proxy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/slack-proxy/releases/download/v0.3.0/slack-proxy_0.3.0_darwin_amd64.tar.gz"
-      sha256 "e27f0bd32bc16c9df3a6b04e2f4beb2a1efa94ba2d95b4d594bc04e649ae6d36"
+    if Hardware::CPU.arm?
+      url "https://github.com/fortio/slack-proxy/releases/download/v0.4.0/slack-proxy_0.4.0_darwin_arm64.tar.gz"
+      sha256 "c36d7011f1beef0f8142cde7e6ca5d8de16f3276c295c0b847074011715898da"
 
       def install
         bin.install "slack-proxy"
@@ -29,16 +29,16 @@ class SlackProxy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/slack-proxy/releases/download/v0.3.0/slack-proxy_0.3.0_linux_arm64.tar.gz"
-      sha256 "ec090cbd7989616f47b89f012828855eab8b369abfa2de575f024aa8c204396e"
+      url "https://github.com/fortio/slack-proxy/releases/download/v0.4.0/slack-proxy_0.4.0_linux_arm64.tar.gz"
+      sha256 "dd1c710962a288859a6687e172bdcbf8fe1e0a0741a318ccd994b92a92f226c9"
 
       def install
         bin.install "slack-proxy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/slack-proxy/releases/download/v0.3.0/slack-proxy_0.3.0_linux_amd64.tar.gz"
-      sha256 "66682092560300dbfe7a265c17bbe29c0e3204ca3bd3a5ff0043168f14830b90"
+      url "https://github.com/fortio/slack-proxy/releases/download/v0.4.0/slack-proxy_0.4.0_linux_amd64.tar.gz"
+      sha256 "62e9ed6a545bfe871bfafbaf20585fae1deb811bce696df9c295dc1fd216060d"
 
       def install
         bin.install "slack-proxy"
