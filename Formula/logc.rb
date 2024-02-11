@@ -5,21 +5,21 @@
 class Logc < Formula
   desc "Fortio log JSON to (colorized) text converter"
   homepage "https://fortio.org/"
-  version "1.3.1"
+  version "1.3.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/logc/releases/download/v1.3.1/logc_1.3.1_darwin_arm64.tar.gz"
-      sha256 "c3e42bd0317c462784061c8f44e12ec6958fe36d91b2df37d7cfafb1197f491e"
+      url "https://github.com/fortio/logc/releases/download/v1.3.2/logc_1.3.2_darwin_arm64.tar.gz"
+      sha256 "cacc1fa5b203c21a9ab272030719a19bd412a0b7a69df017df92044262571cb6"
 
       def install
         bin.install "logc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/logc/releases/download/v1.3.1/logc_1.3.1_darwin_amd64.tar.gz"
-      sha256 "65b13092eab51d2a0bb59b6a661a023974a06f205533fc65e41e318d0c86f219"
+      url "https://github.com/fortio/logc/releases/download/v1.3.2/logc_1.3.2_darwin_amd64.tar.gz"
+      sha256 "9fe86b35c071957bf8645d0b769ab60d9451d98652c401cb34e1bb271a3dc612"
 
       def install
         bin.install "logc"
@@ -29,16 +29,16 @@ class Logc < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/logc/releases/download/v1.3.1/logc_1.3.1_linux_amd64.tar.gz"
-      sha256 "21b0f419494af31da2ab47028c3ceeedcdb486301ff2e4f69a05c45ae2c8b11f"
+      url "https://github.com/fortio/logc/releases/download/v1.3.2/logc_1.3.2_linux_amd64.tar.gz"
+      sha256 "6e83156e77ac94e62a7f854dc31c74515e7ad37a0408fc1a711e1a4ada927012"
 
       def install
         bin.install "logc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/logc/releases/download/v1.3.1/logc_1.3.1_linux_arm64.tar.gz"
-      sha256 "27033239f9df2c4d5bf8f988d9ddcd3b1a7a1b44b8e8708c0433d922ab939274"
+      url "https://github.com/fortio/logc/releases/download/v1.3.2/logc_1.3.2_linux_arm64.tar.gz"
+      sha256 "387a7219d09b89ca0226eca3c2c5db7b6747b6e0ef4186ce8409d3852e7c5a25"
 
       def install
         bin.install "logc"
