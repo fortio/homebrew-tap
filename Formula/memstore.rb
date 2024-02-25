@@ -5,21 +5,21 @@
 class Memstore < Formula
   desc "Fortio memstore"
   homepage "https://fortio.org/"
-  version "0.1.0-pre2"
+  version "0.1.0-pre3"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/fortio/memstore/releases/download/v0.1.0-pre2/memstore_0.1.0-pre2_darwin_arm64.tar.gz"
-      sha256 "3410782cce202aacc3805932f5b3d4953ccf49ddec3c94533e8495067fe6baa1"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/memstore/releases/download/v0.1.0-pre3/memstore_0.1.0-pre3_darwin_amd64.tar.gz"
+      sha256 "fcbde487d870bd30d97b10b39845f8a6c077e3106fe85403e639697651462d1e"
 
       def install
         bin.install "memstore"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/memstore/releases/download/v0.1.0-pre2/memstore_0.1.0-pre2_darwin_amd64.tar.gz"
-      sha256 "fa3c736302a7050c1f5635da93bed3ff3a3631ad9a6363f32761b3eee04b21e2"
+    if Hardware::CPU.arm?
+      url "https://github.com/fortio/memstore/releases/download/v0.1.0-pre3/memstore_0.1.0-pre3_darwin_arm64.tar.gz"
+      sha256 "11078fc1d463d2545fa3adb9d3e1835849f1e1df5d52ac27ab988ec973b14c33"
 
       def install
         bin.install "memstore"
@@ -29,16 +29,16 @@ class Memstore < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/memstore/releases/download/v0.1.0-pre2/memstore_0.1.0-pre2_linux_arm64.tar.gz"
-      sha256 "beb14a8227386bee85c037aeb8e390c7364b42960bc29fb389c0200106117987"
+      url "https://github.com/fortio/memstore/releases/download/v0.1.0-pre3/memstore_0.1.0-pre3_linux_arm64.tar.gz"
+      sha256 "f0c526c04ef26a5ba67e75688469738eac7e02a9e3d479156c5ce7e2c311aa51"
 
       def install
         bin.install "memstore"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/memstore/releases/download/v0.1.0-pre2/memstore_0.1.0-pre2_linux_amd64.tar.gz"
-      sha256 "440bcb1b32a18a11b1493e4e133226e105f02eb06a923e01123453b8ce81e501"
+      url "https://github.com/fortio/memstore/releases/download/v0.1.0-pre3/memstore_0.1.0-pre3_linux_amd64.tar.gz"
+      sha256 "80e52764e9d6e068776d04d91fd393442c931f98e9d456260b6c633741b38fb7"
 
       def install
         bin.install "memstore"
