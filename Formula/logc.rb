@@ -5,21 +5,21 @@
 class Logc < Formula
   desc "Fortio log JSON to (colorized) text converter"
   homepage "https://fortio.org/"
-  version "1.3.2"
+  version "1.3.3"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/fortio/logc/releases/download/v1.3.2/logc_1.3.2_darwin_arm64.tar.gz"
-      sha256 "cacc1fa5b203c21a9ab272030719a19bd412a0b7a69df017df92044262571cb6"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/logc/releases/download/v1.3.3/logc_1.3.3_darwin_amd64.tar.gz"
+      sha256 "2a92bdb9e59b53033c7398c55dedcd4c86d9baf0f8293a9e04cda78886736ef7"
 
       def install
         bin.install "logc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/logc/releases/download/v1.3.2/logc_1.3.2_darwin_amd64.tar.gz"
-      sha256 "9fe86b35c071957bf8645d0b769ab60d9451d98652c401cb34e1bb271a3dc612"
+    if Hardware::CPU.arm?
+      url "https://github.com/fortio/logc/releases/download/v1.3.3/logc_1.3.3_darwin_arm64.tar.gz"
+      sha256 "98341927468a37f2ee1a79d4b95bc49fe45a978ea69f934846482bb12290c06c"
 
       def install
         bin.install "logc"
@@ -28,17 +28,17 @@ class Logc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/logc/releases/download/v1.3.2/logc_1.3.2_linux_amd64.tar.gz"
-      sha256 "6e83156e77ac94e62a7f854dc31c74515e7ad37a0408fc1a711e1a4ada927012"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/logc/releases/download/v1.3.3/logc_1.3.3_linux_arm64.tar.gz"
+      sha256 "c171feb13e781b484a130fe7c3009089e398cbe09381292707fc9de131c65fa3"
 
       def install
         bin.install "logc"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/logc/releases/download/v1.3.2/logc_1.3.2_linux_arm64.tar.gz"
-      sha256 "387a7219d09b89ca0226eca3c2c5db7b6747b6e0ef4186ce8409d3852e7c5a25"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/logc/releases/download/v1.3.3/logc_1.3.3_linux_amd64.tar.gz"
+      sha256 "eac142b46f7c607401c33cb5cb55da0b44e55c029cd9e5bb82e8f7a35ccad742"
 
       def install
         bin.install "logc"
