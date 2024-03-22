@@ -5,21 +5,21 @@
 class Dnsping < Formula
   desc "Fortio DNSping checks packet loss and latency issues with DNS servers"
   homepage "https://fortio.org/"
-  version "1.7.0"
+  version "1.7.1"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/dnsping/releases/download/v1.7.0/dnsping_1.7.0_darwin_amd64.tar.gz"
-      sha256 "3b30c7b0b6502a23dbc4a757defb6c6e2f553280ea80966353dcaf14c9064afe"
+    if Hardware::CPU.arm?
+      url "https://github.com/fortio/dnsping/releases/download/v1.7.1/dnsping_1.7.1_darwin_arm64.tar.gz"
+      sha256 "3b6275cb114e2d50474ecd954929056aa16b347befe7acf780322c9fc4d3aa76"
 
       def install
         bin.install "dnsping"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/fortio/dnsping/releases/download/v1.7.0/dnsping_1.7.0_darwin_arm64.tar.gz"
-      sha256 "09c8e17e434c4f74f2995c9600440fa33a61a54c3a3fc111b33b483dfce791ad"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/dnsping/releases/download/v1.7.1/dnsping_1.7.1_darwin_amd64.tar.gz"
+      sha256 "76c039436426d3a1b26e3a12fec9e3b508ebc82afd78b8cbbbe4a9a86cb05487"
 
       def install
         bin.install "dnsping"
@@ -29,16 +29,16 @@ class Dnsping < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/dnsping/releases/download/v1.7.0/dnsping_1.7.0_linux_arm64.tar.gz"
-      sha256 "8b35754bf1d2c5446a785c9171e4d9102b454d3989861dc380d163d055b7b231"
+      url "https://github.com/fortio/dnsping/releases/download/v1.7.1/dnsping_1.7.1_linux_arm64.tar.gz"
+      sha256 "68ffbd1c96c055d388f348738a0494aab341944e05f7f721862a8c646a3f584b"
 
       def install
         bin.install "dnsping"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/dnsping/releases/download/v1.7.0/dnsping_1.7.0_linux_amd64.tar.gz"
-      sha256 "0c88fc0424cfd81d1c7cbce8bb01d1b56a16ee2a51d028d86d51478e17b25a7c"
+      url "https://github.com/fortio/dnsping/releases/download/v1.7.1/dnsping_1.7.1_linux_amd64.tar.gz"
+      sha256 "ae3de084348ee95d2581d1e1ec5223e3cdf451920f4e42650d8c5eb8a44082a8"
 
       def install
         bin.install "dnsping"
@@ -47,8 +47,6 @@ class Dnsping < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/dnsping version")
-    output = shell_output("#{bin}/dnsping -c 1 www.google.com 8.8.8.8")
-    assert_match(/^# target/, output.lines.last)
+    assert_match version.to_s, shell_output("#{bin}/dnsping -version")
   end
 end
