@@ -5,21 +5,21 @@
 class LllFixer < Formula
   desc "Fix line too long lll linter errors"
   homepage "https://fortio.org/"
-  version "0.1.0-pre8"
+  version "0.1.0"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ldemailly/lll-fixer/releases/download/v0.1.0-pre8/lll-fixer_0.1.0-pre8_darwin_amd64.tar.gz"
-      sha256 "84737b9f66dd3fa2bd79969a73bff530c0ac089e36cc727aafddd042d5f27bf9"
+    if Hardware::CPU.arm?
+      url "https://github.com/ldemailly/lll-fixer/releases/download/v0.1.0/lll-fixer_0.1.0_darwin_arm64.tar.gz"
+      sha256 "5a991e6ce042e1c7d3be080f5da0be5f7b8c9e1097142aa6af92a15d0c3be887"
 
       def install
         bin.install "lll-fixer"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/ldemailly/lll-fixer/releases/download/v0.1.0-pre8/lll-fixer_0.1.0-pre8_darwin_arm64.tar.gz"
-      sha256 "5cbbb5cd400fc1faa34edabccf8489c6eca1d1d647b2569dc2a4c983b66542b2"
+    if Hardware::CPU.intel?
+      url "https://github.com/ldemailly/lll-fixer/releases/download/v0.1.0/lll-fixer_0.1.0_darwin_amd64.tar.gz"
+      sha256 "69a97e8b09cce1b0505378fe5083f0f2871e97a38bb3bea3e481ae5632fe3438"
 
       def install
         bin.install "lll-fixer"
@@ -29,16 +29,16 @@ class LllFixer < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ldemailly/lll-fixer/releases/download/v0.1.0-pre8/lll-fixer_0.1.0-pre8_linux_arm64.tar.gz"
-      sha256 "3fc7eaae5c7131810833f4c1188ece1c0efa6c013e99de8ac57e4104cdafe351"
+      url "https://github.com/ldemailly/lll-fixer/releases/download/v0.1.0/lll-fixer_0.1.0_linux_arm64.tar.gz"
+      sha256 "35ed239aeb2ca3967c5ea6ec46968a530922f922f663d7578270df24deeaaca9"
 
       def install
         bin.install "lll-fixer"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ldemailly/lll-fixer/releases/download/v0.1.0-pre8/lll-fixer_0.1.0-pre8_linux_amd64.tar.gz"
-      sha256 "042b922bb69961abf0d797472c2f29a51d518d425a57bdc79575fa8b14c50e47"
+      url "https://github.com/ldemailly/lll-fixer/releases/download/v0.1.0/lll-fixer_0.1.0_linux_amd64.tar.gz"
+      sha256 "0c1cc9301410bb6d98041a6a97cf9c1c5629e181a69353d2591d24e915b4acbd"
 
       def install
         bin.install "lll-fixer"
