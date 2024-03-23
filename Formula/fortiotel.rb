@@ -11,7 +11,7 @@ class Fortiotel < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/fortio/fortiotel/releases/download/v1.63.5-pre2/fortiotel_1.63.5-pre2_darwin_arm64.tar.gz"
-      sha256 "03260ab465488da6fe962e2ddf64c06e8d3af160059e137df6097c68320740a1"
+      sha256 "ffa2f6273033a30146ed94cc580ef4afab43f8e42083729318ea346791883340"
 
       def install
         bin.install "fortiotel"
@@ -19,7 +19,7 @@ class Fortiotel < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/fortio/fortiotel/releases/download/v1.63.5-pre2/fortiotel_1.63.5-pre2_darwin_amd64.tar.gz"
-      sha256 "bf27efdf7e96ede9dea956a967a7d3fa9fe2d9440176768916807621a95f34d9"
+      sha256 "2dfec30f04d27da86f51f3321a452a89acd4993c3e1434a685e19ba0307abc44"
 
       def install
         bin.install "fortiotel"
@@ -28,17 +28,17 @@ class Fortiotel < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.63.5-pre2/fortiotel_1.63.5-pre2_linux_amd64.tar.gz"
-      sha256 "56e15c8e046bfb548e4d0f21c294318185d30a714563ff5d0c740aac3c704027"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/fortiotel/releases/download/v1.63.5-pre2/fortiotel_1.63.5-pre2_linux_arm64.tar.gz"
+      sha256 "5de81427e37e5c86fe9db074fb7b62dc84fcb5a01e9c4f386e704756ae26da8e"
 
       def install
         bin.install "fortiotel"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.63.5-pre2/fortiotel_1.63.5-pre2_linux_arm64.tar.gz"
-      sha256 "613cb02b995c66bfa6bc7b4e937789636c7edfa28e65f783d36ec39c69b2cf2b"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/fortiotel/releases/download/v1.63.5-pre2/fortiotel_1.63.5-pre2_linux_amd64.tar.gz"
+      sha256 "e2a8a97dbe6a737db2d7c1482a2a832b681285eaaac5f9f4eeb016429c844724"
 
       def install
         bin.install "fortiotel"
