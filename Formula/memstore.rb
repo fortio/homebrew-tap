@@ -5,21 +5,21 @@
 class Memstore < Formula
   desc "Fortio memstore"
   homepage "https://fortio.org/"
-  version "0.1.0-pre3"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/memstore/releases/download/v0.1.0-pre3/memstore_0.1.0-pre3_darwin_amd64.tar.gz"
-      sha256 "fcbde487d870bd30d97b10b39845f8a6c077e3106fe85403e639697651462d1e"
+      url "https://github.com/fortio/memstore/releases/download/v0.1.1/memstore_0.1.1_darwin_amd64.tar.gz"
+      sha256 "46080565ea9ed68e0265e219cf505f98de84c9ada9b110bfb690212c9ab26af3"
 
       def install
         bin.install "memstore"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/memstore/releases/download/v0.1.0-pre3/memstore_0.1.0-pre3_darwin_arm64.tar.gz"
-      sha256 "11078fc1d463d2545fa3adb9d3e1835849f1e1df5d52ac27ab988ec973b14c33"
+      url "https://github.com/fortio/memstore/releases/download/v0.1.1/memstore_0.1.1_darwin_arm64.tar.gz"
+      sha256 "2c00eaf85f6292e300f82e807f622a8f35ef2a988adaf960695e0592fc3b9b3a"
 
       def install
         bin.install "memstore"
@@ -29,16 +29,16 @@ class Memstore < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/memstore/releases/download/v0.1.0-pre3/memstore_0.1.0-pre3_linux_arm64.tar.gz"
-      sha256 "f0c526c04ef26a5ba67e75688469738eac7e02a9e3d479156c5ce7e2c311aa51"
+      url "https://github.com/fortio/memstore/releases/download/v0.1.1/memstore_0.1.1_linux_arm64.tar.gz"
+      sha256 "9c2e6490d916adc91c044a02607b8f15c90306d2d6eca405cd6d2f5dd0e3d962"
 
       def install
         bin.install "memstore"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/memstore/releases/download/v0.1.0-pre3/memstore_0.1.0-pre3_linux_amd64.tar.gz"
-      sha256 "80e52764e9d6e068776d04d91fd393442c931f98e9d456260b6c633741b38fb7"
+      url "https://github.com/fortio/memstore/releases/download/v0.1.1/memstore_0.1.1_linux_amd64.tar.gz"
+      sha256 "cd2fa3d9fe422cdb8ac5f5b60f4911c8c1ec32ef5a306707588af9f0b20952e4"
 
       def install
         bin.install "memstore"
