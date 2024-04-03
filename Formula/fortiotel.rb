@@ -5,21 +5,21 @@
 class Fortiotel < Formula
   desc "Fortio + open telemetry tracing"
   homepage "https://fortio.org/"
-  version "1.63.5"
+  version "1.63.6"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.63.5/fortiotel_1.63.5_darwin_arm64.tar.gz"
-      sha256 "391b2f3c84409fd54c40ef72417fa84404ac2c0539111e32f8f47f5b12f7f0ed"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/fortiotel/releases/download/v1.63.6/fortiotel_1.63.6_darwin_amd64.tar.gz"
+      sha256 "92be2a3af57391e3840b86aea676bdefd38fe55bdcab4bfd61b4b6411f8d8802"
 
       def install
         bin.install "fortiotel"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.63.5/fortiotel_1.63.5_darwin_amd64.tar.gz"
-      sha256 "5546b5a69bb4501d08e492ea6c38348eed7f5ad63211af6712bbb347c32bfe44"
+    if Hardware::CPU.arm?
+      url "https://github.com/fortio/fortiotel/releases/download/v1.63.6/fortiotel_1.63.6_darwin_arm64.tar.gz"
+      sha256 "c763aa0795586eb8a2cab3bc62d499066de1321504682ae5d192e0c9dff0ecb2"
 
       def install
         bin.install "fortiotel"
@@ -28,17 +28,17 @@ class Fortiotel < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.63.5/fortiotel_1.63.5_linux_arm64.tar.gz"
-      sha256 "9e30337fc7a569c4cc12d7162c267e5217e29537ad9c7ebd25a834089b5035d8"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/fortiotel/releases/download/v1.63.6/fortiotel_1.63.6_linux_amd64.tar.gz"
+      sha256 "6db4f976ba10c37141b6226c0d3b1912b0bba3c4990c81c7141548b023b0e607"
 
       def install
         bin.install "fortiotel"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.63.5/fortiotel_1.63.5_linux_amd64.tar.gz"
-      sha256 "c897ffb5c03d2da92e05385af975a5e5415c4a63b5b14eaf3774fe711992eb5b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/fortiotel/releases/download/v1.63.6/fortiotel_1.63.6_linux_arm64.tar.gz"
+      sha256 "5ff1b760a0bc8c219b5bbe2b6bd8086e29119e991a6d5b47397c5d253921f0a6"
 
       def install
         bin.install "fortiotel"
