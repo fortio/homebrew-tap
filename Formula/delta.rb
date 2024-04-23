@@ -5,21 +5,21 @@
 class Delta < Formula
   desc "Fortio delta tool"
   homepage "https://fortio.org/"
-  version "1.3.2"
+  version "1.3.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/delta/releases/download/v1.3.2/delta_1.3.2_darwin_amd64.tar.gz"
-      sha256 "c2a8b03959a41d2409ca1f47d75b402671607cff4d9657909ddebf1fd2b32869"
+      url "https://github.com/fortio/delta/releases/download/v1.3.3/delta_1.3.3_darwin_amd64.tar.gz"
+      sha256 "d8ce0c6c22f61e1bfd0e21027a0bac73814dc4b1cebca5c8c3ce8c6858d63bc6"
 
       def install
         bin.install "delta"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/delta/releases/download/v1.3.2/delta_1.3.2_darwin_arm64.tar.gz"
-      sha256 "a97d05f8b31efd3882b81133043dfb7ee23071e05f8e73c44b3703c225829781"
+      url "https://github.com/fortio/delta/releases/download/v1.3.3/delta_1.3.3_darwin_arm64.tar.gz"
+      sha256 "444928c3d21add059a5ea49fd20ca08adbe3eac49130068dcbe8cb0d239ae4fa"
 
       def install
         bin.install "delta"
@@ -28,17 +28,17 @@ class Delta < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/delta/releases/download/v1.3.2/delta_1.3.2_linux_arm64.tar.gz"
-      sha256 "f482838b2b489442b8415e207e0aff8a2600261619e6c4099812412f079cb64f"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/delta/releases/download/v1.3.3/delta_1.3.3_linux_amd64.tar.gz"
+      sha256 "b701d0b8ae5832612ac6f4bc5d8a94d6e23ccb15be5e31c42d11ac60e2545975"
 
       def install
         bin.install "delta"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/delta/releases/download/v1.3.2/delta_1.3.2_linux_amd64.tar.gz"
-      sha256 "445f358256edc53b6ac2c52b4e513c237d58a9f6fe07ae23787d49a479efa6aa"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/delta/releases/download/v1.3.3/delta_1.3.3_linux_arm64.tar.gz"
+      sha256 "cf55f911ad72e7345213120c0c7dffb61bb7cd69e1bb2718f53beffa7b60a1c5"
 
       def install
         bin.install "delta"
