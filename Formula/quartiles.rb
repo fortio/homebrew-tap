@@ -5,21 +5,21 @@
 class Quartiles < Formula
   desc "Go open telemetry sample app"
   homepage "https://fortio.org/"
-  version "0.1.5"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/ldemailly/quartiles/releases/download/v0.1.5/quartiles_0.1.5_darwin_amd64.tar.gz"
-      sha256 "aedbe122c75ca3baed298851e2393f1b602acc963012bc3c2fbe7be3cd5b3efd"
+      url "https://github.com/ldemailly/quartiles/releases/download/v0.2.0/quartiles_0.2.0_darwin_amd64.tar.gz"
+      sha256 "c087cdf6d7054dfa756672ed03595dc8283e1f180224a51a110c37f11b8628a3"
 
       def install
         bin.install "quartiles"
       end
     end
     on_arm do
-      url "https://github.com/ldemailly/quartiles/releases/download/v0.1.5/quartiles_0.1.5_darwin_arm64.tar.gz"
-      sha256 "454528cb64b8b4356f7d200ab28e901b86153f87cfb009a081edcb5c79ed2b9d"
+      url "https://github.com/ldemailly/quartiles/releases/download/v0.2.0/quartiles_0.2.0_darwin_arm64.tar.gz"
+      sha256 "d246a1c485a5f5bd5667c0aef565f673d71addedb542d52062e293fbee9e8471"
 
       def install
         bin.install "quartiles"
@@ -30,8 +30,8 @@ class Quartiles < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ldemailly/quartiles/releases/download/v0.1.5/quartiles_0.1.5_linux_amd64.tar.gz"
-        sha256 "c4b9365185fc0722a1e6cd71a5b7ad698924c170633f13c03b47b0767e76d11b"
+        url "https://github.com/ldemailly/quartiles/releases/download/v0.2.0/quartiles_0.2.0_linux_amd64.tar.gz"
+        sha256 "0998ab10a5ae736163115a7dc9e40ff897184a275f2a12d5e7345f0af0c97bc8"
 
         def install
           bin.install "quartiles"
@@ -40,8 +40,8 @@ class Quartiles < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ldemailly/quartiles/releases/download/v0.1.5/quartiles_0.1.5_linux_arm64.tar.gz"
-        sha256 "4b1f9ec563c7ac3b51fef6d5d052279dca6d6a76e756392c605200c9732f282e"
+        url "https://github.com/ldemailly/quartiles/releases/download/v0.2.0/quartiles_0.2.0_linux_arm64.tar.gz"
+        sha256 "d5d596347bcc212ab97e4636bf2429d1fab7e7978c45322ca7407f6d07f36487"
 
         def install
           bin.install "quartiles"
