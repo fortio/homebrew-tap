@@ -5,21 +5,21 @@
 class Delta < Formula
   desc "Fortio delta tool"
   homepage "https://fortio.org/"
-  version "1.3.3"
+  version "1.3.4"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/delta/releases/download/v1.3.3/delta_1.3.3_darwin_amd64.tar.gz"
-      sha256 "d8ce0c6c22f61e1bfd0e21027a0bac73814dc4b1cebca5c8c3ce8c6858d63bc6"
+    on_intel do
+      url "https://github.com/fortio/delta/releases/download/v1.3.4/delta_1.3.4_darwin_amd64.tar.gz"
+      sha256 "dffc9ed8b43b34700c85bbc20e2a0bbfec8457cb8cadb9303c92a5f86644fa0c"
 
       def install
         bin.install "delta"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/fortio/delta/releases/download/v1.3.3/delta_1.3.3_darwin_arm64.tar.gz"
-      sha256 "444928c3d21add059a5ea49fd20ca08adbe3eac49130068dcbe8cb0d239ae4fa"
+    on_arm do
+      url "https://github.com/fortio/delta/releases/download/v1.3.4/delta_1.3.4_darwin_arm64.tar.gz"
+      sha256 "6661a2b4e5e451b9133da35e100523430c1ff0ee0263e59b14f5f962aaa74e7b"
 
       def install
         bin.install "delta"
@@ -28,20 +28,24 @@ class Delta < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/delta/releases/download/v1.3.3/delta_1.3.3_linux_amd64.tar.gz"
-      sha256 "b701d0b8ae5832612ac6f4bc5d8a94d6e23ccb15be5e31c42d11ac60e2545975"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/fortio/delta/releases/download/v1.3.4/delta_1.3.4_linux_amd64.tar.gz"
+        sha256 "3ded702ac88c067aa2688d4b4621bb7f70ebaac9a515ee1fd178d278683ec608"
 
-      def install
-        bin.install "delta"
+        def install
+          bin.install "delta"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/delta/releases/download/v1.3.3/delta_1.3.3_linux_arm64.tar.gz"
-      sha256 "cf55f911ad72e7345213120c0c7dffb61bb7cd69e1bb2718f53beffa7b60a1c5"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/fortio/delta/releases/download/v1.3.4/delta_1.3.4_linux_arm64.tar.gz"
+        sha256 "e3914269f86f52f11f57086706d2c3286f639bad171490834210b72db3c0b332"
 
-      def install
-        bin.install "delta"
+        def install
+          bin.install "delta"
+        end
       end
     end
   end
