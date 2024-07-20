@@ -5,21 +5,21 @@
 class Workflows < Formula
   desc ""
   homepage "https://fortio.org/"
-  version "0.1.0-pre6"
+  version "0.1.0-test2"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/fortio/workflows/releases/download/v0.1.0-pre6/workflows_0.1.0-pre6_darwin_amd64.tar.gz"
-      sha256 "dedc72b2f62289805dbe765e24b68cf7332012638e11f43be15709cc25079955"
+      url "https://github.com/fortio/workflows/releases/download/v0.1.0-test2/workflows_0.1.0-test2_darwin_amd64.zip"
+      sha256 "ce3f13d6ee535f66ca686d08940493000de2532696c958782346ba3647c7ec3f"
 
       def install
         bin.install "workflows"
       end
     end
     on_arm do
-      url "https://github.com/fortio/workflows/releases/download/v0.1.0-pre6/workflows_0.1.0-pre6_darwin_arm64.tar.gz"
-      sha256 "c24e2993de2a224777bc91c59664b9244b09bac24a7a7bcd0831276df6a31d23"
+      url "https://github.com/fortio/workflows/releases/download/v0.1.0-test2/workflows_0.1.0-test2_darwin_arm64.zip"
+      sha256 "a6f1c8024d47d61632fde0556840206f90ca230456d84e5d5aacc85fd99fc80e"
 
       def install
         bin.install "workflows"
@@ -30,8 +30,8 @@ class Workflows < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/workflows/releases/download/v0.1.0-pre6/workflows_0.1.0-pre6_linux_amd64.tar.gz"
-        sha256 "3fbb1391f73db41747edafee8dd812bb6bc4f0f694236668bf60905586c880c2"
+        url "https://github.com/fortio/workflows/releases/download/v0.1.0-test2/workflows_0.1.0-test2_linux_amd64.tar.gz"
+        sha256 "dd3561f37aae7cbd8142e78819aaca20599bed9e6fe4730b6295cde8f0fa9e89"
 
         def install
           bin.install "workflows"
@@ -40,8 +40,8 @@ class Workflows < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/workflows/releases/download/v0.1.0-pre6/workflows_0.1.0-pre6_linux_arm64.tar.gz"
-        sha256 "5d9f6716f9acda3a7091020d42e3ef8f3458778373bb03a06a45d666a2bd3cb7"
+        url "https://github.com/fortio/workflows/releases/download/v0.1.0-test2/workflows_0.1.0-test2_linux_arm64.tar.gz"
+        sha256 "213ff09e0a590310b52e3db1a27146aae5254dc4faf4902e2119830e73cb532d"
 
         def install
           bin.install "workflows"
