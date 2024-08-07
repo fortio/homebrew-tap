@@ -5,21 +5,21 @@
 class Logc < Formula
   desc "Fortio log JSON to (colorized) text converter"
   homepage "https://fortio.org/"
-  version "1.3.5"
+  version "1.3.6"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/fortio/logc/releases/download/v1.3.5/logc_1.3.5_darwin_amd64.tar.gz"
-      sha256 "2e761ebf9af0afe2ad96bce4846331952ec14add0cc040f619e031652b4a8722"
+      url "https://github.com/fortio/logc/releases/download/v1.3.6/logc_1.3.6_darwin_amd64.zip"
+      sha256 "86e14ebb13161eec1f8dd71b344a77d3ff7a045fe38332ac38190a37adc87cf0"
 
       def install
         bin.install "logc"
       end
     end
     on_arm do
-      url "https://github.com/fortio/logc/releases/download/v1.3.5/logc_1.3.5_darwin_arm64.tar.gz"
-      sha256 "8dd8f2566139e67abfe43d11b8e38f1fa054188858abe8d257dfba2f90646370"
+      url "https://github.com/fortio/logc/releases/download/v1.3.6/logc_1.3.6_darwin_arm64.zip"
+      sha256 "0e7505fb3cbee082822a46ad5e31b6e239308570cbde89df919a149bc8b82c61"
 
       def install
         bin.install "logc"
@@ -30,8 +30,8 @@ class Logc < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/logc/releases/download/v1.3.5/logc_1.3.5_linux_amd64.tar.gz"
-        sha256 "1c70d5ecf35b4004051ef5a24396792ca752dbecd2ea5b92583e0a15677480c8"
+        url "https://github.com/fortio/logc/releases/download/v1.3.6/logc_1.3.6_linux_amd64.tar.gz"
+        sha256 "255aa68019f88e2e1b66654755993a8b99838bce08632d718d5761d6619bc73e"
 
         def install
           bin.install "logc"
@@ -40,8 +40,8 @@ class Logc < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/logc/releases/download/v1.3.5/logc_1.3.5_linux_arm64.tar.gz"
-        sha256 "b45fe10433e8d294ca224851588901a2e53c5c382c1fce680e42f53c24a13118"
+        url "https://github.com/fortio/logc/releases/download/v1.3.6/logc_1.3.6_linux_arm64.tar.gz"
+        sha256 "0f075b473ae344b6d817fc1da83244e2b4af6edb11b4f59d3099ca13e618a43d"
 
         def install
           bin.install "logc"
