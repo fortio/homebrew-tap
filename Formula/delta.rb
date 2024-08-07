@@ -5,21 +5,21 @@
 class Delta < Formula
   desc "Fortio delta tool"
   homepage "https://fortio.org/"
-  version "1.3.4"
+  version "1.3.5"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/fortio/delta/releases/download/v1.3.4/delta_1.3.4_darwin_amd64.tar.gz"
-      sha256 "dffc9ed8b43b34700c85bbc20e2a0bbfec8457cb8cadb9303c92a5f86644fa0c"
+      url "https://github.com/fortio/delta/releases/download/v1.3.5/delta_1.3.5_darwin_amd64.zip"
+      sha256 "0944cd793d19c14304962eb49587e726bf422dcd289cca4d369f1944ec77197c"
 
       def install
         bin.install "delta"
       end
     end
     on_arm do
-      url "https://github.com/fortio/delta/releases/download/v1.3.4/delta_1.3.4_darwin_arm64.tar.gz"
-      sha256 "6661a2b4e5e451b9133da35e100523430c1ff0ee0263e59b14f5f962aaa74e7b"
+      url "https://github.com/fortio/delta/releases/download/v1.3.5/delta_1.3.5_darwin_arm64.zip"
+      sha256 "374a1b30cadd53e0096b6199a088e044eb3d0941246bc3b2ca2f90d535adeb46"
 
       def install
         bin.install "delta"
@@ -30,8 +30,8 @@ class Delta < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/delta/releases/download/v1.3.4/delta_1.3.4_linux_amd64.tar.gz"
-        sha256 "3ded702ac88c067aa2688d4b4621bb7f70ebaac9a515ee1fd178d278683ec608"
+        url "https://github.com/fortio/delta/releases/download/v1.3.5/delta_1.3.5_linux_amd64.tar.gz"
+        sha256 "9c4ee4ee3596d21de1e2359ba3f6860c20a18cafe95b95878991e971db2ab425"
 
         def install
           bin.install "delta"
@@ -40,8 +40,8 @@ class Delta < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/delta/releases/download/v1.3.4/delta_1.3.4_linux_arm64.tar.gz"
-        sha256 "e3914269f86f52f11f57086706d2c3286f639bad171490834210b72db3c0b332"
+        url "https://github.com/fortio/delta/releases/download/v1.3.5/delta_1.3.5_linux_arm64.tar.gz"
+        sha256 "153c1a5c8055f4129f068c930a089270bad293e0ef0db65ad1739d0c542c7098"
 
         def install
           bin.install "delta"
