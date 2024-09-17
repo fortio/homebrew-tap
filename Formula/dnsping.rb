@@ -5,21 +5,21 @@
 class Dnsping < Formula
   desc "Fortio DNSping checks packet loss and latency issues with DNS servers"
   homepage "https://fortio.org/"
-  version "1.7.1"
+  version "1.8.0"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/fortio/dnsping/releases/download/v1.7.1/dnsping_1.7.1_darwin_arm64.tar.gz"
-      sha256 "3b6275cb114e2d50474ecd954929056aa16b347befe7acf780322c9fc4d3aa76"
+    on_intel do
+      url "https://github.com/fortio/dnsping/releases/download/v1.8.0/dnsping_1.8.0_darwin_amd64.zip"
+      sha256 "3f196cba92cef5879f080ae2ca9811174efdbbd8758d294503baed7a12321775"
 
       def install
         bin.install "dnsping"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/dnsping/releases/download/v1.7.1/dnsping_1.7.1_darwin_amd64.tar.gz"
-      sha256 "76c039436426d3a1b26e3a12fec9e3b508ebc82afd78b8cbbbe4a9a86cb05487"
+    on_arm do
+      url "https://github.com/fortio/dnsping/releases/download/v1.8.0/dnsping_1.8.0_darwin_arm64.zip"
+      sha256 "e615fc0092ec1ed4e3e1a03d705f7153ca38afc315965202608c05c1792c0438"
 
       def install
         bin.install "dnsping"
@@ -28,20 +28,24 @@ class Dnsping < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/dnsping/releases/download/v1.7.1/dnsping_1.7.1_linux_arm64.tar.gz"
-      sha256 "68ffbd1c96c055d388f348738a0494aab341944e05f7f721862a8c646a3f584b"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/fortio/dnsping/releases/download/v1.8.0/dnsping_1.8.0_linux_amd64.tar.gz"
+        sha256 "0b45e1a65c22dc77a022e5182f207f50a9dfa2354f14065df634cf84c14fd0e4"
 
-      def install
-        bin.install "dnsping"
+        def install
+          bin.install "dnsping"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fortio/dnsping/releases/download/v1.7.1/dnsping_1.7.1_linux_amd64.tar.gz"
-      sha256 "ae3de084348ee95d2581d1e1ec5223e3cdf451920f4e42650d8c5eb8a44082a8"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/fortio/dnsping/releases/download/v1.8.0/dnsping_1.8.0_linux_arm64.tar.gz"
+        sha256 "0aea4f351218645fc5758c6d3166a6a9dbd010370911ada96be2b873493441f8"
 
-      def install
-        bin.install "dnsping"
+        def install
+          bin.install "dnsping"
+        end
       end
     end
   end
