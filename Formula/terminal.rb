@@ -5,21 +5,21 @@
 class Terminal < Formula
   desc "Fortio terminal fps checker"
   homepage "https://fortio.org/"
-  version "0.10.0-pre11"
+  version "0.10.0-pre12"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre11/terminal_0.10.0-pre11_darwin_amd64.zip"
-      sha256 "fcc688cda9e807a8130b75bd579d9761c4585de1f66eb2ad7abddde89c8dd8cb"
+      url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre12/fps_0.10.0-pre12_darwin_amd64.zip"
+      sha256 "4535f18ab976e00c5fc024819b4ada9f0745640fec6b1326ecc7cff3ca65c549"
 
       def install
         bin.install "fps"
       end
     end
     on_arm do
-      url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre11/terminal_0.10.0-pre11_darwin_arm64.zip"
-      sha256 "4453432e02093f324267eca2edcccd28f266e02f66d1f80cd7aef6638eac7f5c"
+      url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre12/fps_0.10.0-pre12_darwin_arm64.zip"
+      sha256 "152c7612178dc8750ab0e41ee1bf55d7d23dae4796f913d521ff1db80ad38266"
 
       def install
         bin.install "fps"
@@ -30,8 +30,8 @@ class Terminal < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre11/terminal_0.10.0-pre11_linux_amd64.tar.gz"
-        sha256 "3e23b27cf5dc2694b4e43eb8c4aae817cb28263cea2a8363d999e1eccbccc492"
+        url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre12/fps_0.10.0-pre12_linux_amd64.tar.gz"
+        sha256 "4fa424e5a51aa7f806e8a91dc32a6fe8dc386787de0e2c6db9780d71b62dcd2c"
 
         def install
           bin.install "fps"
@@ -40,8 +40,8 @@ class Terminal < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre11/terminal_0.10.0-pre11_linux_arm64.tar.gz"
-        sha256 "cf64cb675e4e0970bc547ca52a8ce5faca35ddecf476fef3b361cc21b2578314"
+        url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre12/fps_0.10.0-pre12_linux_arm64.tar.gz"
+        sha256 "d9c48fb24b3e72bf7c0f895949df69d5e909d2e458a72de9f8ac912934bef402"
 
         def install
           bin.install "fps"
