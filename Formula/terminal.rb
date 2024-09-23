@@ -5,21 +5,21 @@
 class Terminal < Formula
   desc "Fortio terminal fps checker"
   homepage "https://fortio.org/"
-  version "0.10.0-pre12"
+  version "0.10.0-pre13"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre12/fps_0.10.0-pre12_darwin_amd64.zip"
-      sha256 "4535f18ab976e00c5fc024819b4ada9f0745640fec6b1326ecc7cff3ca65c549"
+      url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre13/fps_0.10.0-pre13_darwin_amd64.zip"
+      sha256 "7a2ddd8449e9ff178f6c2e83f4deab6ad39817f278c96ca136117fb4070aecf6"
 
       def install
         bin.install "fps"
       end
     end
     on_arm do
-      url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre12/fps_0.10.0-pre12_darwin_arm64.zip"
-      sha256 "152c7612178dc8750ab0e41ee1bf55d7d23dae4796f913d521ff1db80ad38266"
+      url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre13/fps_0.10.0-pre13_darwin_arm64.zip"
+      sha256 "5feab2ede564d45732142c00e94fab34be2520c27eefcb125c7f0be028318bb3"
 
       def install
         bin.install "fps"
@@ -30,8 +30,8 @@ class Terminal < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre12/fps_0.10.0-pre12_linux_amd64.tar.gz"
-        sha256 "4fa424e5a51aa7f806e8a91dc32a6fe8dc386787de0e2c6db9780d71b62dcd2c"
+        url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre13/fps_0.10.0-pre13_linux_amd64.tar.gz"
+        sha256 "c662c07e30b1c9cd6cec22bfcb62fb9a58f7dc8a396b26e17c611c2b3084a29e"
 
         def install
           bin.install "fps"
@@ -40,8 +40,8 @@ class Terminal < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre12/fps_0.10.0-pre12_linux_arm64.tar.gz"
-        sha256 "d9c48fb24b3e72bf7c0f895949df69d5e909d2e458a72de9f8ac912934bef402"
+        url "https://github.com/fortio/terminal/releases/download/v0.10.0-pre13/fps_0.10.0-pre13_linux_arm64.tar.gz"
+        sha256 "a9f52a6e8ae9cdd766b87d921773ea3ce2af10c5a68f78ad127ecf6359383c23"
 
         def install
           bin.install "fps"
