@@ -5,21 +5,21 @@
 class Life < Formula
   desc "Fortio terminal Conway's game of life demo"
   homepage "https://fortio.org/"
-  version "0.19.0-pre5"
+  version "0.19.0-pre6"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre5/life_0.19.0-pre5_darwin_amd64.zip"
-      sha256 "de53703939a9e25b696e994981a1ddbc86bfd5693ed705e8fac390e6201bb2e3"
+      url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre6/life_0.19.0-pre6_darwin_amd64.zip"
+      sha256 "c9fe1a418307e7af3630a56556b4cef5cfef40812ad8cda0de9061520bb26816"
 
       def install
         bin.install "life"
       end
     end
     on_arm do
-      url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre5/life_0.19.0-pre5_darwin_arm64.zip"
-      sha256 "b777b70f8a53fc179f190989bdaf8fb5bfe8418900caef383261869fce9ec869"
+      url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre6/life_0.19.0-pre6_darwin_arm64.zip"
+      sha256 "a1dfeda78c3bb43180c1a181e050e423229dfe177abffd6c74a7098e93744a97"
 
       def install
         bin.install "life"
@@ -30,8 +30,8 @@ class Life < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre5/life_0.19.0-pre5_linux_amd64.tar.gz"
-        sha256 "ae2e9c20a52d9418e5c1a60530934c4af32fd598a71777d4d4abffd489adcdbc"
+        url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre6/life_0.19.0-pre6_linux_amd64.tar.gz"
+        sha256 "ede5d6a1197b3b3608684dd3c8f3c9213233d8d596a20c17ce9c1721b6b139bb"
 
         def install
           bin.install "life"
@@ -40,8 +40,8 @@ class Life < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre5/life_0.19.0-pre5_linux_arm64.tar.gz"
-        sha256 "b28f58c07d8b0bfceef7e61d0dec39bf5a60a603c1f2c5760480b05a0e21c787"
+        url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre6/life_0.19.0-pre6_linux_arm64.tar.gz"
+        sha256 "762cf4f79ebf13d9f463cbada30b31e443081e1960da9b4db497ae2a43584b87"
 
         def install
           bin.install "life"
