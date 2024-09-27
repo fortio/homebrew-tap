@@ -5,21 +5,21 @@
 class Fps < Formula
   desc "Fortio terminal fps checker"
   homepage "https://fortio.org/"
-  version "0.19.0-pre5"
+  version "0.19.0-pre6"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre5/fps_0.19.0-pre5_darwin_amd64.zip"
-      sha256 "86f08017e1f5c1ed7a804b7ddd69e5767a162d75feeee8a5009df3ee84f53dcf"
+      url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre6/fps_0.19.0-pre6_darwin_amd64.zip"
+      sha256 "c73888e805e690e596f134e495489e031543874a024a985219a323a76ecf1836"
 
       def install
         bin.install "fps"
       end
     end
     on_arm do
-      url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre5/fps_0.19.0-pre5_darwin_arm64.zip"
-      sha256 "9881d83bef786dac0feb11f8b415de5f9ed2d0b30ba7161d53277b4dbb08812e"
+      url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre6/fps_0.19.0-pre6_darwin_arm64.zip"
+      sha256 "ed5809eea853676e7f8bd074c1661e086ba901108200a3edc575ffd06a9e272a"
 
       def install
         bin.install "fps"
@@ -30,8 +30,8 @@ class Fps < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre5/fps_0.19.0-pre5_linux_amd64.tar.gz"
-        sha256 "713bd4443654baca61b004a5591d9c49dd642e7a71e14f54b3aeb415dbfe4fab"
+        url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre6/fps_0.19.0-pre6_linux_amd64.tar.gz"
+        sha256 "b4bdee721c9fcf7dbb0019c07ebee2729be7062aa9fef045109eb0612362c30c"
 
         def install
           bin.install "fps"
@@ -40,8 +40,8 @@ class Fps < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre5/fps_0.19.0-pre5_linux_arm64.tar.gz"
-        sha256 "fbea9f90ac30d746bffb6b8077f1d08d487d4e98c001957915c2b8899debace6"
+        url "https://github.com/fortio/terminal/releases/download/v0.19.0-pre6/fps_0.19.0-pre6_linux_arm64.tar.gz"
+        sha256 "d092d2ecd8997681ac5f367da3cc433d03a36fcafac60b2c3117ffe3f20cbb8f"
 
         def install
           bin.install "fps"
