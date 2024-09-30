@@ -5,21 +5,21 @@
 class Fps < Formula
   desc "Fortio terminal fps checker"
   homepage "https://fortio.org/"
-  version "0.20.0-pre2"
+  version "0.20.0"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/fortio/terminal/releases/download/v0.20.0-pre2/fps_0.20.0-pre2_darwin_amd64.zip"
-      sha256 "e7bad4edd481e7a38df20fb1e9fdbd4bc2f18ba7c14dd324d0a6a612316aa823"
+      url "https://github.com/fortio/terminal/releases/download/v0.20.0/fps_0.20.0_darwin_amd64.zip"
+      sha256 "ffa5d393f7b7d5211a7976a12da540a35d89d1ec075429be0df7b100746ae933"
 
       def install
         bin.install "fps"
       end
     end
     on_arm do
-      url "https://github.com/fortio/terminal/releases/download/v0.20.0-pre2/fps_0.20.0-pre2_darwin_arm64.zip"
-      sha256 "736ec59aff2b60e6b979c52ea9ebf8787272bcb8fd78f6b55211227c36afde1e"
+      url "https://github.com/fortio/terminal/releases/download/v0.20.0/fps_0.20.0_darwin_arm64.zip"
+      sha256 "4a4ef94f8556c7831d07443550751d0b664b8cf762bc3b44edd0e06b07a0b225"
 
       def install
         bin.install "fps"
@@ -30,8 +30,8 @@ class Fps < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.20.0-pre2/fps_0.20.0-pre2_linux_amd64.tar.gz"
-        sha256 "2426690b15b4d0c2fcff878a481515f0db178add577f1c8b34bea6a57343c845"
+        url "https://github.com/fortio/terminal/releases/download/v0.20.0/fps_0.20.0_linux_amd64.tar.gz"
+        sha256 "85cc254122158eb6afb37bcffc0095b516b829fae06698f45fb77cebf866513e"
 
         def install
           bin.install "fps"
@@ -40,8 +40,8 @@ class Fps < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.20.0-pre2/fps_0.20.0-pre2_linux_arm64.tar.gz"
-        sha256 "c934df7ef483bd05737f8e2f5d7018e10680b1a80ae2517e5dac8f2866a3e121"
+        url "https://github.com/fortio/terminal/releases/download/v0.20.0/fps_0.20.0_linux_arm64.tar.gz"
+        sha256 "f2e90ee4f4462bf2701b81f950f5a18abbf50495234e38cb5dac1065657d3e54"
 
         def install
           bin.install "fps"
