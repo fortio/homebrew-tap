@@ -5,21 +5,21 @@
 class Brick < Formula
   desc "Fortio terminal brick smashing game in the style of Breakout"
   homepage "https://fortio.org/"
-  version "0.20.0-pre1"
+  version "0.20.0-pre2"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/fortio/terminal/releases/download/v0.20.0-pre1/brick_0.20.0-pre1_darwin_amd64.zip"
-      sha256 "8993c7908e0d61fe344b3d721febce11a8a39d44bb3bc62ee14050ed59a55846"
+      url "https://github.com/fortio/terminal/releases/download/v0.20.0-pre2/brick_0.20.0-pre2_darwin_amd64.zip"
+      sha256 "b7312ac4cde3c38bd7f7549523356a58f3c28983de9ae3174394ed3790b80a89"
 
       def install
         bin.install "brick"
       end
     end
     on_arm do
-      url "https://github.com/fortio/terminal/releases/download/v0.20.0-pre1/brick_0.20.0-pre1_darwin_arm64.zip"
-      sha256 "d33b902e9e7cdbfe779b6af16a474507763ac4dc3264763bc622f8277d63fb4d"
+      url "https://github.com/fortio/terminal/releases/download/v0.20.0-pre2/brick_0.20.0-pre2_darwin_arm64.zip"
+      sha256 "06d112ecbe669114623425d2ab845b76b9ac721836fd6fe52a1a5cc272cfa948"
 
       def install
         bin.install "brick"
@@ -30,8 +30,8 @@ class Brick < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.20.0-pre1/brick_0.20.0-pre1_linux_amd64.tar.gz"
-        sha256 "7d39e4d417e58640b4bb0ef6a78a88bed1ac6c2e77f8a853b5cae61cc511bdfd"
+        url "https://github.com/fortio/terminal/releases/download/v0.20.0-pre2/brick_0.20.0-pre2_linux_amd64.tar.gz"
+        sha256 "a398cc216792c31318a2168ceda095314296c9c6722e9d8b5fe799f1f06c5824"
 
         def install
           bin.install "brick"
@@ -40,8 +40,8 @@ class Brick < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.20.0-pre1/brick_0.20.0-pre1_linux_arm64.tar.gz"
-        sha256 "f3a81422649209bc35308196f3d495f6b5eea5eaabf0a98179bfdd9e823e4c35"
+        url "https://github.com/fortio/terminal/releases/download/v0.20.0-pre2/brick_0.20.0-pre2_linux_arm64.tar.gz"
+        sha256 "640ea27f3999389403e5f8ca9124f4716ec2bcdaebe7e3235ecd2d83b146352a"
 
         def install
           bin.install "brick"
