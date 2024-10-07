@@ -5,21 +5,21 @@
 class Fps < Formula
   desc "Fortio terminal fps checker"
   homepage "https://fortio.org/"
-  version "0.22.1"
+  version "0.23.0"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/fortio/terminal/releases/download/v0.22.1/fps_0.22.1_darwin_amd64.zip"
-      sha256 "931280c38851efb340f1c0346b6d46f4c5f9e0cc9f8da2d39faf56c77031a746"
+      url "https://github.com/fortio/terminal/releases/download/v0.23.0/fps_0.23.0_darwin_amd64.zip"
+      sha256 "4d805ada496cb1a7ab7cc36b27687c89a181a8e5044554f3a482a2e128a867d7"
 
       def install
         bin.install "fps"
       end
     end
     on_arm do
-      url "https://github.com/fortio/terminal/releases/download/v0.22.1/fps_0.22.1_darwin_arm64.zip"
-      sha256 "d8a9f914883aaf55c68b4bb45447ceed2a7ee63badc065b9a409f90746050c80"
+      url "https://github.com/fortio/terminal/releases/download/v0.23.0/fps_0.23.0_darwin_arm64.zip"
+      sha256 "3356d0b1efd3433cd42f75ea31902e9a1feaf8db150571fa3153723516ea390e"
 
       def install
         bin.install "fps"
@@ -30,8 +30,8 @@ class Fps < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.22.1/fps_0.22.1_linux_amd64.tar.gz"
-        sha256 "ce98522349dba29fee383e140e623611c9dac757e935eee6a51dd6b41b9430ac"
+        url "https://github.com/fortio/terminal/releases/download/v0.23.0/fps_0.23.0_linux_amd64.tar.gz"
+        sha256 "ed5e8acd9ef06f697348fa7fb88dc608efe90a0e259443c10a4c55ad94d76392"
 
         def install
           bin.install "fps"
@@ -40,8 +40,8 @@ class Fps < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.22.1/fps_0.22.1_linux_arm64.tar.gz"
-        sha256 "ecd4366e77f3dfc40cdcc240a1efeec93e8e53194b916e52c0160e116d6c7091"
+        url "https://github.com/fortio/terminal/releases/download/v0.23.0/fps_0.23.0_linux_arm64.tar.gz"
+        sha256 "7666463725dc6e540b22642b2419b99a4ed08e6453e4de8a958b854cb5588131"
 
         def install
           bin.install "fps"
