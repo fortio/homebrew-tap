@@ -5,21 +5,21 @@
 class Fps < Formula
   desc "Fortio terminal fps checker"
   homepage "https://fortio.org/"
-  version "0.27.1"
+  version "0.27.2"
   license "Apache-2.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/fortio/terminal/releases/download/v0.27.1/fps_0.27.1_darwin_amd64.zip"
-      sha256 "6ec4c13b1bdf6709c6675da020194234e28a7d19346fb953c4ded8d69300d934"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/terminal/releases/download/v0.27.2/fps_0.27.2_darwin_amd64.zip"
+      sha256 "f38739b6b4f135be514523086a559f2c562b59fca6a9d5569af3878ac46c6a78"
 
       def install
         bin.install "fps"
       end
     end
-    on_arm do
-      url "https://github.com/fortio/terminal/releases/download/v0.27.1/fps_0.27.1_darwin_arm64.zip"
-      sha256 "cde171b2ae1573918d1b75a971cf66577eef890fdd947d4e7ec45182d4f8bd13"
+    if Hardware::CPU.arm?
+      url "https://github.com/fortio/terminal/releases/download/v0.27.2/fps_0.27.2_darwin_arm64.zip"
+      sha256 "1e66756290f45f7ff87beebc7b23795fca3f29728a75d178ab862fea2f03a5b6"
 
       def install
         bin.install "fps"
@@ -28,20 +28,20 @@ class Fps < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.27.1/fps_0.27.1_linux_amd64.tar.gz"
-        sha256 "a0a2cfd34e3b4e568c309e8090e6077930c5b9d5691339b71b1e72eb7c114b11"
+        url "https://github.com/fortio/terminal/releases/download/v0.27.2/fps_0.27.2_linux_amd64.tar.gz"
+        sha256 "f2d70ea52dcf4470ef5e680e792cd3e85cdf31c31fc6299301bb85e1e067f729"
 
         def install
           bin.install "fps"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.27.1/fps_0.27.1_linux_arm64.tar.gz"
-        sha256 "1d03a1372acf8ff6ca8c41467b5a74fe0e12caaa2f596c2684b916525fd34ab5"
+        url "https://github.com/fortio/terminal/releases/download/v0.27.2/fps_0.27.2_linux_arm64.tar.gz"
+        sha256 "ce613f8b94afd07430fe86180bf529f04d0a52cd12f74691bc91bd8d0adf37e6"
 
         def install
           bin.install "fps"
