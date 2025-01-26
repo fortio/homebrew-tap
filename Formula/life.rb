@@ -5,21 +5,21 @@
 class Life < Formula
   desc "Fortio terminal Conway's game of life demo"
   homepage "https://fortio.org/"
-  version "0.27.1"
+  version "0.27.2"
   license "Apache-2.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/fortio/terminal/releases/download/v0.27.1/life_0.27.1_darwin_amd64.zip"
-      sha256 "322a6f27a0422c56651cddc8d8fd78eba4702c5ce5aebac8815cd883224cc46a"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/terminal/releases/download/v0.27.2/life_0.27.2_darwin_amd64.zip"
+      sha256 "90f0e9559a9b7d2ff8646f4d283e4def7e7ce6097d957e8fce1420bce6ef9760"
 
       def install
         bin.install "life"
       end
     end
-    on_arm do
-      url "https://github.com/fortio/terminal/releases/download/v0.27.1/life_0.27.1_darwin_arm64.zip"
-      sha256 "71f4e8daed78bdcf9d9afa9737b21ee49363e399c57955f069e56ecd0096a41a"
+    if Hardware::CPU.arm?
+      url "https://github.com/fortio/terminal/releases/download/v0.27.2/life_0.27.2_darwin_arm64.zip"
+      sha256 "9aaf3672688d87e5fc63a8b46eac1b2ca6edf1ea8cb6a0cdad2a55b3c83a1eee"
 
       def install
         bin.install "life"
@@ -28,20 +28,20 @@ class Life < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.27.1/life_0.27.1_linux_amd64.tar.gz"
-        sha256 "57fac8361623b216a10ee2fce7993277341fc6b926b975fad256d91215e8884f"
+        url "https://github.com/fortio/terminal/releases/download/v0.27.2/life_0.27.2_linux_amd64.tar.gz"
+        sha256 "cff6dbab92f3757380ed6ca906f0e8dd84899a704ff5b64bce98b85c3abd60d9"
 
         def install
           bin.install "life"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.27.1/life_0.27.1_linux_arm64.tar.gz"
-        sha256 "d32d75f9d1a068299a260e5d6bda6705cf073a7edacb51db4b788594e0a00a70"
+        url "https://github.com/fortio/terminal/releases/download/v0.27.2/life_0.27.2_linux_arm64.tar.gz"
+        sha256 "e17136b84b346ea78d4496552507f8d57c02d89702eaacb8c63ffe8936f19bda"
 
         def install
           bin.install "life"
