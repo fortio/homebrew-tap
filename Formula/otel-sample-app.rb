@@ -5,21 +5,21 @@
 class OtelSampleApp < Formula
   desc "Go open telemetry sample app"
   homepage "https://fortio.org/"
-  version "0.4.0"
+  version "0.5.0"
   license "Apache-2.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/fortio/otel-sample-app/releases/download/v0.4.0/otel-sample-app_0.4.0_darwin_amd64.tar.gz"
-      sha256 "8ce04359237161fd42b6be25e390113917ee89d0b86a66f8c44d4d7f9d075653"
+    if Hardware::CPU.intel?
+      url "https://github.com/fortio/otel-sample-app/releases/download/v0.5.0/otel-sample-app_0.5.0_darwin_amd64.zip"
+      sha256 "177a47a7d1bbb2e9ad3bf4e651ec13bb9478d02c28485b0fe61b03249ed1975a"
 
       def install
         bin.install "otel-sample-app"
       end
     end
-    on_arm do
-      url "https://github.com/fortio/otel-sample-app/releases/download/v0.4.0/otel-sample-app_0.4.0_darwin_arm64.tar.gz"
-      sha256 "fa1d77940c8608d9c6dceecd582c606ff4120ad9ab30649ccab22686ffd7f6bc"
+    if Hardware::CPU.arm?
+      url "https://github.com/fortio/otel-sample-app/releases/download/v0.5.0/otel-sample-app_0.5.0_darwin_arm64.zip"
+      sha256 "aea3aa41fb5428865b9b78784246bee4b5382a1046dacedecd1b4b386d792326"
 
       def install
         bin.install "otel-sample-app"
@@ -28,20 +28,20 @@ class OtelSampleApp < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/otel-sample-app/releases/download/v0.4.0/otel-sample-app_0.4.0_linux_amd64.tar.gz"
-        sha256 "b925ae9022fc226068f5cb15302c5eb158f2fc9e9a4694f26001a90d7b365e88"
+        url "https://github.com/fortio/otel-sample-app/releases/download/v0.5.0/otel-sample-app_0.5.0_linux_amd64.tar.gz"
+        sha256 "daefee1e73a8876c97f677e9aae553e4472d9a46714b9d4404369f006a1e9a72"
 
         def install
           bin.install "otel-sample-app"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/otel-sample-app/releases/download/v0.4.0/otel-sample-app_0.4.0_linux_arm64.tar.gz"
-        sha256 "8c307f187f1449da577430515441838926ca5e1e314a5043e11f3b1ffb8d87e2"
+        url "https://github.com/fortio/otel-sample-app/releases/download/v0.5.0/otel-sample-app_0.5.0_linux_arm64.tar.gz"
+        sha256 "a517239e5324bda61265fd7972fdae2b006f1ab0d8a6ca82f3b6cbc7a80a3d62"
 
         def install
           bin.install "otel-sample-app"
