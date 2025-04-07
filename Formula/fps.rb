@@ -5,21 +5,21 @@
 class Fps < Formula
   desc "Fortio terminal fps checker"
   homepage "https://fortio.org/"
-  version "0.27.2"
+  version "0.28.0-pre5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.27.2/fps_0.27.2_darwin_amd64.zip"
-      sha256 "f38739b6b4f135be514523086a559f2c562b59fca6a9d5569af3878ac46c6a78"
+      url "https://github.com/fortio/fps/releases/download/v0.28.0-pre5/fps_0.28.0-pre5_darwin_amd64.zip"
+      sha256 "aab79c913e796aacf5670054653c98d9e3a536dc31b0cba6174b5ab2fae844f1"
 
       def install
         bin.install "fps"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.27.2/fps_0.27.2_darwin_arm64.zip"
-      sha256 "1e66756290f45f7ff87beebc7b23795fca3f29728a75d178ab862fea2f03a5b6"
+      url "https://github.com/fortio/fps/releases/download/v0.28.0-pre5/fps_0.28.0-pre5_darwin_arm64.zip"
+      sha256 "0caec2646f779e81fe32d56da3114c02f63adccac05a2530cbb7a007dcb5e1ec"
 
       def install
         bin.install "fps"
@@ -30,8 +30,8 @@ class Fps < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.27.2/fps_0.27.2_linux_amd64.tar.gz"
-        sha256 "f2d70ea52dcf4470ef5e680e792cd3e85cdf31c31fc6299301bb85e1e067f729"
+        url "https://github.com/fortio/fps/releases/download/v0.28.0-pre5/fps_0.28.0-pre5_linux_amd64.tar.gz"
+        sha256 "9497c6f349a73fce3c7d018c4cc1b6350d154b9dde698b79fa3ba6437542ca2f"
 
         def install
           bin.install "fps"
@@ -40,8 +40,8 @@ class Fps < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.27.2/fps_0.27.2_linux_arm64.tar.gz"
-        sha256 "ce613f8b94afd07430fe86180bf529f04d0a52cd12f74691bc91bd8d0adf37e6"
+        url "https://github.com/fortio/fps/releases/download/v0.28.0-pre5/fps_0.28.0-pre5_linux_arm64.tar.gz"
+        sha256 "e5a85da8aac6360b6be19f17e08ddcaabb58dae78b4f227034d1265513d728bd"
 
         def install
           bin.install "fps"
