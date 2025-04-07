@@ -5,21 +5,21 @@
 class Brick < Formula
   desc "Fortio terminal brick smashing game in the style of Breakout"
   homepage "https://fortio.org/"
-  version "0.28.0-pre3"
+  version "0.28.0-pre4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre3/brick_0.28.0-pre3_darwin_amd64.zip"
-      sha256 "846011df1d70fcf91e01f5c7c1d284fc0555727bcb42fee964c5eaecd0bf039a"
+      url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre4/brick_0.28.0-pre4_darwin_amd64.zip"
+      sha256 "280113773aa30d3f26c9df115a64f8a0dfbb0e97e8a5a053cb0fe5ec0f8686da"
 
       def install
         bin.install "brick"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre3/brick_0.28.0-pre3_darwin_arm64.zip"
-      sha256 "5b7309bfef6d9c0d6f6691b5f6981c233a1f1cd484d7b1d9ac8831debb09da69"
+      url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre4/brick_0.28.0-pre4_darwin_arm64.zip"
+      sha256 "0a2a03a424da4ccbed51606c449549831874abe887361d948555cce5c96205c2"
 
       def install
         bin.install "brick"
@@ -30,8 +30,8 @@ class Brick < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre3/brick_0.28.0-pre3_linux_amd64.tar.gz"
-        sha256 "af397156783ccfae3dc00105dccabeb36762550a8ed38d9dbd7e8bc0290deddf"
+        url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre4/brick_0.28.0-pre4_linux_amd64.tar.gz"
+        sha256 "5d8eee5ac02318e78a873e3be54a290f0be2e86025eeb9ea5d89e2846e9dfec8"
 
         def install
           bin.install "brick"
@@ -40,8 +40,8 @@ class Brick < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre3/brick_0.28.0-pre3_linux_arm64.tar.gz"
-        sha256 "2b365a3e00cad52f18a6f4833a7783fb84a94c401c497d68ca1388fe7f67e305"
+        url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre4/brick_0.28.0-pre4_linux_arm64.tar.gz"
+        sha256 "aead7a2b10c41d246dd00eff6841508c96f7b220003334c39d0c1344069eb98f"
 
         def install
           bin.install "brick"
