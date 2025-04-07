@@ -5,21 +5,21 @@
 class Life < Formula
   desc "Fortio terminal Conway's game of life demo"
   homepage "https://fortio.org/"
-  version "0.28.0-pre3"
+  version "0.28.0-pre4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre3/life_0.28.0-pre3_darwin_amd64.zip"
-      sha256 "1e2eadbcb82eb5b0f375136135d6f11c5d8b95630b85d3eee0fd4bbf5038b98b"
+      url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre4/life_0.28.0-pre4_darwin_amd64.zip"
+      sha256 "7a347b80f1a60c9fda88af40a3b08681777c08a4f4ec65e5c48d4e36050cdd17"
 
       def install
         bin.install "life"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre3/life_0.28.0-pre3_darwin_arm64.zip"
-      sha256 "7e4f0daad431014ee8f57b6f0420d485b9a1aa8aabd22b57dde02764299d984d"
+      url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre4/life_0.28.0-pre4_darwin_arm64.zip"
+      sha256 "3459b1054db795f7ecb5b57260d3e0b8a2f074dcd9b4d8f9b221bba48347f581"
 
       def install
         bin.install "life"
@@ -30,8 +30,8 @@ class Life < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre3/life_0.28.0-pre3_linux_amd64.tar.gz"
-        sha256 "e399c377241299185c70eec6853601f8a8ba95013cf0cd85f01b21fff2f81895"
+        url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre4/life_0.28.0-pre4_linux_amd64.tar.gz"
+        sha256 "b7ebb616c92378b0eeaeb5db978dafc0002c990fea2c108a7fc40f21a585addf"
 
         def install
           bin.install "life"
@@ -40,8 +40,8 @@ class Life < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre3/life_0.28.0-pre3_linux_arm64.tar.gz"
-        sha256 "ddc463e50025e39a3914bb3f92f527f997f0c0c1405d8dbb3f69eef06c17315c"
+        url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre4/life_0.28.0-pre4_linux_arm64.tar.gz"
+        sha256 "e2eb42f9760409af9c1a864494589faa3eb929aafbe82d5b022c5be9df120c17"
 
         def install
           bin.install "life"
