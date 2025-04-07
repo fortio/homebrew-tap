@@ -5,21 +5,21 @@
 class Life < Formula
   desc "Fortio terminal Conway's game of life demo"
   homepage "https://fortio.org/"
-  version "0.27.2"
+  version "0.28.0-pre3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.27.2/life_0.27.2_darwin_amd64.zip"
-      sha256 "90f0e9559a9b7d2ff8646f4d283e4def7e7ce6097d957e8fce1420bce6ef9760"
+      url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre3/life_0.28.0-pre3_darwin_amd64.zip"
+      sha256 "1e2eadbcb82eb5b0f375136135d6f11c5d8b95630b85d3eee0fd4bbf5038b98b"
 
       def install
         bin.install "life"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.27.2/life_0.27.2_darwin_arm64.zip"
-      sha256 "9aaf3672688d87e5fc63a8b46eac1b2ca6edf1ea8cb6a0cdad2a55b3c83a1eee"
+      url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre3/life_0.28.0-pre3_darwin_arm64.zip"
+      sha256 "7e4f0daad431014ee8f57b6f0420d485b9a1aa8aabd22b57dde02764299d984d"
 
       def install
         bin.install "life"
@@ -30,8 +30,8 @@ class Life < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.27.2/life_0.27.2_linux_amd64.tar.gz"
-        sha256 "cff6dbab92f3757380ed6ca906f0e8dd84899a704ff5b64bce98b85c3abd60d9"
+        url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre3/life_0.28.0-pre3_linux_amd64.tar.gz"
+        sha256 "e399c377241299185c70eec6853601f8a8ba95013cf0cd85f01b21fff2f81895"
 
         def install
           bin.install "life"
@@ -40,8 +40,8 @@ class Life < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.27.2/life_0.27.2_linux_arm64.tar.gz"
-        sha256 "e17136b84b346ea78d4496552507f8d57c02d89702eaacb8c63ffe8936f19bda"
+        url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre3/life_0.28.0-pre3_linux_arm64.tar.gz"
+        sha256 "ddc463e50025e39a3914bb3f92f527f997f0c0c1405d8dbb3f69eef06c17315c"
 
         def install
           bin.install "life"
