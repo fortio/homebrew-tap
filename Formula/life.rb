@@ -5,21 +5,21 @@
 class Life < Formula
   desc "Fortio terminal Conway's game of life demo"
   homepage "https://fortio.org/"
-  version "0.28.0-pre4"
+  version "0.29.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre4/life_0.28.0-pre4_darwin_amd64.zip"
-      sha256 "7a347b80f1a60c9fda88af40a3b08681777c08a4f4ec65e5c48d4e36050cdd17"
+      url "https://github.com/fortio/terminal/releases/download/v0.29.0/life_0.29.0_darwin_amd64.zip"
+      sha256 "9f201f74669f420eaa69b6a7ec4ab148560472015ebc59e3789b04a7689b42af"
 
       def install
         bin.install "life"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre4/life_0.28.0-pre4_darwin_arm64.zip"
-      sha256 "3459b1054db795f7ecb5b57260d3e0b8a2f074dcd9b4d8f9b221bba48347f581"
+      url "https://github.com/fortio/terminal/releases/download/v0.29.0/life_0.29.0_darwin_arm64.zip"
+      sha256 "5d5dec3b4839ec34617c90566e8ce1aa97a7f4273542d43d4bf21e5bf2fb7c4f"
 
       def install
         bin.install "life"
@@ -30,8 +30,8 @@ class Life < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre4/life_0.28.0-pre4_linux_amd64.tar.gz"
-        sha256 "b7ebb616c92378b0eeaeb5db978dafc0002c990fea2c108a7fc40f21a585addf"
+        url "https://github.com/fortio/terminal/releases/download/v0.29.0/life_0.29.0_linux_amd64.tar.gz"
+        sha256 "cbf7b09c0716104eca56c5253d4d01da5ea4601d0c575b056da0a4975c47761f"
 
         def install
           bin.install "life"
@@ -40,8 +40,8 @@ class Life < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.28.0-pre4/life_0.28.0-pre4_linux_arm64.tar.gz"
-        sha256 "e2eb42f9760409af9c1a864494589faa3eb929aafbe82d5b022c5be9df120c17"
+        url "https://github.com/fortio/terminal/releases/download/v0.29.0/life_0.29.0_linux_arm64.tar.gz"
+        sha256 "6618a895228c0caf06a4304fedd313d2f88d775948e2045fffba577ac673be88"
 
         def install
           bin.install "life"
