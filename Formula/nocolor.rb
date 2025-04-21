@@ -5,21 +5,21 @@
 class Nocolor < Formula
   desc "Fortio terminal nocolor (and no other ansi code either) filter"
   homepage "https://fortio.org/"
-  version "0.31.0"
+  version "0.32.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.31.0/nocolor_0.31.0_darwin_amd64.zip"
-      sha256 "6d1491590d7532861165848f769150f9f44cedfc9b095e18f6ab472df6216d3c"
+      url "https://github.com/fortio/terminal/releases/download/v0.32.0/nocolor_0.32.0_darwin_amd64.zip"
+      sha256 "fe6082385e1617bde187131ff95755ebdf6eac23a9496d09d148b5b497fcbd6b"
 
       def install
         bin.install "nocolor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.31.0/nocolor_0.31.0_darwin_arm64.zip"
-      sha256 "bf4f3d68d9d3ce06b668aa4e4110c7b5f921a611ff3eb9af1080207abbc831d2"
+      url "https://github.com/fortio/terminal/releases/download/v0.32.0/nocolor_0.32.0_darwin_arm64.zip"
+      sha256 "0e6c98517a89dcf65cd72f301ff89459ec63e44ae931994e13e4130dec0c6082"
 
       def install
         bin.install "nocolor"
@@ -30,8 +30,8 @@ class Nocolor < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.31.0/nocolor_0.31.0_linux_amd64.tar.gz"
-        sha256 "28c03c2287c83379765166fcc20b152afe4dcebbc523fbe7cf6a1d5ef965094d"
+        url "https://github.com/fortio/terminal/releases/download/v0.32.0/nocolor_0.32.0_linux_amd64.tar.gz"
+        sha256 "b29c437e2c8b0da8e9adc4855768f068884d535504e9504e0f3706a5fe676320"
 
         def install
           bin.install "nocolor"
@@ -40,8 +40,8 @@ class Nocolor < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.31.0/nocolor_0.31.0_linux_arm64.tar.gz"
-        sha256 "af76a414ff4714dddad6c6a581c122129d6ea05a4b51f6dec575c39f63165a9e"
+        url "https://github.com/fortio/terminal/releases/download/v0.32.0/nocolor_0.32.0_linux_arm64.tar.gz"
+        sha256 "cf1daaff0ef3446f7ac35fc6a8fc9be006f26cbf76b73626a1061e620a0944a2"
 
         def install
           bin.install "nocolor"
