@@ -5,21 +5,21 @@
 class Brick < Formula
   desc "Fortio terminal brick smashing game in the style of Breakout"
   homepage "https://fortio.org/"
-  version "0.33.0"
+  version "0.34.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.33.0/brick_0.33.0_darwin_amd64.zip"
-      sha256 "5e2e6cd19d0dd88ac48407f5a3dd1b98b7d40877c097a52f4ecc56f8ec78a8ec"
+      url "https://github.com/fortio/terminal/releases/download/v0.34.0/brick_0.34.0_darwin_amd64.zip"
+      sha256 "f29ac973fc21dbc9271c579202e22ec0ca79f383b41b7467a02e3963598f6e0e"
 
       def install
         bin.install "brick"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.33.0/brick_0.33.0_darwin_arm64.zip"
-      sha256 "632df7e1860a6a681c0659c2e85f995b28e316829e59f4601df111e03d8b2562"
+      url "https://github.com/fortio/terminal/releases/download/v0.34.0/brick_0.34.0_darwin_arm64.zip"
+      sha256 "ab0648744ee6b68556de1f25379843bb440a6c4787ad2efc56c26adef32a574d"
 
       def install
         bin.install "brick"
@@ -30,8 +30,8 @@ class Brick < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.33.0/brick_0.33.0_linux_amd64.tar.gz"
-        sha256 "9e499396320cbfc4a39e628bda9862fcb293cdadd7080921f49c6fba4bfbf010"
+        url "https://github.com/fortio/terminal/releases/download/v0.34.0/brick_0.34.0_linux_amd64.tar.gz"
+        sha256 "ebc31455678227cc1480aa8a26f92689d9d2f038e86385d552b3d02981d6c0fa"
 
         def install
           bin.install "brick"
@@ -40,8 +40,8 @@ class Brick < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.33.0/brick_0.33.0_linux_arm64.tar.gz"
-        sha256 "bf6a08063cc9a41376617b49b76d1f5e4b421f8713be87740ea0e5b53f4143aa"
+        url "https://github.com/fortio/terminal/releases/download/v0.34.0/brick_0.34.0_linux_arm64.tar.gz"
+        sha256 "495a5841544715796701c3589eaf471e5d46f038c68c2bde43beba4e7f518ea5"
 
         def install
           bin.install "brick"
