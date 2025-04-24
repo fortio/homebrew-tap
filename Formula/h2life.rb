@@ -5,21 +5,21 @@
 class H2life < Formula
   desc "Fortio ansipixels to http - life game demo"
   homepage "https://fortio.org/"
-  version "0.5.0"
+  version "0.5.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/h2life/releases/download/v0.5.0/h2life_0.5.0_darwin_amd64.zip"
-      sha256 "a35367bc8e1301326f7cddcb18f7fb0e041e0019eba2e21d78cb2bcd278a2776"
+      url "https://github.com/fortio/h2life/releases/download/v0.5.1/h2life_0.5.1_darwin_amd64.zip"
+      sha256 "7b76d292ab680967a3a157dc4807e453e585a4755114c63eb546c730a720e76b"
 
       def install
         bin.install "h2life"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/h2life/releases/download/v0.5.0/h2life_0.5.0_darwin_arm64.zip"
-      sha256 "630f5f2440c6bbfe38d99f5873e59c1ece6247a0d83a3fe89bd903547bb412a8"
+      url "https://github.com/fortio/h2life/releases/download/v0.5.1/h2life_0.5.1_darwin_arm64.zip"
+      sha256 "898ed40cdbd909a4667404c10d0ad15cd5bbf233f84371cc3321dbb510729ee0"
 
       def install
         bin.install "h2life"
@@ -30,8 +30,8 @@ class H2life < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/h2life/releases/download/v0.5.0/h2life_0.5.0_linux_amd64.tar.gz"
-        sha256 "d4a59bbbfdc4402926f88fc0128b895d53669db28986a4bd4c6bb699384a62c4"
+        url "https://github.com/fortio/h2life/releases/download/v0.5.1/h2life_0.5.1_linux_amd64.tar.gz"
+        sha256 "82462986e4ef1dfc43847d08aebc8993a7b4f9b50cfef870397e4eb6b5c4a3d3"
 
         def install
           bin.install "h2life"
@@ -40,8 +40,8 @@ class H2life < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/h2life/releases/download/v0.5.0/h2life_0.5.0_linux_arm64.tar.gz"
-        sha256 "741db9c1e1eeb8e1ff0e57c211b27f8d5288a76444601689c35323dddab7d7d9"
+        url "https://github.com/fortio/h2life/releases/download/v0.5.1/h2life_0.5.1_linux_arm64.tar.gz"
+        sha256 "2b29b3409f6f5d307937c8b1887c92dc233be0bf0d3fa7b8139640c2004dca6f"
 
         def install
           bin.install "h2life"
