@@ -5,21 +5,21 @@
 class Blackjack < Formula
   desc "Fortio terminal blackjack card game"
   homepage "https://fortio.org/"
-  version "0.35.5"
+  version "0.35.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.35.5/blackjack_0.35.5_darwin_amd64.zip"
-      sha256 "98c34f00e85a2a2a06ca08a9be627eed5ec76b022669b039568e17b5f7c129f0"
+      url "https://github.com/fortio/terminal/releases/download/v0.35.6/blackjack_0.35.6_darwin_amd64.zip"
+      sha256 "ce60491bcaf6a9fcef59a37dfef6f5714471f5418d3c67b4f41b9a83ef3fa507"
 
       def install
         bin.install "blackjack"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.35.5/blackjack_0.35.5_darwin_arm64.zip"
-      sha256 "f2709f394cbe604c98e4167a9093ce43ef7a61b7b78f7307de515dca53f4374a"
+      url "https://github.com/fortio/terminal/releases/download/v0.35.6/blackjack_0.35.6_darwin_arm64.zip"
+      sha256 "a5df75440aa4a282d9556aae49a05249788d6b39db3328905dc13599f6ca4c05"
 
       def install
         bin.install "blackjack"
@@ -30,8 +30,8 @@ class Blackjack < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.35.5/blackjack_0.35.5_linux_amd64.tar.gz"
-        sha256 "fb91bd5c8ddb485b6108ff9727b28ce645bb816183b935f8abc4fd82e1616ea6"
+        url "https://github.com/fortio/terminal/releases/download/v0.35.6/blackjack_0.35.6_linux_amd64.tar.gz"
+        sha256 "453e46aa5c7d319045bb4cc88e84e5148b17eeb661d25e485f8937ed05092471"
 
         def install
           bin.install "blackjack"
@@ -40,8 +40,8 @@ class Blackjack < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.35.5/blackjack_0.35.5_linux_arm64.tar.gz"
-        sha256 "a4c5ccaae509758b168806a914db405a3aa3de795e6c582b077f7ad74d444fad"
+        url "https://github.com/fortio/terminal/releases/download/v0.35.6/blackjack_0.35.6_linux_arm64.tar.gz"
+        sha256 "11a0b27a9086c8a30966452c823c1646c7d0664ec04f7826f5bcd8618cc066f2"
 
         def install
           bin.install "blackjack"
