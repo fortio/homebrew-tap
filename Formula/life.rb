@@ -5,21 +5,21 @@
 class Life < Formula
   desc "Fortio terminal Conway's game of life demo"
   homepage "https://fortio.org/"
-  version "0.35.4"
+  version "0.35.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.35.4/life_0.35.4_darwin_amd64.zip"
-      sha256 "774ef66e4eae82ebfc80d6e5a8ca966eeff3d699809681a8947370da2b7602a5"
+      url "https://github.com/fortio/terminal/releases/download/v0.35.5/life_0.35.5_darwin_amd64.zip"
+      sha256 "c32da06b8826f0fe055d9e488be707ac25709bac08de294d0ff692c486865a35"
 
       def install
         bin.install "life"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.35.4/life_0.35.4_darwin_arm64.zip"
-      sha256 "55fa3b86f84acd50edcc606470c721d849606d83d65a949237a091e8303be497"
+      url "https://github.com/fortio/terminal/releases/download/v0.35.5/life_0.35.5_darwin_arm64.zip"
+      sha256 "d2486a8744c84f244c7001143d77b2ad368fb4205930e09afeb4142151e53afe"
 
       def install
         bin.install "life"
@@ -30,8 +30,8 @@ class Life < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.35.4/life_0.35.4_linux_amd64.tar.gz"
-        sha256 "6d277cf7228f54fc7938e11b70e12aa9f9b7bbe1fea3261af50f8881be9b4940"
+        url "https://github.com/fortio/terminal/releases/download/v0.35.5/life_0.35.5_linux_amd64.tar.gz"
+        sha256 "8158f9e433771499032c9fa4ebc5111676f30f05b41afd58c84554e702c870a9"
 
         def install
           bin.install "life"
@@ -40,8 +40,8 @@ class Life < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/terminal/releases/download/v0.35.4/life_0.35.4_linux_arm64.tar.gz"
-        sha256 "d7fe476fbfa26805a452f272369c148d0db1a5006cf8db5a4bd8a654111a3449"
+        url "https://github.com/fortio/terminal/releases/download/v0.35.5/life_0.35.5_linux_arm64.tar.gz"
+        sha256 "a062e504eda42bb6829ba65db773ea177155c738fc8917abd8574c5505ceca89"
 
         def install
           bin.install "life"
