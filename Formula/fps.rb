@@ -5,21 +5,21 @@
 class Fps < Formula
   desc "Fortio terminal fps checker"
   homepage "https://fortio.org/"
-  version "0.34.0"
+  version "0.35.8"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/fps/releases/download/v0.34.0/fps_0.34.0_darwin_amd64.zip"
-      sha256 "322a50f698dc5128e2f95c2b45d98d1297a522624a5c8d9354ddafaf5312c9c8"
+      url "https://github.com/fortio/fps/releases/download/v0.35.8/fps_0.35.8_darwin_amd64.zip"
+      sha256 "02bacb4239fc57960128ae5160e0f70acba03af9a1fa4d1705fdd14a3ba911d2"
 
       def install
         bin.install "fps"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/fps/releases/download/v0.34.0/fps_0.34.0_darwin_arm64.zip"
-      sha256 "bfab62471893a35317245c7dab77ed88ebb936ff85d8071e9e1b69c499aec84c"
+      url "https://github.com/fortio/fps/releases/download/v0.35.8/fps_0.35.8_darwin_arm64.zip"
+      sha256 "7792c4e4417a3a63f2c5c23d36e4b92d858b184035df288e71521307f8f38aa2"
 
       def install
         bin.install "fps"
@@ -28,24 +28,18 @@ class Fps < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/fps/releases/download/v0.34.0/fps_0.34.0_linux_amd64.tar.gz"
-        sha256 "dfd96298d09e17a38c1202c8b8ed6c019eaa94ac425612bdd5d9f143e326f166"
-
-        def install
-          bin.install "fps"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/fps/releases/download/v0.35.8/fps_0.35.8_linux_amd64.tar.gz"
+      sha256 "b4ee3892057a99233db121d2a3de395299c3c6077eff569be000fa7d330dcba1"
+      def install
+        bin.install "fps"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/fps/releases/download/v0.34.0/fps_0.34.0_linux_arm64.tar.gz"
-        sha256 "c383d2b296664385d707f96c2d55dbd553c7ff183b90093b9914a7430a132b74"
-
-        def install
-          bin.install "fps"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/fps/releases/download/v0.35.8/fps_0.35.8_linux_arm64.tar.gz"
+      sha256 "34de6f1fa9a9d0fd7b1d4347c264d0df4a7618fd8d2d48df4a1fc7a2fa4755a1"
+      def install
+        bin.install "fps"
       end
     end
   end
