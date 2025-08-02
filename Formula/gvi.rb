@@ -5,21 +5,21 @@
 class Gvi < Formula
   desc "Fortio terminal vi like editor"
   homepage "https://fortio.org/"
-  version "0.6.1"
+  version "0.7.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/gvi/releases/download/v0.6.1/gvi_0.6.1_darwin_amd64.zip"
-      sha256 "715b7a174693ec1a03dabc25dc6880be992bd6c9c505353ec919019fd0db42e2"
+      url "https://github.com/fortio/gvi/releases/download/v0.7.0/gvi_0.7.0_darwin_amd64.zip"
+      sha256 "4346bf93a5bb943315dcb96c1abc52e548703045099f5dc358080ca8af9f0631"
 
       def install
         bin.install "gvi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/gvi/releases/download/v0.6.1/gvi_0.6.1_darwin_arm64.zip"
-      sha256 "261b1e0d24f1b260e0cc5e722a2a46a46c4550eb806e3e47c8208f6783a708c1"
+      url "https://github.com/fortio/gvi/releases/download/v0.7.0/gvi_0.7.0_darwin_arm64.zip"
+      sha256 "ca3fd91a8108cf77080d69dfd98b0f6213b42a90eae4092625114c8a3581b6c9"
 
       def install
         bin.install "gvi"
@@ -29,15 +29,15 @@ class Gvi < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/gvi/releases/download/v0.6.1/gvi_0.6.1_linux_amd64.tar.gz"
-      sha256 "df10e10ebda0f8914bcabcf6de9e635bad5d731695ad63e726ebda731b608482"
+      url "https://github.com/fortio/gvi/releases/download/v0.7.0/gvi_0.7.0_linux_amd64.tar.gz"
+      sha256 "443316c14f3cb023b8bcb5e6ba855fdfd7250604a8c2f9181a522bc9f066b9a8"
       def install
         bin.install "gvi"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/gvi/releases/download/v0.6.1/gvi_0.6.1_linux_arm64.tar.gz"
-      sha256 "20afeef91f127dc1fd3a6d937cd063036e1d4f2103106af08fffc1684ded31f3"
+      url "https://github.com/fortio/gvi/releases/download/v0.7.0/gvi_0.7.0_linux_arm64.tar.gz"
+      sha256 "a44062849f491a312c88248bdef35c244cd8b2703006ec9edd51601c1ebce984"
       def install
         bin.install "gvi"
       end
