@@ -5,21 +5,21 @@
 class Life < Formula
   desc "Fortio terminal Conway's game of life demo"
   homepage "https://fortio.org/"
-  version "0.42.0"
+  version "0.43.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.42.0/life_0.42.0_darwin_amd64.zip"
-      sha256 "a21b7ecc742034c1aa1b83ab5e505a602247f268368138028087396c765ccb99"
+      url "https://github.com/fortio/terminal/releases/download/v0.43.0/life_0.43.0_darwin_amd64.zip"
+      sha256 "1e76288dc3f46f6f8e179566b58515663cdce542bb5decf9a656b6c0c0cec299"
 
       def install
         bin.install "life"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.42.0/life_0.42.0_darwin_arm64.zip"
-      sha256 "74ff4f99ab93086557566cf30015f677252270dddf64fa39344b398eaeddb04c"
+      url "https://github.com/fortio/terminal/releases/download/v0.43.0/life_0.43.0_darwin_arm64.zip"
+      sha256 "583d457b478081d5334613c9b861536b83c0766e084d051866a911a305860c1c"
 
       def install
         bin.install "life"
@@ -29,15 +29,15 @@ class Life < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.42.0/life_0.42.0_linux_amd64.tar.gz"
-      sha256 "81c41c7ac4644e5a024c0ee9e14bb5da3422c314b78f6792ac52cb50775a4ee6"
+      url "https://github.com/fortio/terminal/releases/download/v0.43.0/life_0.43.0_linux_amd64.tar.gz"
+      sha256 "6b48a223dbf03bbe49c6fe219c15fcc3981121a063b281742c682a280b415ecf"
       def install
         bin.install "life"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.42.0/life_0.42.0_linux_arm64.tar.gz"
-      sha256 "ed1d46e201241d7c0066b2321f9d39123c64efeed10dd2b4cd5b62a9b05d1379"
+      url "https://github.com/fortio/terminal/releases/download/v0.43.0/life_0.43.0_linux_arm64.tar.gz"
+      sha256 "ab458818514b9539a5797f2f06d58724ccbbd1e481bbd74badc535e128eb97dd"
       def install
         bin.install "life"
       end
