@@ -5,21 +5,21 @@
 class Webscreenshot < Formula
   desc "Tool to make screenshot of web pages from command line"
   homepage "https://fortio.org/"
-  version "0.2.1"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/webscreenshot/releases/download/v0.2.1/webscreenshot_0.2.1_darwin_amd64.zip"
-      sha256 "ed593147ab2470357d7cb986d39e9914b1352a2f04895e089529ad6cf8fa5437"
+      url "https://github.com/fortio/webscreenshot/releases/download/v0.3.0/webscreenshot_0.3.0_darwin_amd64.zip"
+      sha256 "991b930ab88bd3bcd869498572dd47bd538cf80bfe349c8ebe6f6c7b654ab583"
 
       def install
         bin.install "webscreenshot"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/webscreenshot/releases/download/v0.2.1/webscreenshot_0.2.1_darwin_arm64.zip"
-      sha256 "9672093741df522093b4666c4d3de08662a5069fd59dc46a9392483ae1618d93"
+      url "https://github.com/fortio/webscreenshot/releases/download/v0.3.0/webscreenshot_0.3.0_darwin_arm64.zip"
+      sha256 "63bfafa533ff492e8078249d629801613bde197ef909162c63952a8076555f4e"
 
       def install
         bin.install "webscreenshot"
@@ -28,24 +28,18 @@ class Webscreenshot < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/webscreenshot/releases/download/v0.2.1/webscreenshot_0.2.1_linux_amd64.tar.gz"
-        sha256 "5175fff1a10f8d3ab4c0ab56b884b4e367a1de5490b55bebaf3c205a042134cd"
-
-        def install
-          bin.install "webscreenshot"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/webscreenshot/releases/download/v0.3.0/webscreenshot_0.3.0_linux_amd64.tar.gz"
+      sha256 "fb3b52b6d6924ca9b9e9c86709f498fd22f082d2ac15fbf5fa0b2e13758ce895"
+      def install
+        bin.install "webscreenshot"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/webscreenshot/releases/download/v0.2.1/webscreenshot_0.2.1_linux_arm64.tar.gz"
-        sha256 "fcfc03d0268f5df58d24a8f8aab540650b2c11b246c3c0d299f153bc6218b098"
-
-        def install
-          bin.install "webscreenshot"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/webscreenshot/releases/download/v0.3.0/webscreenshot_0.3.0_linux_arm64.tar.gz"
+      sha256 "3a2369b76c4f83654033bfaa9eff7ea682eecd4b4769a9656fc885202d247dfb"
+      def install
+        bin.install "webscreenshot"
       end
     end
   end
