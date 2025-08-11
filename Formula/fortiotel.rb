@@ -5,21 +5,21 @@
 class Fortiotel < Formula
   desc "Fortio + open telemetry tracing"
   homepage "https://fortio.org/"
-  version "1.70.0"
+  version "1.71.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.70.0/fortiotel_1.70.0_darwin_amd64.zip"
-      sha256 "c17a88a1aad91278f58b739d5fca6b4e91485873ccecb8494753c0cc128706cc"
+      url "https://github.com/fortio/fortiotel/releases/download/v1.71.0/fortiotel_1.71.0_darwin_amd64.zip"
+      sha256 "dcfc6e287359648ff7ba78cebe87b303f94034257ce325a796613fdabe21d7c6"
 
       def install
         bin.install "fortiotel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.70.0/fortiotel_1.70.0_darwin_arm64.zip"
-      sha256 "ea7993576aec4ef6e36a175ae877628d916aafa3dbbbdca0d88b3bac3b73af1d"
+      url "https://github.com/fortio/fortiotel/releases/download/v1.71.0/fortiotel_1.71.0_darwin_arm64.zip"
+      sha256 "961e799e3bb7b21b6cc76c8e104134ba70c6627377cf2ddf23ea69e28a21be91"
 
       def install
         bin.install "fortiotel"
@@ -29,15 +29,15 @@ class Fortiotel < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.70.0/fortiotel_1.70.0_linux_amd64.tar.gz"
-      sha256 "daf4d5a769ffacdb4fbed741b1dcda123d54d4c33c807a476fa68a586c7a9d53"
+      url "https://github.com/fortio/fortiotel/releases/download/v1.71.0/fortiotel_1.71.0_linux_amd64.tar.gz"
+      sha256 "874e42dfe9bbb94ff8712104a1e0889a2e6855fe27e50c979876e1ab757d10b4"
       def install
         bin.install "fortiotel"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/fortiotel/releases/download/v1.70.0/fortiotel_1.70.0_linux_arm64.tar.gz"
-      sha256 "2e04ac3b125994bb596ec4b97ab4fd1225191f80b81a376c8db8eb7e89d05603"
+      url "https://github.com/fortio/fortiotel/releases/download/v1.71.0/fortiotel_1.71.0_linux_arm64.tar.gz"
+      sha256 "191a768689bd4ab73d5496867ec56d63eea14f5ebcf7caf91d952d376db301e0"
       def install
         bin.install "fortiotel"
       end
