@@ -5,21 +5,21 @@
 class Nocolor < Formula
   desc "Fortio terminal nocolor (and no other ansi code either) filter"
   homepage "https://fortio.org/"
-  version "0.48.0"
+  version "0.48.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.48.0/nocolor_0.48.0_darwin_amd64.zip"
-      sha256 "4a508554a8c6ab3733b1cf98f59575eb4104efe9f8687c4d900a6bc8661e13c5"
+      url "https://github.com/fortio/terminal/releases/download/v0.48.1/nocolor_0.48.1_darwin_amd64.zip"
+      sha256 "e6bfc02da13c6e8444b02d17d39bca2dcba5847562b6ae39a1d41e51f5dbf5b6"
 
       def install
         bin.install "nocolor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.48.0/nocolor_0.48.0_darwin_arm64.zip"
-      sha256 "d17138e195e2dd945428940a39c173dc233bfdb76a7d7f32a7a49e09036c1c9d"
+      url "https://github.com/fortio/terminal/releases/download/v0.48.1/nocolor_0.48.1_darwin_arm64.zip"
+      sha256 "81f3958c412131683eec2785f13c3ab45869554cf763a1ebd89ce78badb91b70"
 
       def install
         bin.install "nocolor"
@@ -29,15 +29,15 @@ class Nocolor < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.48.0/nocolor_0.48.0_linux_amd64.tar.gz"
-      sha256 "d3d0e443394ed5a417987ee5d98a88f0b81d27582772857e3564c87929c7591d"
+      url "https://github.com/fortio/terminal/releases/download/v0.48.1/nocolor_0.48.1_linux_amd64.tar.gz"
+      sha256 "63b21f5c0ede7bd889dc500596b802b64457be6249a250d1bef9c449f6d80f23"
       def install
         bin.install "nocolor"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.48.0/nocolor_0.48.0_linux_arm64.tar.gz"
-      sha256 "a0273b7bc1eef4cedea8a08fd0665b5e39ce137e6bf975740fda757f31b02927"
+      url "https://github.com/fortio/terminal/releases/download/v0.48.1/nocolor_0.48.1_linux_arm64.tar.gz"
+      sha256 "49766d000adf329ef03970f5bdf24649f486a6878f0d4ed86eb0a4ae2f4912b4"
       def install
         bin.install "nocolor"
       end
