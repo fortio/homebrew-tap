@@ -5,21 +5,21 @@
 class Tcolor < Formula
   desc "Fortio terminal color picker"
   homepage "https://fortio.org/"
-  version "1.1.0"
+  version "1.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tcolor/releases/download/v1.1.0/tcolor_1.1.0_darwin_amd64.zip"
-      sha256 "350b5b54da666dca04f03b88216bf0be7036c5a5df294978cda43c55f170a2d0"
+      url "https://github.com/fortio/tcolor/releases/download/v1.2.0/tcolor_1.2.0_darwin_amd64.zip"
+      sha256 "9c8a1a3d173fa665da93adfaa8091704d63c26ecd6091160c2e6a3f2fa7580b0"
 
       def install
         bin.install "tcolor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tcolor/releases/download/v1.1.0/tcolor_1.1.0_darwin_arm64.zip"
-      sha256 "853a916a4c60c1f71704c2d66f5a4d64d12e63bb713610d58065940a832d68ed"
+      url "https://github.com/fortio/tcolor/releases/download/v1.2.0/tcolor_1.2.0_darwin_arm64.zip"
+      sha256 "2697031d67c57131437af0b0c3abbfa5e2d97be44f4a4d7e69b5211db8cf44d9"
 
       def install
         bin.install "tcolor"
@@ -29,15 +29,15 @@ class Tcolor < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tcolor/releases/download/v1.1.0/tcolor_1.1.0_linux_amd64.tar.gz"
-      sha256 "e3e69fbcd19afbe4a3f48cc2a397caeb455eb1129f07b4b440d53326b9eccf85"
+      url "https://github.com/fortio/tcolor/releases/download/v1.2.0/tcolor_1.2.0_linux_amd64.tar.gz"
+      sha256 "19e5c271c9a6d5e1204b5db3be4be001c1a11624a64a2b8943a1db232c990042"
       def install
         bin.install "tcolor"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tcolor/releases/download/v1.1.0/tcolor_1.1.0_linux_arm64.tar.gz"
-      sha256 "5fb7b598bf7bc5438f210c62176c942872040530c41ce903d78c799253fd1afa"
+      url "https://github.com/fortio/tcolor/releases/download/v1.2.0/tcolor_1.2.0_linux_arm64.tar.gz"
+      sha256 "ac5aa3521474a5193625cf7d011f30c31fae76ac6ea98e061020ba7968640436"
       def install
         bin.install "tcolor"
       end
