@@ -5,21 +5,21 @@
 class Tev < Formula
   desc "Fortio terminal terminal event debug"
   homepage "https://fortio.org/"
-  version "0.9.1"
+  version "0.9.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tev/releases/download/v0.9.1/tev_0.9.1_darwin_amd64.zip"
-      sha256 "0aa7d2fd3f12e506e82bd596637c03b816eb0eceb096c5c4f593c2fd526b7099"
+      url "https://github.com/fortio/tev/releases/download/v0.9.2/tev_0.9.2_darwin_amd64.zip"
+      sha256 "132813ae935a5362a90f481af9b287fe12a6c9944d1b793d873a1f96165c7fd3"
 
       def install
         bin.install "tev"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tev/releases/download/v0.9.1/tev_0.9.1_darwin_arm64.zip"
-      sha256 "611a501bbdda7002ac685262eb37344be8320a5b72c45a245ab20cf13cea4b85"
+      url "https://github.com/fortio/tev/releases/download/v0.9.2/tev_0.9.2_darwin_arm64.zip"
+      sha256 "f9b99ccd5f07fee9332c30a59b6c0ea86d91533a5fe1015b1bca8184d3097495"
 
       def install
         bin.install "tev"
@@ -28,16 +28,16 @@ class Tev < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tev/releases/download/v0.9.1/tev_0.9.1_linux_amd64.tar.gz"
-      sha256 "079650e57b1bc9ebaf4d9badcb214c08ef2be554e6ccce5338fca6ff452a612c"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/tev/releases/download/v0.9.2/tev_0.9.2_linux_amd64.tar.gz"
+      sha256 "c41eb15620e11cc96755ee695268cf82cce7d11ac0d891dc0f4dc3298bd71d3f"
       def install
         bin.install "tev"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tev/releases/download/v0.9.1/tev_0.9.1_linux_arm64.tar.gz"
-      sha256 "7666d94cf641dc0c9ac5d2b24167f8ca1d5c3e9a25880e3b36441a21702f6a37"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/tev/releases/download/v0.9.2/tev_0.9.2_linux_arm64.tar.gz"
+      sha256 "b874ad4c838bd75b7643a9e7e93be6ed1161d4a59b1d8d6682431cd5cd622b6a"
       def install
         bin.install "tev"
       end
