@@ -5,21 +5,21 @@
 class Tfonts < Formula
   desc "Fortio terminal large text output using your TTF fonts"
   homepage "https://fortio.org/"
-  version "1.4.1"
+  version "1.4.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tfonts/releases/download/v1.4.1/tfonts_1.4.1_darwin_amd64.zip"
-      sha256 "951b9b15d11dbecb6281f7e502403412526e3dad3d3eab81f53793a04cdcaace"
+      url "https://github.com/fortio/tfonts/releases/download/v1.4.2/tfonts_1.4.2_darwin_amd64.zip"
+      sha256 "509211b782dbaac4d1635ce24dfb0d252a06f4327de9175bddc07419bc5b03d2"
 
       def install
         bin.install "tfonts"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tfonts/releases/download/v1.4.1/tfonts_1.4.1_darwin_arm64.zip"
-      sha256 "6a218c08cf5e55aad29a2e733b208a6f3b4a366432d43b533ecb27a4e3d195d6"
+      url "https://github.com/fortio/tfonts/releases/download/v1.4.2/tfonts_1.4.2_darwin_arm64.zip"
+      sha256 "4d685881cdc5879d1e1118ba43f66ac71ce78729416c2f7c627578f952427e29"
 
       def install
         bin.install "tfonts"
@@ -28,16 +28,16 @@ class Tfonts < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tfonts/releases/download/v1.4.1/tfonts_1.4.1_linux_amd64.tar.gz"
-      sha256 "82a574ec110258bd77bac8da44ef03fc1ee464bac3e9083a894204c2fe8c5760"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/tfonts/releases/download/v1.4.2/tfonts_1.4.2_linux_amd64.tar.gz"
+      sha256 "a7fcd629ce05214b87d141f5a7b27af39d37467bba2c7243e4f820514d2ab04f"
       def install
         bin.install "tfonts"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tfonts/releases/download/v1.4.1/tfonts_1.4.1_linux_arm64.tar.gz"
-      sha256 "a9d67e85158855465223180174d5673bec33c5132b67b0663560de1d0de3694c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/tfonts/releases/download/v1.4.2/tfonts_1.4.2_linux_arm64.tar.gz"
+      sha256 "4a9c41a3ba2858c8163190a2e85907bd91e9393722923d1130f6032e00240138"
       def install
         bin.install "tfonts"
       end
