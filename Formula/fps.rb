@@ -5,21 +5,21 @@
 class Fps < Formula
   desc "Fortio terminal fps checker"
   homepage "https://fortio.org/"
-  version "0.51.1"
+  version "0.52.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/fps/releases/download/v0.51.1/fps_0.51.1_darwin_amd64.zip"
-      sha256 "dc93cbacb2d2260d2620ceac806a33a3462431ec693c4ececeb2be3fa67e0e02"
+      url "https://github.com/fortio/fps/releases/download/v0.52.0/fps_0.52.0_darwin_amd64.zip"
+      sha256 "094962bdfbe66ddb9fff999832612240ca36ac356370f1495464401e0a2cf2f0"
 
       def install
         bin.install "fps"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/fps/releases/download/v0.51.1/fps_0.51.1_darwin_arm64.zip"
-      sha256 "1805ec2126f279c50d3e121d2154196a88ee8ed850264266fe54cc7f2caa32dc"
+      url "https://github.com/fortio/fps/releases/download/v0.52.0/fps_0.52.0_darwin_arm64.zip"
+      sha256 "2a33ac961f0eda3c647f17b152a02501870ca8a280d47c0bee346cb2373bc1da"
 
       def install
         bin.install "fps"
@@ -28,16 +28,16 @@ class Fps < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/fps/releases/download/v0.51.1/fps_0.51.1_linux_amd64.tar.gz"
-      sha256 "0422bae47016dcda0ac137a5f53c6441c9238108e4f6c22bcb78fc887cda2d4b"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/fps/releases/download/v0.52.0/fps_0.52.0_linux_amd64.tar.gz"
+      sha256 "714955351f58ab8d9724db3493506dcc94f1fa8a8cca10821cc030fa5c0c3694"
       def install
         bin.install "fps"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/fps/releases/download/v0.51.1/fps_0.51.1_linux_arm64.tar.gz"
-      sha256 "3a4d18af5de4b7e1d0d1392845e3221ddbf52aefef3b795ad61ff3093ba46c2a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/fps/releases/download/v0.52.0/fps_0.52.0_linux_arm64.tar.gz"
+      sha256 "feed76579ba2cfef4b0860b72b8383bd00de81a69b6802c824f9ae95f5275c9b"
       def install
         bin.install "fps"
       end
