@@ -5,21 +5,21 @@
 class Tclock < Formula
   desc "Fortio terminal clock"
   homepage "https://fortio.org/"
-  version "1.4.0"
+  version "1.5.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tclock/releases/download/v1.4.0/tclock_1.4.0_darwin_amd64.zip"
-      sha256 "64a14f01bc6674f044c0f9930b656cb5226f747819544cc7a97c25f26511eade"
+      url "https://github.com/fortio/tclock/releases/download/v1.5.0/tclock_1.5.0_darwin_amd64.zip"
+      sha256 "e15857e5af1d3430512a4fbcc36edfff484e2853ba997b101029303b2d1ddff8"
 
       def install
         bin.install "tclock"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tclock/releases/download/v1.4.0/tclock_1.4.0_darwin_arm64.zip"
-      sha256 "abdcbb81d400efa159c369108adc1fefd90127879082bdf7b9076ea7c6f98265"
+      url "https://github.com/fortio/tclock/releases/download/v1.5.0/tclock_1.5.0_darwin_arm64.zip"
+      sha256 "142360f489ab450784f58dbfa0921eb9646e82153fcfd38795cca5d1915fc628"
 
       def install
         bin.install "tclock"
@@ -28,16 +28,16 @@ class Tclock < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tclock/releases/download/v1.4.0/tclock_1.4.0_linux_amd64.tar.gz"
-      sha256 "8fda03f9cfeef8e1de79d80a6df8690bc764a104579472ad3bdf0989627e8567"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/tclock/releases/download/v1.5.0/tclock_1.5.0_linux_amd64.tar.gz"
+      sha256 "d1a7526f7f4b7148136cd6744c43bc359d6f6acd8f3505db9035df371d5e4826"
       def install
         bin.install "tclock"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tclock/releases/download/v1.4.0/tclock_1.4.0_linux_arm64.tar.gz"
-      sha256 "5f5b276beee0f58fb7b0b7236d240b4babc74ec3050964bdbbb28bec46482ae6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/tclock/releases/download/v1.5.0/tclock_1.5.0_linux_arm64.tar.gz"
+      sha256 "6909d62d0cce245d81023f7a7bab40c5c361c816f7aa3bfb79e86e533bd5f0da"
       def install
         bin.install "tclock"
       end
