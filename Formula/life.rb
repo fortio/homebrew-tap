@@ -5,21 +5,21 @@
 class Life < Formula
   desc "Fortio terminal Conway's game of life demo"
   homepage "https://fortio.org/"
-  version "0.52.0"
+  version "0.52.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.52.0/life_0.52.0_darwin_amd64.zip"
-      sha256 "ca49139302734366d41bbb5231e1a3a63a8620c848c4bcb38fa069a2e79722bc"
+      url "https://github.com/fortio/terminal/releases/download/v0.52.1/life_0.52.1_darwin_amd64.zip"
+      sha256 "b6c361f62ec6d0c114ec1f11fd45fed878a2a75eeec65aae4d810c317200ba1b"
 
       def install
         bin.install "life"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.52.0/life_0.52.0_darwin_arm64.zip"
-      sha256 "aa3b5a7716dc4b79985caa0be459679d5796fa2b48c062e0e32ec71df4a7f007"
+      url "https://github.com/fortio/terminal/releases/download/v0.52.1/life_0.52.1_darwin_arm64.zip"
+      sha256 "5be1189c789186818920a646fde73ddfc4270a3a6da5c79f59b78f1471a27811"
 
       def install
         bin.install "life"
@@ -28,16 +28,16 @@ class Life < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.52.0/life_0.52.0_linux_amd64.tar.gz"
-      sha256 "a8d3efdb77e6054cb128ad2d3f6414b4e2dab388d67cfb835457eaebf81bf142"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/terminal/releases/download/v0.52.1/life_0.52.1_linux_amd64.tar.gz"
+      sha256 "13d8be567a469444e16724037111da7f2c3169a192cbfd4797c3c643c901c5ce"
       def install
         bin.install "life"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.52.0/life_0.52.0_linux_arm64.tar.gz"
-      sha256 "a4278a96b6239b87f5ef2b84918b7a945c364dcc4df524c50428f6681e469f09"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/terminal/releases/download/v0.52.1/life_0.52.1_linux_arm64.tar.gz"
+      sha256 "25f4ec775a67176d0456210e7424e23aec997f69d12a710508aa31bb7686b4e4"
       def install
         bin.install "life"
       end
