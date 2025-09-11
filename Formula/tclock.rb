@@ -5,21 +5,21 @@
 class Tclock < Formula
   desc "Fortio terminal clock"
   homepage "https://fortio.org/"
-  version "1.7.3"
+  version "1.7.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tclock/releases/download/v1.7.3/tclock_1.7.3_darwin_amd64.zip"
-      sha256 "86b04c205d01f274e978b80276656dc61149ac21fcfa998de49cb742363d15af"
+      url "https://github.com/fortio/tclock/releases/download/v1.7.4/tclock_1.7.4_darwin_amd64.zip"
+      sha256 "61dce85fc7559cb43231e575e567948314f6fd3d0ff21bcd62773be9a21cd00a"
 
       def install
         bin.install "tclock"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tclock/releases/download/v1.7.3/tclock_1.7.3_darwin_arm64.zip"
-      sha256 "fe90b86fa23a0e3595797286088d215a2be55fa9d4a975394f35d7208ea8ceb6"
+      url "https://github.com/fortio/tclock/releases/download/v1.7.4/tclock_1.7.4_darwin_arm64.zip"
+      sha256 "21a10928c451c9d5ee122a10dd08c11a51f7d4232c1e76989b6329662071f2af"
 
       def install
         bin.install "tclock"
@@ -29,15 +29,15 @@ class Tclock < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tclock/releases/download/v1.7.3/tclock_1.7.3_linux_amd64.tar.gz"
-      sha256 "61cdcc69deafb32f697f3392836b3cb4bf4b8ac9aef25659d98ee27f194f13f1"
+      url "https://github.com/fortio/tclock/releases/download/v1.7.4/tclock_1.7.4_linux_amd64.tar.gz"
+      sha256 "f01094558c9bbbbf09f05b71e5de56ebef80032ef41e8dcb5f727594e482731a"
       def install
         bin.install "tclock"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tclock/releases/download/v1.7.3/tclock_1.7.3_linux_arm64.tar.gz"
-      sha256 "732df3099447378b37bb47cfa0bb25585a1d707a3aee05390f6e7fdf20696180"
+      url "https://github.com/fortio/tclock/releases/download/v1.7.4/tclock_1.7.4_linux_arm64.tar.gz"
+      sha256 "d7007c963e3a14a15de86f2d68e190e92b91aa5e5be8f7daefc2700553d7116e"
       def install
         bin.install "tclock"
       end
