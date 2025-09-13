@@ -5,21 +5,21 @@
 class Fps < Formula
   desc "Fortio terminal fps checker"
   homepage "https://fortio.org/"
-  version "0.52.0"
+  version "0.52.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/fps/releases/download/v0.52.0/fps_0.52.0_darwin_amd64.zip"
-      sha256 "094962bdfbe66ddb9fff999832612240ca36ac356370f1495464401e0a2cf2f0"
+      url "https://github.com/fortio/fps/releases/download/v0.52.2/fps_0.52.2_darwin_amd64.zip"
+      sha256 "f161fe1d87dabc4789511f4dfe16e5641f467f853f7da982d3cb2e6e2a9d9120"
 
       def install
         bin.install "fps"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/fps/releases/download/v0.52.0/fps_0.52.0_darwin_arm64.zip"
-      sha256 "2a33ac961f0eda3c647f17b152a02501870ca8a280d47c0bee346cb2373bc1da"
+      url "https://github.com/fortio/fps/releases/download/v0.52.2/fps_0.52.2_darwin_arm64.zip"
+      sha256 "503ef0c5705db66f97d2dc87370be3d9ef21343b697ea3bcf690deb524ada9a8"
 
       def install
         bin.install "fps"
@@ -29,15 +29,15 @@ class Fps < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/fps/releases/download/v0.52.0/fps_0.52.0_linux_amd64.tar.gz"
-      sha256 "714955351f58ab8d9724db3493506dcc94f1fa8a8cca10821cc030fa5c0c3694"
+      url "https://github.com/fortio/fps/releases/download/v0.52.2/fps_0.52.2_linux_amd64.tar.gz"
+      sha256 "ab99e9730e15266530318fe21915bcd1f846a7e38936d9e30ac362a22fcb11cb"
       def install
         bin.install "fps"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/fps/releases/download/v0.52.0/fps_0.52.0_linux_arm64.tar.gz"
-      sha256 "feed76579ba2cfef4b0860b72b8383bd00de81a69b6802c824f9ae95f5275c9b"
+      url "https://github.com/fortio/fps/releases/download/v0.52.2/fps_0.52.2_linux_arm64.tar.gz"
+      sha256 "e1d121c0e7187bf515e2a2008966670a1854a6ca2d2ddc21bbae64f6a1d6749f"
       def install
         bin.install "fps"
       end
