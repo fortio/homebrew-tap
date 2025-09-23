@@ -5,21 +5,21 @@
 class Tcolor < Formula
   desc "Fortio terminal color picker"
   homepage "https://fortio.org/"
-  version "1.3.3"
+  version "1.3.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tcolor/releases/download/v1.3.3/tcolor_1.3.3_darwin_amd64.zip"
-      sha256 "f101602890ce9f5ece7bca45e9ecf13f5a3bff1cbac037a35fcab762d46a16b5"
+      url "https://github.com/fortio/tcolor/releases/download/v1.3.4/tcolor_1.3.4_darwin_amd64.zip"
+      sha256 "0c0ee109897908e1e6b9b4422dfba38e39c8a5e74614e37ef17491af1de22a16"
 
       def install
         bin.install "tcolor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tcolor/releases/download/v1.3.3/tcolor_1.3.3_darwin_arm64.zip"
-      sha256 "bac1f075bfa25bf18ba9126436f155525435bd7baad0117c8b51bb2ebf1970e8"
+      url "https://github.com/fortio/tcolor/releases/download/v1.3.4/tcolor_1.3.4_darwin_arm64.zip"
+      sha256 "c5f5f9cf50e5fe36fb406f3d77c312a049df88fb87e3bf627aff2d2d4f776470"
 
       def install
         bin.install "tcolor"
@@ -28,16 +28,16 @@ class Tcolor < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tcolor/releases/download/v1.3.3/tcolor_1.3.3_linux_amd64.tar.gz"
-      sha256 "371f359103a16b8ad63a93650e450ef2b874d86d881046b74145b290213e6455"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/tcolor/releases/download/v1.3.4/tcolor_1.3.4_linux_amd64.tar.gz"
+      sha256 "4dc622190139a41ec83175627ecc7141b0ddde70f99654a90e66c15f5c3bddc8"
       def install
         bin.install "tcolor"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tcolor/releases/download/v1.3.3/tcolor_1.3.3_linux_arm64.tar.gz"
-      sha256 "e79b2f4d63bfb42061e8b5b0ceb886faf1a15f44d4ca468b7ab709a2b2e1e482"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/tcolor/releases/download/v1.3.4/tcolor_1.3.4_linux_arm64.tar.gz"
+      sha256 "1aac1c977df26016a3b3315eb4d3cd0b7b035271988bd872dbdd5d62c4a5161b"
       def install
         bin.install "tcolor"
       end
