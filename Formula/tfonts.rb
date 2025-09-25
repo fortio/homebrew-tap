@@ -5,21 +5,21 @@
 class Tfonts < Formula
   desc "Fortio terminal large text output using your TTF fonts"
   homepage "https://fortio.org/"
-  version "1.4.2"
+  version "1.4.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tfonts/releases/download/v1.4.2/tfonts_1.4.2_darwin_amd64.zip"
-      sha256 "509211b782dbaac4d1635ce24dfb0d252a06f4327de9175bddc07419bc5b03d2"
+      url "https://github.com/fortio/tfonts/releases/download/v1.4.3/tfonts_1.4.3_darwin_amd64.zip"
+      sha256 "0dc121445f88aff4c169e9bf0dfe48e15bafc0fc849141cea394cec5ff85b704"
 
       def install
         bin.install "tfonts"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tfonts/releases/download/v1.4.2/tfonts_1.4.2_darwin_arm64.zip"
-      sha256 "4d685881cdc5879d1e1118ba43f66ac71ce78729416c2f7c627578f952427e29"
+      url "https://github.com/fortio/tfonts/releases/download/v1.4.3/tfonts_1.4.3_darwin_arm64.zip"
+      sha256 "99a6f5868726c223492860e54ad42fa5b9ac39a45b4d00eaa01baa8e2c04165e"
 
       def install
         bin.install "tfonts"
@@ -29,15 +29,15 @@ class Tfonts < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tfonts/releases/download/v1.4.2/tfonts_1.4.2_linux_amd64.tar.gz"
-      sha256 "a7fcd629ce05214b87d141f5a7b27af39d37467bba2c7243e4f820514d2ab04f"
+      url "https://github.com/fortio/tfonts/releases/download/v1.4.3/tfonts_1.4.3_linux_amd64.tar.gz"
+      sha256 "aedbed83ed8847099490998e068ae59e57d5909a4b0fe8883d3d58fcfe7b455b"
       def install
         bin.install "tfonts"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tfonts/releases/download/v1.4.2/tfonts_1.4.2_linux_arm64.tar.gz"
-      sha256 "4a9c41a3ba2858c8163190a2e85907bd91e9393722923d1130f6032e00240138"
+      url "https://github.com/fortio/tfonts/releases/download/v1.4.3/tfonts_1.4.3_linux_arm64.tar.gz"
+      sha256 "623d0946ca7924da385ef69edfd8cbd137e03def32f7a30eb8c24227f9cb99d3"
       def install
         bin.install "tfonts"
       end
