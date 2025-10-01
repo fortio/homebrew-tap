@@ -5,21 +5,21 @@
 class Blackjack < Formula
   desc "Fortio terminal blackjack card game"
   homepage "https://fortio.org/"
-  version "0.57.0"
+  version "0.57.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.57.0/blackjack_0.57.0_darwin_amd64.zip"
-      sha256 "3649ff5a36d16e371e943a5676f217525a97335a237b4890922d6a694b70e4c6"
+      url "https://github.com/fortio/terminal/releases/download/v0.57.1/blackjack_0.57.1_darwin_amd64.zip"
+      sha256 "1a0f337415cc325a89f78fdc75314db703990ce57ce458d8bfa15aac83799f25"
 
       def install
         bin.install "blackjack"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.57.0/blackjack_0.57.0_darwin_arm64.zip"
-      sha256 "4e2b442cbe63296de8caafe6642ee356e1c2afd4098017c614b59ff027911209"
+      url "https://github.com/fortio/terminal/releases/download/v0.57.1/blackjack_0.57.1_darwin_arm64.zip"
+      sha256 "8eccf3c870f3f927a48cb75d61caff7e57315cea33457f64ebb4023174476fa7"
 
       def install
         bin.install "blackjack"
@@ -29,15 +29,15 @@ class Blackjack < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.57.0/blackjack_0.57.0_linux_amd64.tar.gz"
-      sha256 "94ee92e5ce9314c17e12d6987c673ad56b1e4bc04cf4648f10afbc677fb9b58a"
+      url "https://github.com/fortio/terminal/releases/download/v0.57.1/blackjack_0.57.1_linux_amd64.tar.gz"
+      sha256 "ffa91da673f85eaac4073fd5a8bc92b187ad16899d986be4b16fcc78aab1d7f6"
       def install
         bin.install "blackjack"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.57.0/blackjack_0.57.0_linux_arm64.tar.gz"
-      sha256 "004cef2682bce16704f385d092ea331e6684bfde2bca0661dcc32a271bcbccd3"
+      url "https://github.com/fortio/terminal/releases/download/v0.57.1/blackjack_0.57.1_linux_arm64.tar.gz"
+      sha256 "ef40b9bfa47b6ae135e808cc5a761fba47b6850eb783d07f670c8fc4039061fe"
       def install
         bin.install "blackjack"
       end
