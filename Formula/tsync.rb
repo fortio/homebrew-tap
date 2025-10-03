@@ -5,21 +5,21 @@
 class Tsync < Formula
   desc "Fortio secure synchronization between machines"
   homepage "https://fortio.org/"
-  version "0.3.2"
+  version "0.3.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tsync/releases/download/v0.3.2/tsync_0.3.2_darwin_amd64.zip"
-      sha256 "040764a30ca3a6ceaaa9bee29ad98ad289ae490be0e96488eaa528e379501971"
+      url "https://github.com/fortio/tsync/releases/download/v0.3.3/tsync_0.3.3_darwin_amd64.zip"
+      sha256 "ba257d62bf78f92a56341af62b02aed6bb6c9c6ccf5aeee5f646ce639f8735ca"
 
       def install
         bin.install "tsync"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tsync/releases/download/v0.3.2/tsync_0.3.2_darwin_arm64.zip"
-      sha256 "f8d10710f54ef9e74942d736567d60d5d7539f9a8a8285c8a91667f3c11f584e"
+      url "https://github.com/fortio/tsync/releases/download/v0.3.3/tsync_0.3.3_darwin_arm64.zip"
+      sha256 "7d91fb95ff80664d29c2af869cce30259a752aa043abff1978ce86e11fc9a81c"
 
       def install
         bin.install "tsync"
@@ -29,15 +29,15 @@ class Tsync < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tsync/releases/download/v0.3.2/tsync_0.3.2_linux_amd64.tar.gz"
-      sha256 "06d98e919561bd94a1afa9272ea3e7a62feac4d1fea648433ef6395fdd1f9382"
+      url "https://github.com/fortio/tsync/releases/download/v0.3.3/tsync_0.3.3_linux_amd64.tar.gz"
+      sha256 "d6a708d26b13168faa45c08314d828dff53a9221446b99082c15b0caab3a2503"
       def install
         bin.install "tsync"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tsync/releases/download/v0.3.2/tsync_0.3.2_linux_arm64.tar.gz"
-      sha256 "463057472180821601d383854b1bec573de794be8f8b401594a1669297d90de3"
+      url "https://github.com/fortio/tsync/releases/download/v0.3.3/tsync_0.3.3_linux_arm64.tar.gz"
+      sha256 "c24901985bd28e24937bfd92e3a556efdd1adfb84b34c75eb025843ea8bf0dd0"
       def install
         bin.install "tsync"
       end
