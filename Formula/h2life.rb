@@ -5,21 +5,21 @@
 class H2life < Formula
   desc "Fortio ansipixels to http - life game demo"
   homepage "https://fortio.org/"
-  version "0.7.2"
+  version "0.8.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/h2life/releases/download/v0.7.2/h2life_0.7.2_darwin_amd64.zip"
-      sha256 "3ac3385524b5f2f9a65bc2b5997fc54b3c4cb8e714c4791ea17f5423abff9657"
+      url "https://github.com/fortio/h2life/releases/download/v0.8.0/h2life_0.8.0_darwin_amd64.zip"
+      sha256 "23b280b71bc193d69eb007855364762f8c1d0fde4681dbec1e515cb6405c02ca"
 
       def install
         bin.install "h2life"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/h2life/releases/download/v0.7.2/h2life_0.7.2_darwin_arm64.zip"
-      sha256 "5b456e2e0683eb2aa6fd5853ad765543c40d7f537e93ab89e9ce6d196e792854"
+      url "https://github.com/fortio/h2life/releases/download/v0.8.0/h2life_0.8.0_darwin_arm64.zip"
+      sha256 "29dc80b3e581be5f16877571fc46fde1061757f93fda6c94b59959fa2b90b4dc"
 
       def install
         bin.install "h2life"
@@ -28,16 +28,16 @@ class H2life < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/h2life/releases/download/v0.7.2/h2life_0.7.2_linux_amd64.tar.gz"
-      sha256 "039de3f5b6844d4e12bf60796e5e183d5f922d1124f22d8e39421ba4c04573be"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/h2life/releases/download/v0.8.0/h2life_0.8.0_linux_amd64.tar.gz"
+      sha256 "e716860ab9bd09feca4d955ef4e4f4ce368d9b4419fc7b3b9bee7da82d60136e"
       def install
         bin.install "h2life"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/h2life/releases/download/v0.7.2/h2life_0.7.2_linux_arm64.tar.gz"
-      sha256 "f62ae071adbce8ab173544c5068ba45e0441e1e6ef35257b2ca551d471aef136"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/h2life/releases/download/v0.8.0/h2life_0.8.0_linux_arm64.tar.gz"
+      sha256 "f74f94f9e65537b68fa64aabe456882322fb629e909ea67fbbb2409c13d9e0a2"
       def install
         bin.install "h2life"
       end
