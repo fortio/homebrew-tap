@@ -5,21 +5,21 @@
 class Tray < Formula
   desc "Fortio Ray tracing in the Terminal"
   homepage "https://fortio.org/"
-  version "0.10.0"
+  version "0.11.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tray/releases/download/v0.10.0/tray_0.10.0_darwin_amd64.zip"
-      sha256 "0cb3335fbf83f25340e9f7c787b475dd9b76196ee9d1fc76b7004ee2c055bdbd"
+      url "https://github.com/fortio/tray/releases/download/v0.11.0/tray_0.11.0_darwin_amd64.zip"
+      sha256 "1909120194fd65c27a90ccfe6f70318fb27b4db98ba97bb47693f75cbdea6f32"
 
       def install
         bin.install "tray"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tray/releases/download/v0.10.0/tray_0.10.0_darwin_arm64.zip"
-      sha256 "c6948220e5c9727231fb074ea8772f89dc81c7a28ed14346eeefa8923200bcf9"
+      url "https://github.com/fortio/tray/releases/download/v0.11.0/tray_0.11.0_darwin_arm64.zip"
+      sha256 "0bc217bf12305d934515df64231d890b4be332cf1a2562d65a935fbbde55c34e"
 
       def install
         bin.install "tray"
@@ -29,15 +29,15 @@ class Tray < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tray/releases/download/v0.10.0/tray_0.10.0_linux_amd64.tar.gz"
-      sha256 "3fde32447e2713d4ac8d8b3a32139f943f0e6e663dc78ba8c888ea614ee02a6a"
+      url "https://github.com/fortio/tray/releases/download/v0.11.0/tray_0.11.0_linux_amd64.tar.gz"
+      sha256 "dbc0ff4105ed096970e6232eac8fa26feeed93ace8af6cae6e679d06fbf14546"
       def install
         bin.install "tray"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tray/releases/download/v0.10.0/tray_0.10.0_linux_arm64.tar.gz"
-      sha256 "643fd50241f0990473195a8ed3ae54647fa6e624669ec1452b99d00532f1f8d3"
+      url "https://github.com/fortio/tray/releases/download/v0.11.0/tray_0.11.0_linux_arm64.tar.gz"
+      sha256 "c40172bfe143aa25fef0d76b10aa9bddb59f57af716f42bae39c697e381bd45e"
       def install
         bin.install "tray"
       end
