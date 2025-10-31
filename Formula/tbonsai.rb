@@ -5,21 +5,21 @@
 class Tbonsai < Formula
   desc "Fortio tbonsai Ansipixels port of cbonsai"
   homepage "https://fortio.org/"
-  version "0.4.0"
+  version "0.4.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tbonsai/releases/download/v0.4.0/tbonsai_0.4.0_darwin_amd64.zip"
-      sha256 "4677d5edd7f44eef587688e26b644891fc1da4cd67aabede355f9f0564d3a34c"
+      url "https://github.com/fortio/tbonsai/releases/download/v0.4.1/tbonsai_0.4.1_darwin_amd64.zip"
+      sha256 "a52f3f6cc7762548452b2c1aa70514c8dbcc48eedd2fcf1328d61f5e2f23e300"
 
       def install
         bin.install "tbonsai"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tbonsai/releases/download/v0.4.0/tbonsai_0.4.0_darwin_arm64.zip"
-      sha256 "e837a7445b73cd7a5f6570f40a4363188313edec483d8f1679226df8b20ef20d"
+      url "https://github.com/fortio/tbonsai/releases/download/v0.4.1/tbonsai_0.4.1_darwin_arm64.zip"
+      sha256 "c21155b5d1c6878b21f9f584497509a17ff75ccfc8c61b03bb74eb0ef38c451a"
 
       def install
         bin.install "tbonsai"
@@ -29,15 +29,15 @@ class Tbonsai < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tbonsai/releases/download/v0.4.0/tbonsai_0.4.0_linux_amd64.tar.gz"
-      sha256 "187fb6a8decf7f2c2715a45ea746a3afcd38cd599e0cfce773683e2c50098d26"
+      url "https://github.com/fortio/tbonsai/releases/download/v0.4.1/tbonsai_0.4.1_linux_amd64.tar.gz"
+      sha256 "891ccdca816f36c60b316fa137cce5814cec5a26f0113ca240483a4815582299"
       def install
         bin.install "tbonsai"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tbonsai/releases/download/v0.4.0/tbonsai_0.4.0_linux_arm64.tar.gz"
-      sha256 "afebab28bb98a8ed1a336aeed61719ebbdb83f507a45a0278ecf28c8206ee7ba"
+      url "https://github.com/fortio/tbonsai/releases/download/v0.4.1/tbonsai_0.4.1_linux_arm64.tar.gz"
+      sha256 "2087b5c0f61c1ee63cdcd40abacb14661c9c6c8f3bcbeea57157ceb45c2bfe7d"
       def install
         bin.install "tbonsai"
       end
