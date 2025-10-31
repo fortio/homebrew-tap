@@ -5,21 +5,21 @@
 class Tmaze < Formula
   desc "Ansi pixels version of the C64 classic maze"
   homepage "https://fortio.org/"
-  version "1.3.0"
+  version "1.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tmaze/releases/download/v1.3.0/tmaze_1.3.0_darwin_amd64.zip"
-      sha256 "600ed17f22ead51eb2177c30032e6650c8d5747b952594fb7d94635b6a12dcf9"
+      url "https://github.com/fortio/tmaze/releases/download/v1.4.0/tmaze_1.4.0_darwin_amd64.zip"
+      sha256 "c6a8bebeb3fd5e5c6cb6a7ac86b7b0ac452cb9b4bb553ec4d07bf9d7909ad591"
 
       def install
         bin.install "tmaze"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tmaze/releases/download/v1.3.0/tmaze_1.3.0_darwin_arm64.zip"
-      sha256 "c8a726fa7446b8c9a12a9c757096e69a04099cf7ffdbe50b17401a22b1214e1d"
+      url "https://github.com/fortio/tmaze/releases/download/v1.4.0/tmaze_1.4.0_darwin_arm64.zip"
+      sha256 "6f378a4031cedd446319e1561b8ab0dd86072e4870ec799d03a7f914cd95f751"
 
       def install
         bin.install "tmaze"
@@ -29,15 +29,15 @@ class Tmaze < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tmaze/releases/download/v1.3.0/tmaze_1.3.0_linux_amd64.tar.gz"
-      sha256 "62e226775f36c1bc8d6465064f08eadfc10dda76c42959733359dc41b9d469e7"
+      url "https://github.com/fortio/tmaze/releases/download/v1.4.0/tmaze_1.4.0_linux_amd64.tar.gz"
+      sha256 "98581bcc5e7907936701a4cedc07962f0c98937b2a5730d098c2f40b82ff1288"
       def install
         bin.install "tmaze"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tmaze/releases/download/v1.3.0/tmaze_1.3.0_linux_arm64.tar.gz"
-      sha256 "3587e4370b2a22f5c24310925e723ea7c3830d0f37dfa5abbebbbface3c1c7c6"
+      url "https://github.com/fortio/tmaze/releases/download/v1.4.0/tmaze_1.4.0_linux_arm64.tar.gz"
+      sha256 "df513045f8e8975450c517ecb67addda6bd3ab8650acc79527c347cc89f947b2"
       def install
         bin.install "tmaze"
       end
