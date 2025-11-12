@@ -5,21 +5,21 @@
 class Tev < Formula
   desc "Fortio terminal terminal event debug"
   homepage "https://fortio.org/"
-  version "0.10.2"
+  version "0.10.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tev/releases/download/v0.10.2/tev_0.10.2_darwin_amd64.zip"
-      sha256 "98d7ec8ef839f7ec363e64c89b79aafe5fea063fed778943fb9dcfd33fa02b91"
+      url "https://github.com/fortio/tev/releases/download/v0.10.3/tev_0.10.3_darwin_amd64.zip"
+      sha256 "c5177974842d415aff698ad0f7561e71d262eddff00f071d43344d2b5d7e1ac7"
 
       def install
         bin.install "tev"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tev/releases/download/v0.10.2/tev_0.10.2_darwin_arm64.zip"
-      sha256 "2260dfa5342e487f18dc55605c9261882f2d227655da37a38d6737df22f02b27"
+      url "https://github.com/fortio/tev/releases/download/v0.10.3/tev_0.10.3_darwin_arm64.zip"
+      sha256 "78ebe268d42e9707f52cfc3d92b7c1a633505780d3fb371aef45975e7fcb58fb"
 
       def install
         bin.install "tev"
@@ -29,15 +29,15 @@ class Tev < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tev/releases/download/v0.10.2/tev_0.10.2_linux_amd64.tar.gz"
-      sha256 "5ef640c1647cc85ddb4e5539a9988c95b02abe0af82122f02480e041371b5f7e"
+      url "https://github.com/fortio/tev/releases/download/v0.10.3/tev_0.10.3_linux_amd64.tar.gz"
+      sha256 "ee280e338014bcee27f90226760e92668eb7759b7eb20d98257c09d7eca67814"
       def install
         bin.install "tev"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tev/releases/download/v0.10.2/tev_0.10.2_linux_arm64.tar.gz"
-      sha256 "495ef25b55918e2dd2212d165ae02d7893d8095a82d15a372dd4ee53ae24d0fb"
+      url "https://github.com/fortio/tev/releases/download/v0.10.3/tev_0.10.3_linux_arm64.tar.gz"
+      sha256 "98b5ce1171fa8fe8d000cffb23497da2b71b734564c156329478ec49b586fa04"
       def install
         bin.install "tev"
       end
