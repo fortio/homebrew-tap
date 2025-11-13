@@ -5,21 +5,21 @@
 class Tmatrix < Formula
   desc "Simulate the matrix effect in your terminal"
   homepage "https://fortio.org/"
-  version "0.2.0"
+  version "0.2.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tmatrix/releases/download/v0.2.0/tmatrix_0.2.0_darwin_amd64.zip"
-      sha256 "5eccd195d2857777660767ff405a3085d615c60deee0aef96580c129ad7c90ec"
+      url "https://github.com/fortio/tmatrix/releases/download/v0.2.1/tmatrix_0.2.1_darwin_amd64.zip"
+      sha256 "17712b96f2d8a296167b400cde1eefff6246aac591fd706f40a4d841564c4f28"
 
       def install
         bin.install "tmatrix"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tmatrix/releases/download/v0.2.0/tmatrix_0.2.0_darwin_arm64.zip"
-      sha256 "ed99d8ea52f36074c300e386e2cfa516e578742a5faed7c3bc2f33239005bee4"
+      url "https://github.com/fortio/tmatrix/releases/download/v0.2.1/tmatrix_0.2.1_darwin_arm64.zip"
+      sha256 "e3611eee3463903d13aaa0e35c100f92e32bbf484899ebb22e476a5a872dea02"
 
       def install
         bin.install "tmatrix"
@@ -29,15 +29,15 @@ class Tmatrix < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tmatrix/releases/download/v0.2.0/tmatrix_0.2.0_linux_amd64.tar.gz"
-      sha256 "7c08af8835361c2751bd18464ffc66d05bc4430b6547b85e9b1f21092e25a22b"
+      url "https://github.com/fortio/tmatrix/releases/download/v0.2.1/tmatrix_0.2.1_linux_amd64.tar.gz"
+      sha256 "0d30aff495573cf2ceaa18684408f6798582e1d59ef0f2a2ae96b02a88d22e94"
       def install
         bin.install "tmatrix"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tmatrix/releases/download/v0.2.0/tmatrix_0.2.0_linux_arm64.tar.gz"
-      sha256 "406807bcbae5b9d1dee06bd8a0427ced270b327a2c828270a096437e7271bb96"
+      url "https://github.com/fortio/tmatrix/releases/download/v0.2.1/tmatrix_0.2.1_linux_arm64.tar.gz"
+      sha256 "d94e887257ad5b6d05ee80d8b649fe79f38180892b47d1415b3864ad3e24ef51"
       def install
         bin.install "tmatrix"
       end
