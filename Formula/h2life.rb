@@ -5,21 +5,21 @@
 class H2life < Formula
   desc "Fortio ansipixels to http - life game demo"
   homepage "https://fortio.org/"
-  version "0.9.2"
+  version "0.10.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/h2life/releases/download/v0.9.2/h2life_0.9.2_darwin_amd64.zip"
-      sha256 "5321198518b4d2ccb3ebc2f56f92ccef6670ed9fbdaa066f3666e98ee6a3cd24"
+      url "https://github.com/fortio/h2life/releases/download/v0.10.0/h2life_0.10.0_darwin_amd64.zip"
+      sha256 "aa893c75b23cdb19a4de57e159bd982042e810de0ffe2a52cb73879ab9fb6cfd"
 
       def install
         bin.install "h2life"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/h2life/releases/download/v0.9.2/h2life_0.9.2_darwin_arm64.zip"
-      sha256 "2cfb7efed4a1dd40b6adbfe35a8def294027cc2d03a3e0943d05ddbc03ec0d80"
+      url "https://github.com/fortio/h2life/releases/download/v0.10.0/h2life_0.10.0_darwin_arm64.zip"
+      sha256 "ae69abe26930d179040f4d3d726d39ef09fc158dc01fc18e6c5dc928754176e1"
 
       def install
         bin.install "h2life"
@@ -29,15 +29,15 @@ class H2life < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/h2life/releases/download/v0.9.2/h2life_0.9.2_linux_amd64.tar.gz"
-      sha256 "e60c093a5a0c351e92232d32e4e7de7b58348c92809bded317c78ab7eab00d26"
+      url "https://github.com/fortio/h2life/releases/download/v0.10.0/h2life_0.10.0_linux_amd64.tar.gz"
+      sha256 "0eea9d165e8345f8c63b0467adb5294fca291ff73a122ccb0e4b1d6fb633673f"
       def install
         bin.install "h2life"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/h2life/releases/download/v0.9.2/h2life_0.9.2_linux_arm64.tar.gz"
-      sha256 "0bfdaaee6503651c915aef4f1dd9179f5efae228ecab51f34bab77ce387a4f7c"
+      url "https://github.com/fortio/h2life/releases/download/v0.10.0/h2life_0.10.0_linux_arm64.tar.gz"
+      sha256 "d16932add8575b118dac1f7d0ad75c04375848ecf6069d08e3de94d97884b86f"
       def install
         bin.install "h2life"
       end
