@@ -5,21 +5,21 @@
 class PanicLinter < Formula
   desc "Go panic linter"
   homepage "https://fortio.org/"
-  version "0.2.5"
+  version "0.2.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.5/panic-linter_0.2.5_darwin_amd64.zip"
-      sha256 "b23f531909cf4edceb209ab8725a49ea5700954facb7477d077bcfb259f6c7db"
+      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.6/panic-linter_0.2.6_darwin_amd64.zip"
+      sha256 "b44046b74b7109b65099f18dbe7f07f8de74998ed2e69a6cba0e77462202b1d6"
 
       def install
         bin.install "panic-linter"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.5/panic-linter_0.2.5_darwin_arm64.zip"
-      sha256 "faa035611449f1c5bd76e10da6e50fc87f1d03e34996ccb009409e0f227b9d89"
+      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.6/panic-linter_0.2.6_darwin_arm64.zip"
+      sha256 "817b5e83cd88c9aa04095a0c9e59590b0aecb36e52b3afd7a8649e30a7d24874"
 
       def install
         bin.install "panic-linter"
@@ -28,16 +28,16 @@ class PanicLinter < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.5/panic-linter_0.2.5_linux_amd64.tar.gz"
-      sha256 "66fc2249561bac58edb548b8ed403d395e390900a24ce4a1e77d212d9bf67b98"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.6/panic-linter_0.2.6_linux_amd64.tar.gz"
+      sha256 "52ba8fba0f66b199e7d2ff6b5402c1674ff6e12c18b2d34b8219cd37e0aeba08"
       def install
         bin.install "panic-linter"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.5/panic-linter_0.2.5_linux_arm64.tar.gz"
-      sha256 "723c85c5cefbaeee4dc624eb54c3a23a25799682a98f124facefa78a2c2f944f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.6/panic-linter_0.2.6_linux_arm64.tar.gz"
+      sha256 "25006ec3d047cc5b1162b48ea1944e48772b119df4a03ca23a98d1539429c068"
       def install
         bin.install "panic-linter"
       end
