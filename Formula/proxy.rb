@@ -5,21 +5,21 @@
 class Proxy < Formula
   desc "TLS ingress reverse proxy and multiplexer with autocert and simple routing rules"
   homepage "https://fortio.org/"
-  version "1.29.1"
+  version "1.29.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/proxy/releases/download/v1.29.1/proxy_1.29.1_darwin_amd64.zip"
-      sha256 "1ac8d93a27dcd3a8baf594b6e12140e5765c23153a05fba2da56cfa43eee579e"
+      url "https://github.com/fortio/proxy/releases/download/v1.29.2/proxy_1.29.2_darwin_amd64.zip"
+      sha256 "b86962ea7898a85b59cda9f04a3a4c120afff85b8fd500e766fb1442df80e124"
 
       def install
         bin.install "proxy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/proxy/releases/download/v1.29.1/proxy_1.29.1_darwin_arm64.zip"
-      sha256 "98340c439c4fe31b2de213afc4f0da45d0dd29c65fb90d4cdd2dd46d45275588"
+      url "https://github.com/fortio/proxy/releases/download/v1.29.2/proxy_1.29.2_darwin_arm64.zip"
+      sha256 "deefd24ba305ce10fe4102d0c159b23623de9ed10f3074ccbc9996dfff9a1179"
 
       def install
         bin.install "proxy"
@@ -29,15 +29,15 @@ class Proxy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/proxy/releases/download/v1.29.1/proxy_1.29.1_linux_amd64.tar.gz"
-      sha256 "88f3dd02697150e683dc451a85144c299b807e58807d402655fd9a8efa5cc21e"
+      url "https://github.com/fortio/proxy/releases/download/v1.29.2/proxy_1.29.2_linux_amd64.tar.gz"
+      sha256 "39d00b8e48acafa063d5dadcf28ef419cc71a914c648bd239c9351482c135212"
       def install
         bin.install "proxy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/proxy/releases/download/v1.29.1/proxy_1.29.1_linux_arm64.tar.gz"
-      sha256 "9087ec9909062f969748beb2e5e83f194b3c6dbb2bcee73ead490cfb34dd2e2b"
+      url "https://github.com/fortio/proxy/releases/download/v1.29.2/proxy_1.29.2_linux_arm64.tar.gz"
+      sha256 "34f3c87722fd6c58b6c395576afab154ded05e44e8f1035ab78cac8af9ee6f89"
       def install
         bin.install "proxy"
       end
