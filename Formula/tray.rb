@@ -5,21 +5,21 @@
 class Tray < Formula
   desc "Fortio Ray tracing in the Terminal"
   homepage "https://fortio.org/"
-  version "1.5.1"
+  version "1.5.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tray/releases/download/v1.5.1/tray_1.5.1_darwin_amd64.zip"
-      sha256 "9c9bc33b6ebf30dd1a607ef025f71c7a647de31100b334bdf63962d0705e90ef"
+      url "https://github.com/fortio/tray/releases/download/v1.5.2/tray_1.5.2_darwin_amd64.zip"
+      sha256 "369c117e518b26876fe78d82b160a72c5f83b53a0e32d284f1a787a5020bb7e5"
 
       def install
         bin.install "tray"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tray/releases/download/v1.5.1/tray_1.5.1_darwin_arm64.zip"
-      sha256 "8f11526cda6e72e9058ce6ac1e9c4e4367f68dc897be1fbc9bc33fe7c8b83dce"
+      url "https://github.com/fortio/tray/releases/download/v1.5.2/tray_1.5.2_darwin_arm64.zip"
+      sha256 "8c22c52d0933dc322693b64998b8f7717e2da15e5417e5312530d785b11eddb9"
 
       def install
         bin.install "tray"
@@ -29,15 +29,15 @@ class Tray < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tray/releases/download/v1.5.1/tray_1.5.1_linux_amd64.tar.gz"
-      sha256 "3e480ab8a2e3b5a389c235be7bb09819840a8e6a9d0f9b7f08100ca67d89094d"
+      url "https://github.com/fortio/tray/releases/download/v1.5.2/tray_1.5.2_linux_amd64.tar.gz"
+      sha256 "7a7ef782ce8045863cdbe4d7e333e83bef421eaf3617a7a4645b30ea98016831"
       def install
         bin.install "tray"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tray/releases/download/v1.5.1/tray_1.5.1_linux_arm64.tar.gz"
-      sha256 "77dbf434536139dfe3699dc50e8e649660d32d22eb80c9550b5bfe3309a59d7b"
+      url "https://github.com/fortio/tray/releases/download/v1.5.2/tray_1.5.2_linux_arm64.tar.gz"
+      sha256 "df5e2de1c64a0f6a95a791f9c180c99b29ca43de95e6e5bb1d1f2bd41088e331"
       def install
         bin.install "tray"
       end
