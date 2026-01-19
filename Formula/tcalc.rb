@@ -5,21 +5,21 @@
 class Tcalc < Formula
   desc "tcalc is a bitwise calculator that is run from the terminal. It supports basic variable assignments, and most arithmetic and bitwise operations."
   homepage "https://fortio.org/"
-  version "0.6.2"
+  version "0.7.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tcalc/releases/download/v0.6.2/tcalc_0.6.2_darwin_amd64.zip"
-      sha256 "154458c6615a83da1d480f0ae56faee34dc41a812f6bb20c0f9ed83872334732"
+      url "https://github.com/fortio/tcalc/releases/download/v0.7.2/tcalc_0.7.2_darwin_amd64.zip"
+      sha256 "8db42eafdeb6a1e3a14714fb532016d20be1b47449a4908b3d53bdb0e2a6b2a4"
 
       def install
         bin.install "tcalc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tcalc/releases/download/v0.6.2/tcalc_0.6.2_darwin_arm64.zip"
-      sha256 "45821ee23ce53d81baaf5957b14bff5a30596eeae6a80b22333a32e89b4c954d"
+      url "https://github.com/fortio/tcalc/releases/download/v0.7.2/tcalc_0.7.2_darwin_arm64.zip"
+      sha256 "e3f90e24959c34465bd3c9483e7ca414884726c6471102bc5f72a067b8291eab"
 
       def install
         bin.install "tcalc"
@@ -29,15 +29,15 @@ class Tcalc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tcalc/releases/download/v0.6.2/tcalc_0.6.2_linux_amd64.tar.gz"
-      sha256 "e0e1acf3a092af33d342ac57aecba1b6ed0b367bfa1c2dba7094dc0a082a6535"
+      url "https://github.com/fortio/tcalc/releases/download/v0.7.2/tcalc_0.7.2_linux_amd64.tar.gz"
+      sha256 "90872f77b4f8068cf65a9f3682d23ef26944cb81f3ab798cf61c178e08daef91"
       def install
         bin.install "tcalc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tcalc/releases/download/v0.6.2/tcalc_0.6.2_linux_arm64.tar.gz"
-      sha256 "c6e8b083d741f453e0e0792bd7100672cf5b0f6bebefb3d4fe1963545860c6e9"
+      url "https://github.com/fortio/tcalc/releases/download/v0.7.2/tcalc_0.7.2_linux_arm64.tar.gz"
+      sha256 "33f03b9b09ebaa5b22647401dc37955c5c3d47613eac823e2c85866026e7ec13"
       def install
         bin.install "tcalc"
       end
