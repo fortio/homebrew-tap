@@ -5,21 +5,21 @@
 class Tsnake < Formula
   desc "Play the classic game of snake in the terminal"
   homepage "https://fortio.org/"
-  version "0.2.2"
+  version "0.2.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tsnake/releases/download/v0.2.2/tsnake_0.2.2_darwin_amd64.zip"
-      sha256 "621eea98411cd1053c6492809f14454dd9f27317c58664bd887633e4b293f1ee"
+      url "https://github.com/fortio/tsnake/releases/download/v0.2.3/tsnake_0.2.3_darwin_amd64.zip"
+      sha256 "0955537736d0522f3bc115d358624f6162ff085789e27da1cbdf856981911438"
 
       def install
         bin.install "tsnake"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tsnake/releases/download/v0.2.2/tsnake_0.2.2_darwin_arm64.zip"
-      sha256 "9ac05df514d259bf6ea3079394eb0db9c7762e07ebf330dc54b24a49912134c6"
+      url "https://github.com/fortio/tsnake/releases/download/v0.2.3/tsnake_0.2.3_darwin_arm64.zip"
+      sha256 "5a2d1054ac5873d8e5f7a56f99af39e2c06e2c595c7c15883c14a8991bc4985e"
 
       def install
         bin.install "tsnake"
@@ -29,15 +29,15 @@ class Tsnake < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tsnake/releases/download/v0.2.2/tsnake_0.2.2_linux_amd64.tar.gz"
-      sha256 "b9c058bfaa30993b16eaaf3302e3a86f0b9f7dc194a0a6d353752aabbe9bd988"
+      url "https://github.com/fortio/tsnake/releases/download/v0.2.3/tsnake_0.2.3_linux_amd64.tar.gz"
+      sha256 "f6aa327989ceee83344f532b75c208def90d86333c8db1b170bef619810c94f5"
       def install
         bin.install "tsnake"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tsnake/releases/download/v0.2.2/tsnake_0.2.2_linux_arm64.tar.gz"
-      sha256 "f09e38ddaa97322bd3ad40c14d64f18d45ef1ce0c7f25e25fd52d847393094b0"
+      url "https://github.com/fortio/tsnake/releases/download/v0.2.3/tsnake_0.2.3_linux_arm64.tar.gz"
+      sha256 "58c0d5512319c92b055c2de479d1ff4d69d0707955eeb1154c1715e1de9f98cf"
       def install
         bin.install "tsnake"
       end
