@@ -5,21 +5,21 @@
 class Brick < Formula
   desc "Fortio terminal brick smashing game in the style of Breakout"
   homepage "https://fortio.org/"
-  version "0.63.3"
+  version "0.63.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.63.3/brick_0.63.3_darwin_amd64.zip"
-      sha256 "78564cc7ad371a477e9fe8d0cac4b32b038c039d061f46710335fccd5b7dd478"
+      url "https://github.com/fortio/terminal/releases/download/v0.63.4/brick_0.63.4_darwin_amd64.zip"
+      sha256 "b426ac49c9cf2f018070cf0f4f633040822a5c3d1d61b10e464a1b7293f9fe2d"
 
       def install
         bin.install "brick"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.63.3/brick_0.63.3_darwin_arm64.zip"
-      sha256 "3d8f7ccd20eac60cd198a01ac78949bd1e1ec518a452c9ebac911a1b851ad687"
+      url "https://github.com/fortio/terminal/releases/download/v0.63.4/brick_0.63.4_darwin_arm64.zip"
+      sha256 "3e1df131b88bae7a9a6f3b15bf4dc2b78c647240d62d63a9f123742fb1b761b9"
 
       def install
         bin.install "brick"
@@ -29,15 +29,15 @@ class Brick < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.63.3/brick_0.63.3_linux_amd64.tar.gz"
-      sha256 "da40f0900e0a6a5c0421829f430e4945a39e33b807bff36d07168d820baca0da"
+      url "https://github.com/fortio/terminal/releases/download/v0.63.4/brick_0.63.4_linux_amd64.tar.gz"
+      sha256 "07a4c0da98337ccc89256637b32cc77a90f532fdf7d5a983d47f1a491d6427a2"
       def install
         bin.install "brick"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.63.3/brick_0.63.3_linux_arm64.tar.gz"
-      sha256 "1a64b4ba05c67089c44b65d9bd45c5ae0aa819beab170887481c568e9bed69b7"
+      url "https://github.com/fortio/terminal/releases/download/v0.63.4/brick_0.63.4_linux_arm64.tar.gz"
+      sha256 "bd05e4c218ffbfaba0d428d74fa26879ae620f10fdd707c8dc08ce1b3c497dac"
       def install
         bin.install "brick"
       end
