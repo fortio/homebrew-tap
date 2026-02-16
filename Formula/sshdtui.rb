@@ -5,21 +5,21 @@
 class Sshdtui < Formula
   desc "Ansipixels sshd tui demoes menu server"
   homepage "https://fortio.org/"
-  version "0.7.2"
+  version "0.7.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/sshdtui/releases/download/v0.7.2/sshdtui_0.7.2_darwin_amd64.zip"
-      sha256 "c3f510806c9f16d362d4a498ccef2aec01103e230da25f857fa8b0f0fcce8798"
+      url "https://github.com/fortio/sshdtui/releases/download/v0.7.3/sshdtui_0.7.3_darwin_amd64.zip"
+      sha256 "4c4c5cc7fa2a224fef6a4da7ab273c54eed77fe167f9fc17858357346d2aa2e8"
 
       def install
         bin.install "sshdtui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/sshdtui/releases/download/v0.7.2/sshdtui_0.7.2_darwin_arm64.zip"
-      sha256 "fc1f1e0fa9e4f0f0182230bda1641721b946a4c99fdc584558d022c2bfae9b28"
+      url "https://github.com/fortio/sshdtui/releases/download/v0.7.3/sshdtui_0.7.3_darwin_arm64.zip"
+      sha256 "74ca3fd55a236388de4e4423b037909bf688f76e252ace4a3ab0c6757025b481"
 
       def install
         bin.install "sshdtui"
@@ -29,15 +29,15 @@ class Sshdtui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/sshdtui/releases/download/v0.7.2/sshdtui_0.7.2_linux_amd64.tar.gz"
-      sha256 "ef190c6b7d4db645156a6eea1de005c59c15465b9ea0ba7b9edec0379b78cd05"
+      url "https://github.com/fortio/sshdtui/releases/download/v0.7.3/sshdtui_0.7.3_linux_amd64.tar.gz"
+      sha256 "e4e417bd47ae8830790f74f99d7a3e055d738f84f42e9d954ae7f9e7cf89042f"
       def install
         bin.install "sshdtui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/sshdtui/releases/download/v0.7.2/sshdtui_0.7.2_linux_arm64.tar.gz"
-      sha256 "9fa26b8a694e3eb35c3d2bd440a5ef5fe4db52071d95df48e91f9ecff579b4e7"
+      url "https://github.com/fortio/sshdtui/releases/download/v0.7.3/sshdtui_0.7.3_linux_arm64.tar.gz"
+      sha256 "a1274890580e4fc01da9520492e5fc86e8886cdf791434c309ee8c2b7228d2ce"
       def install
         bin.install "sshdtui"
       end
