@@ -5,21 +5,21 @@
 class Demo < Formula
   desc "Support for high dynamic range synthetic PNG image in go"
   homepage "https://fortio.org/"
-  version "0.1.0-pre1"
+  version "0.1.0-pre2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/hdr/releases/download/v0.1.0-pre1/demo_0.1.0-pre1_darwin_amd64.zip"
-      sha256 "e8075cb55beb10747a81645b3aeb1b2cb218301d1e13924825793cdf20191cd0"
+      url "https://github.com/fortio/hdr/releases/download/v0.1.0-pre2/demo_0.1.0-pre2_darwin_amd64.zip"
+      sha256 "b5f7b3a71bbeacc0924f58cbae3ed4054d3c7164d299673188472729cf009aae"
 
       define_method(:install) do
         bin.install "demo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/hdr/releases/download/v0.1.0-pre1/demo_0.1.0-pre1_darwin_arm64.zip"
-      sha256 "ba0830e1f7e01b901ab92535bd4eb79612fc249fb49dc2fc4b074626a8606c92"
+      url "https://github.com/fortio/hdr/releases/download/v0.1.0-pre2/demo_0.1.0-pre2_darwin_arm64.zip"
+      sha256 "e7d6c9df4daab105286de478ab1f4e18e831fe1d9304956ed36bcc63051840ac"
 
       define_method(:install) do
         bin.install "demo"
@@ -29,15 +29,15 @@ class Demo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/hdr/releases/download/v0.1.0-pre1/demo_0.1.0-pre1_linux_amd64.tar.gz"
-      sha256 "05c43db61045a135fbe87711d9c42b802028590a6f633dd5ab832394782e12b0"
+      url "https://github.com/fortio/hdr/releases/download/v0.1.0-pre2/demo_0.1.0-pre2_linux_amd64.tar.gz"
+      sha256 "0bcf5555bf080ce3b448d08bff1907b1cab90527d62d8eb0a385136772ce07c2"
       define_method(:install) do
         bin.install "demo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/hdr/releases/download/v0.1.0-pre1/demo_0.1.0-pre1_linux_arm64.tar.gz"
-      sha256 "62940ff42f8fa44c30d2173df909a419ca9912bc622e9df559738e31db499ebc"
+      url "https://github.com/fortio/hdr/releases/download/v0.1.0-pre2/demo_0.1.0-pre2_linux_arm64.tar.gz"
+      sha256 "1b4b54761a7b135d3ef3f4dae54590751ca1299db62d3ce82e492e204d6ff1c3"
       define_method(:install) do
         bin.install "demo"
       end
