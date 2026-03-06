@@ -5,23 +5,23 @@
 class H2life < Formula
   desc "Fortio ansipixels to http - life game demo"
   homepage "https://fortio.org/"
-  version "0.10.5"
+  version "0.11.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/h2life/releases/download/v0.10.5/h2life_0.10.5_darwin_amd64.zip"
-      sha256 "08d1a2e3898319c301db7cc4b2df9092f82cd0c267b22a259b67a2d1879ce55b"
+      url "https://github.com/fortio/h2life/releases/download/v0.11.0/h2life_0.11.0_darwin_amd64.zip"
+      sha256 "9ca25a4d325d2468c0741d8805a8a3dab9be74dd36600ad7833f8a41bd2b78b8"
 
-      def install
+      define_method(:install) do
         bin.install "h2life"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/h2life/releases/download/v0.10.5/h2life_0.10.5_darwin_arm64.zip"
-      sha256 "383ef5ebd3a58dd0aadc244f48698e21dc0b98ab5b76b828e0e38d59d67b14a9"
+      url "https://github.com/fortio/h2life/releases/download/v0.11.0/h2life_0.11.0_darwin_arm64.zip"
+      sha256 "4e4f585471dba0cf7a3dc82082748bcba73a8c06a968ca475a6a8f9f69e0c961"
 
-      def install
+      define_method(:install) do
         bin.install "h2life"
       end
     end
@@ -29,16 +29,16 @@ class H2life < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/h2life/releases/download/v0.10.5/h2life_0.10.5_linux_amd64.tar.gz"
-      sha256 "b7c96bbd6b16dc3795f04536ead81d424e8b1142fb505f34c58db527362e9752"
-      def install
+      url "https://github.com/fortio/h2life/releases/download/v0.11.0/h2life_0.11.0_linux_amd64.tar.gz"
+      sha256 "c6dc9675a751ac3f08f9b87bb20cd3155c194e40e54833d50186664fadb14453"
+      define_method(:install) do
         bin.install "h2life"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/h2life/releases/download/v0.10.5/h2life_0.10.5_linux_arm64.tar.gz"
-      sha256 "30c1eeb639fb3a4ac8b3a67bf48b5ae0228b7a57edce8869d12ec24254069512"
-      def install
+      url "https://github.com/fortio/h2life/releases/download/v0.11.0/h2life_0.11.0_linux_arm64.tar.gz"
+      sha256 "c9ca4426310e4664aaca1bdd4d762daa5b01063aac9574d83c0e144fdab3a29e"
+      define_method(:install) do
         bin.install "h2life"
       end
     end
