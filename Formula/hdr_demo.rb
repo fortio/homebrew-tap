@@ -5,21 +5,21 @@
 class HdrDemo < Formula
   desc "Support for high dynamic range synthetic PNG image in go"
   homepage "https://fortio.org/"
-  version "1.0.0"
+  version "1.1.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/hdr/releases/download/v1.0.0/hdr_demo_1.0.0_darwin_amd64.zip"
-      sha256 "92e9aa2fb2a22c63d5396fd7ea1df935836b28fd4d7ce36379bdd4de29aa5630"
+      url "https://github.com/fortio/hdr/releases/download/v1.1.0/hdr_demo_1.1.0_darwin_amd64.zip"
+      sha256 "b99b8a81ae2c6435b501f665a825c740076e356d7f515e099f8251583624b4b8"
 
       define_method(:install) do
         bin.install "hdr_demo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/hdr/releases/download/v1.0.0/hdr_demo_1.0.0_darwin_arm64.zip"
-      sha256 "23bba2e1cf89a5f4b15c7a1f5555466ce942c6ab3834aaad79fc7049eb26f72e"
+      url "https://github.com/fortio/hdr/releases/download/v1.1.0/hdr_demo_1.1.0_darwin_arm64.zip"
+      sha256 "777ebaf9e3249184af307713ded61717c45377f80b77f6b05c3b825424e1fd27"
 
       define_method(:install) do
         bin.install "hdr_demo"
@@ -29,15 +29,15 @@ class HdrDemo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/hdr/releases/download/v1.0.0/hdr_demo_1.0.0_linux_amd64.tar.gz"
-      sha256 "258977b5955b8e6908f65f1f2e03bb04297770fdc6a685f41560477418724815"
+      url "https://github.com/fortio/hdr/releases/download/v1.1.0/hdr_demo_1.1.0_linux_amd64.tar.gz"
+      sha256 "a299b5d66b711c382bb08300843560b8ede3537b9f8c9da132a38340c8226498"
       define_method(:install) do
         bin.install "hdr_demo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/hdr/releases/download/v1.0.0/hdr_demo_1.0.0_linux_arm64.tar.gz"
-      sha256 "87fbceaf12e8daf9af60848093b72500d448a5263a417b18bd1611f589895127"
+      url "https://github.com/fortio/hdr/releases/download/v1.1.0/hdr_demo_1.1.0_linux_arm64.tar.gz"
+      sha256 "90f5fbf1af21b72792e8e8c1cdeb296301930a1b296236f3488480fea39bb395"
       define_method(:install) do
         bin.install "hdr_demo"
       end
