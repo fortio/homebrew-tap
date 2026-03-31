@@ -5,23 +5,23 @@
 class Sshdtui < Formula
   desc "Ansipixels sshd tui demoes menu server"
   homepage "https://fortio.org/"
-  version "0.7.3"
+  version "0.7.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/sshdtui/releases/download/v0.7.3/sshdtui_0.7.3_darwin_amd64.zip"
-      sha256 "4c4c5cc7fa2a224fef6a4da7ab273c54eed77fe167f9fc17858357346d2aa2e8"
+      url "https://github.com/fortio/sshdtui/releases/download/v0.7.4/sshdtui_0.7.4_darwin_amd64.zip"
+      sha256 "6d8948ad4487e4cc2cf50ee350c5177821beda70128de27a50864b5266810d10"
 
-      def install
+      define_method(:install) do
         bin.install "sshdtui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/sshdtui/releases/download/v0.7.3/sshdtui_0.7.3_darwin_arm64.zip"
-      sha256 "74ca3fd55a236388de4e4423b037909bf688f76e252ace4a3ab0c6757025b481"
+      url "https://github.com/fortio/sshdtui/releases/download/v0.7.4/sshdtui_0.7.4_darwin_arm64.zip"
+      sha256 "4676a24a067698c496f6ca9103bdcc634ce55d9c1f0913bb17afe6d390606547"
 
-      def install
+      define_method(:install) do
         bin.install "sshdtui"
       end
     end
@@ -29,16 +29,16 @@ class Sshdtui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/sshdtui/releases/download/v0.7.3/sshdtui_0.7.3_linux_amd64.tar.gz"
-      sha256 "e4e417bd47ae8830790f74f99d7a3e055d738f84f42e9d954ae7f9e7cf89042f"
-      def install
+      url "https://github.com/fortio/sshdtui/releases/download/v0.7.4/sshdtui_0.7.4_linux_amd64.tar.gz"
+      sha256 "8f4937d7c323dd6bf7515d396db5afe65001063e995aef6ae223d0370d5a184a"
+      define_method(:install) do
         bin.install "sshdtui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/sshdtui/releases/download/v0.7.3/sshdtui_0.7.3_linux_arm64.tar.gz"
-      sha256 "a1274890580e4fc01da9520492e5fc86e8886cdf791434c309ee8c2b7228d2ce"
-      def install
+      url "https://github.com/fortio/sshdtui/releases/download/v0.7.4/sshdtui_0.7.4_linux_arm64.tar.gz"
+      sha256 "840fc77296884695c226629103d712d5caa7c3c985297e705bcf59a402f71385"
+      define_method(:install) do
         bin.install "sshdtui"
       end
     end
