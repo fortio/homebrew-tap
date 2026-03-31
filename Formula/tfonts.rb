@@ -5,23 +5,23 @@
 class Tfonts < Formula
   desc "Fortio terminal large text output using your TTF fonts"
   homepage "https://fortio.org/"
-  version "1.5.7"
+  version "1.6.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tfonts/releases/download/v1.5.7/tfonts_1.5.7_darwin_amd64.zip"
-      sha256 "254c3846c5847fc80686d5ee22b65fcc611387ed2ffbf2c5e8e3def7039e6970"
+      url "https://github.com/fortio/tfonts/releases/download/v1.6.0/tfonts_1.6.0_darwin_amd64.zip"
+      sha256 "82f580c7b334b87e14a9a09852f7677593f3e782329825103295b25ce1e8e2cb"
 
-      def install
+      define_method(:install) do
         bin.install "tfonts"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tfonts/releases/download/v1.5.7/tfonts_1.5.7_darwin_arm64.zip"
-      sha256 "d9c8c3caa2efd9d3c56e7948b4b58a05395844fd9d5f0cd85e7beb4e02e69a2c"
+      url "https://github.com/fortio/tfonts/releases/download/v1.6.0/tfonts_1.6.0_darwin_arm64.zip"
+      sha256 "aa3b41bb04f4ef34201fde3a06f78ef72e96542f192746922748b060ecaf43b9"
 
-      def install
+      define_method(:install) do
         bin.install "tfonts"
       end
     end
@@ -29,16 +29,16 @@ class Tfonts < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tfonts/releases/download/v1.5.7/tfonts_1.5.7_linux_amd64.tar.gz"
-      sha256 "6e9f3f2adfb60358a6eabf8793524b1c3dcedd207f89de24f32bfa113b373e72"
-      def install
+      url "https://github.com/fortio/tfonts/releases/download/v1.6.0/tfonts_1.6.0_linux_amd64.tar.gz"
+      sha256 "b127dabbb7345509996159fd725613e6e17bd0cbe3bc959bef0e83b04193ba67"
+      define_method(:install) do
         bin.install "tfonts"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tfonts/releases/download/v1.5.7/tfonts_1.5.7_linux_arm64.tar.gz"
-      sha256 "dbd9481e51739ba92a183cd5836400f001aed6767d89248c88d7c25a985d74af"
-      def install
+      url "https://github.com/fortio/tfonts/releases/download/v1.6.0/tfonts_1.6.0_linux_arm64.tar.gz"
+      sha256 "7ab045bc0a3bd3d1fdffd64a80116c1bf562d93a5d7cadf079d53ab57f526482"
+      define_method(:install) do
         bin.install "tfonts"
       end
     end
