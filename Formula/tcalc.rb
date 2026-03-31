@@ -5,23 +5,23 @@
 class Tcalc < Formula
   desc "tcalc is a bitwise calculator that is run from the terminal. It supports basic variable assignments, and most arithmetic and bitwise operations."
   homepage "https://fortio.org/"
-  version "0.8.1"
+  version "0.8.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tcalc/releases/download/v0.8.1/tcalc_0.8.1_darwin_amd64.zip"
-      sha256 "04e4db9875ad720e8954961bddaac57a8176c1a2863a180f59f058b5b9d5dc3c"
+      url "https://github.com/fortio/tcalc/releases/download/v0.8.2/tcalc_0.8.2_darwin_amd64.zip"
+      sha256 "61daad45ee8f6c1da3e2270eaee91bbad43596f33d9448b7186d7683315f2f7a"
 
-      def install
+      define_method(:install) do
         bin.install "tcalc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tcalc/releases/download/v0.8.1/tcalc_0.8.1_darwin_arm64.zip"
-      sha256 "c8b2ae8c93881372d5c1f177b3747f674f0d6f9a7c7359de5fd2c6b6d509ecac"
+      url "https://github.com/fortio/tcalc/releases/download/v0.8.2/tcalc_0.8.2_darwin_arm64.zip"
+      sha256 "c81da68e625237b0489a6332dee4b7c15b2f73cdfa478fb7f895ec237a2dac67"
 
-      def install
+      define_method(:install) do
         bin.install "tcalc"
       end
     end
@@ -29,16 +29,16 @@ class Tcalc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tcalc/releases/download/v0.8.1/tcalc_0.8.1_linux_amd64.tar.gz"
-      sha256 "a04c34df736b4c6afd4035b7e443d4f86b8ea604f5b88af56efe1d7b8541bfb3"
-      def install
+      url "https://github.com/fortio/tcalc/releases/download/v0.8.2/tcalc_0.8.2_linux_amd64.tar.gz"
+      sha256 "407db16562873b6448d2be78efc73128e8cfd4439ec804519c0508da58999d4f"
+      define_method(:install) do
         bin.install "tcalc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tcalc/releases/download/v0.8.1/tcalc_0.8.1_linux_arm64.tar.gz"
-      sha256 "acd69fa81721b9c0c169faac9353c186172cf28f9afff14d2054e5aa9ecd33ee"
-      def install
+      url "https://github.com/fortio/tcalc/releases/download/v0.8.2/tcalc_0.8.2_linux_arm64.tar.gz"
+      sha256 "2b689d1e46628d37ce58ee87e05473f357655076c7863891dd4546c040e89b13"
+      define_method(:install) do
         bin.install "tcalc"
       end
     end
