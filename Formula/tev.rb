@@ -5,23 +5,23 @@
 class Tev < Formula
   desc "Fortio terminal terminal event debug"
   homepage "https://fortio.org/"
-  version "0.12.2"
+  version "0.13.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tev/releases/download/v0.12.2/tev_0.12.2_darwin_amd64.zip"
-      sha256 "c89df260a17a99b8c9d1b043f271188d04270698f5ce195d06f2aa30bbad5feb"
+      url "https://github.com/fortio/tev/releases/download/v0.13.0/tev_0.13.0_darwin_amd64.zip"
+      sha256 "f29e62322662447e610b20d2f667a9fbdd059bd0d9a2364de799c5a08e26bf5c"
 
-      def install
+      define_method(:install) do
         bin.install "tev"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tev/releases/download/v0.12.2/tev_0.12.2_darwin_arm64.zip"
-      sha256 "70a27d05cf0ea7ec4ce245db505414c8025a901f57cda383eb7a3d0900486b40"
+      url "https://github.com/fortio/tev/releases/download/v0.13.0/tev_0.13.0_darwin_arm64.zip"
+      sha256 "4563808edd2982bd0fcaad4fc6b410da7e1f73c4f437fd62f514c7e41c959d80"
 
-      def install
+      define_method(:install) do
         bin.install "tev"
       end
     end
@@ -29,16 +29,16 @@ class Tev < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tev/releases/download/v0.12.2/tev_0.12.2_linux_amd64.tar.gz"
-      sha256 "0a4d3a3caae0e47033d00028332a4f80f13c7cd16d68bc257b19444f4aa2000e"
-      def install
+      url "https://github.com/fortio/tev/releases/download/v0.13.0/tev_0.13.0_linux_amd64.tar.gz"
+      sha256 "32983a979a7f13272628d88b05fe4e0c1cc67977b0f50a454f8a1ecd3103a1ed"
+      define_method(:install) do
         bin.install "tev"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tev/releases/download/v0.12.2/tev_0.12.2_linux_arm64.tar.gz"
-      sha256 "9f82f402191baddcd80a1ceffaa3f33f0359acfec23016aeb3b78d4aaf97eab9"
-      def install
+      url "https://github.com/fortio/tev/releases/download/v0.13.0/tev_0.13.0_linux_arm64.tar.gz"
+      sha256 "19f0c4d5e93273b8266bb409e22425651a3216d725de9eaac81acc8a5bf0cb4a"
+      define_method(:install) do
         bin.install "tev"
       end
     end
