@@ -5,23 +5,23 @@
 class Memstore < Formula
   desc "Fortio memstore"
   homepage "https://fortio.org/"
-  version "0.1.2"
+  version "0.1.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/memstore/releases/download/v0.1.2/memstore_0.1.2_darwin_amd64.zip"
-      sha256 "12f3ac2e591453334d8db1e30117852ee285787f53c7e8e4e6fc6c18a9424fa8"
+      url "https://github.com/fortio/memstore/releases/download/v0.1.3/memstore_0.1.3_darwin_amd64.zip"
+      sha256 "7878fc1433e303d7db7041c9da96af89a166654fe1f2be6152b4a30878a0891c"
 
-      def install
+      define_method(:install) do
         bin.install "memstore"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/memstore/releases/download/v0.1.2/memstore_0.1.2_darwin_arm64.zip"
-      sha256 "01f03148c6513ab3fba580f6bff572e209cf1b4c8261223cae7bbb6506f4ff13"
+      url "https://github.com/fortio/memstore/releases/download/v0.1.3/memstore_0.1.3_darwin_arm64.zip"
+      sha256 "af2d23d200cf7c48a0cd350b207e3c4cae233cbe16019acc1a829538de3df19a"
 
-      def install
+      define_method(:install) do
         bin.install "memstore"
       end
     end
@@ -29,16 +29,16 @@ class Memstore < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/memstore/releases/download/v0.1.2/memstore_0.1.2_linux_amd64.tar.gz"
-      sha256 "7b2e9b454e0d14bc95c2ccfac1030b433775037a403b7a38d43de67e13f42a97"
-      def install
+      url "https://github.com/fortio/memstore/releases/download/v0.1.3/memstore_0.1.3_linux_amd64.tar.gz"
+      sha256 "e6c13345d374442902feb41967bf0ca87769ce98d51579d81a2ca7724a52170c"
+      define_method(:install) do
         bin.install "memstore"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/memstore/releases/download/v0.1.2/memstore_0.1.2_linux_arm64.tar.gz"
-      sha256 "0ad900e20e362f5710edb147b20e8e920d95347bc60d48f0a7fba9fbf234749f"
-      def install
+      url "https://github.com/fortio/memstore/releases/download/v0.1.3/memstore_0.1.3_linux_arm64.tar.gz"
+      sha256 "1539feb367b1470221c461863b39b7cd01c1d3276bdec8f64912d04ca7518416"
+      define_method(:install) do
         bin.install "memstore"
       end
     end
