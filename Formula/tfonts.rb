@@ -5,21 +5,21 @@
 class Tfonts < Formula
   desc "Fortio terminal large text output using your TTF fonts"
   homepage "https://fortio.org/"
-  version "1.6.0"
+  version "1.6.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tfonts/releases/download/v1.6.0/tfonts_1.6.0_darwin_amd64.zip"
-      sha256 "82f580c7b334b87e14a9a09852f7677593f3e782329825103295b25ce1e8e2cb"
+      url "https://github.com/fortio/tfonts/releases/download/v1.6.1/tfonts_1.6.1_darwin_amd64.zip"
+      sha256 "400b0a6919c7963c9adc4bab5a9e06663fd6b7501be9a582fd4464e46e57cf19"
 
       define_method(:install) do
         bin.install "tfonts"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tfonts/releases/download/v1.6.0/tfonts_1.6.0_darwin_arm64.zip"
-      sha256 "aa3b41bb04f4ef34201fde3a06f78ef72e96542f192746922748b060ecaf43b9"
+      url "https://github.com/fortio/tfonts/releases/download/v1.6.1/tfonts_1.6.1_darwin_arm64.zip"
+      sha256 "8c95aa9a36024adcef7b289197e18822dc4fc835597b546d41e57217f00f4a3c"
 
       define_method(:install) do
         bin.install "tfonts"
@@ -29,15 +29,15 @@ class Tfonts < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tfonts/releases/download/v1.6.0/tfonts_1.6.0_linux_amd64.tar.gz"
-      sha256 "b127dabbb7345509996159fd725613e6e17bd0cbe3bc959bef0e83b04193ba67"
+      url "https://github.com/fortio/tfonts/releases/download/v1.6.1/tfonts_1.6.1_linux_amd64.tar.gz"
+      sha256 "850681d7dd1697dbfaa2a7ceb70f58df6b6c1ac4d968303535ddecc648a9f255"
       define_method(:install) do
         bin.install "tfonts"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tfonts/releases/download/v1.6.0/tfonts_1.6.0_linux_arm64.tar.gz"
-      sha256 "7ab045bc0a3bd3d1fdffd64a80116c1bf562d93a5d7cadf079d53ab57f526482"
+      url "https://github.com/fortio/tfonts/releases/download/v1.6.1/tfonts_1.6.1_linux_arm64.tar.gz"
+      sha256 "9b6b468cd5843f0cb7dc8523ca3cb45f7eae716fbde5f93324bdebab5ec0b996"
       define_method(:install) do
         bin.install "tfonts"
       end
