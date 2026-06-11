@@ -5,23 +5,23 @@
 class Life < Formula
   desc "Fortio terminal Conway's game of life demo"
   homepage "https://fortio.org/"
-  version "0.64.1"
+  version "0.65.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.64.1/life_0.64.1_darwin_amd64.zip"
-      sha256 "5573f94d75a82215c6ccadaaec98081dbd6cea4013492973e92698754b445bef"
+      url "https://github.com/fortio/terminal/releases/download/v0.65.1/life_0.65.1_darwin_amd64.zip"
+      sha256 "c852268a72fd70d975816b380e28b3d42ac71794c2baff46a42d1a609967003c"
 
-      def install
+      define_method(:install) do
         bin.install "life"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.64.1/life_0.64.1_darwin_arm64.zip"
-      sha256 "7ebd437dba2890dbba853751f660c4916070926b9eacfec35207ce27819cfede"
+      url "https://github.com/fortio/terminal/releases/download/v0.65.1/life_0.65.1_darwin_arm64.zip"
+      sha256 "03ad32032968ce607d3ebc75fc01a4c07918776206688bd2b84efda7110be726"
 
-      def install
+      define_method(:install) do
         bin.install "life"
       end
     end
@@ -29,16 +29,16 @@ class Life < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.64.1/life_0.64.1_linux_amd64.tar.gz"
-      sha256 "96a1e2c968f92269aa36f42d71618788016cc1931e445503b8535ed86ab93f77"
-      def install
+      url "https://github.com/fortio/terminal/releases/download/v0.65.1/life_0.65.1_linux_amd64.tar.gz"
+      sha256 "a4a2d5450db39f75cb6deb0809f32e2640b66dfcb9b0fd713d51680197f1d7a8"
+      define_method(:install) do
         bin.install "life"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.64.1/life_0.64.1_linux_arm64.tar.gz"
-      sha256 "003fa0d100f21290c49a431d24d4f0bde621ef44947d2376887d769233e3423f"
-      def install
+      url "https://github.com/fortio/terminal/releases/download/v0.65.1/life_0.65.1_linux_arm64.tar.gz"
+      sha256 "9f12b915a7a69a38d0febddc376b1b18e877b1130ec9c6855adce688035fcd84"
+      define_method(:install) do
         bin.install "life"
       end
     end
