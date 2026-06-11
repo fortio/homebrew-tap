@@ -5,23 +5,23 @@
 class Tmatrix < Formula
   desc "Simulate the matrix effect in your terminal"
   homepage "https://fortio.org/"
-  version "0.2.7"
+  version "0.2.8"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tmatrix/releases/download/v0.2.7/tmatrix_0.2.7_darwin_amd64.zip"
-      sha256 "4990b20195fe303c002fbdde1c1db67db1cace5a57daced7bdd7db06649a4420"
+      url "https://github.com/fortio/tmatrix/releases/download/v0.2.8/tmatrix_0.2.8_darwin_amd64.zip"
+      sha256 "8c92d6969c766e064d8d8d6926c9c3a5617acea635e97b8fbebb872c22718ec9"
 
-      def install
+      define_method(:install) do
         bin.install "tmatrix"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tmatrix/releases/download/v0.2.7/tmatrix_0.2.7_darwin_arm64.zip"
-      sha256 "f5d2bd68870513186a19ef401ed50551a1ea8d74bfd5f4d26aaa1761a0591fe8"
+      url "https://github.com/fortio/tmatrix/releases/download/v0.2.8/tmatrix_0.2.8_darwin_arm64.zip"
+      sha256 "3a580950ebcf92528a8cc310f14f20a64e3c17e1e40c22296e50ece6d7483666"
 
-      def install
+      define_method(:install) do
         bin.install "tmatrix"
       end
     end
@@ -29,16 +29,16 @@ class Tmatrix < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tmatrix/releases/download/v0.2.7/tmatrix_0.2.7_linux_amd64.tar.gz"
-      sha256 "6577f94d63fe4cc443c99888ee06de3a43c0cd6387a58d61d9be0a7bb923ba9b"
-      def install
+      url "https://github.com/fortio/tmatrix/releases/download/v0.2.8/tmatrix_0.2.8_linux_amd64.tar.gz"
+      sha256 "3d3a1148152c05b594117169ea0248036e6764b6416ea3963aaec11a77f72b30"
+      define_method(:install) do
         bin.install "tmatrix"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tmatrix/releases/download/v0.2.7/tmatrix_0.2.7_linux_arm64.tar.gz"
-      sha256 "d6464fa64870229af71deff853f8b92110cb7b4891074daf5bf010f0adb0e522"
-      def install
+      url "https://github.com/fortio/tmatrix/releases/download/v0.2.8/tmatrix_0.2.8_linux_arm64.tar.gz"
+      sha256 "4da943966c35c7e5851b6874d5e1fe2f49623c467213269be57c318ce343d247"
+      define_method(:install) do
         bin.install "tmatrix"
       end
     end
