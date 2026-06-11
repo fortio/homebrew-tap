@@ -5,21 +5,21 @@
 class Nocolor < Formula
   desc "Fortio terminal nocolor (and no other ansi code either) filter"
   homepage "https://fortio.org/"
-  version "0.65.0"
+  version "0.65.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.0/nocolor_0.65.0_darwin_amd64.zip"
-      sha256 "6f7f602877a8e6dde2e5bd36266d0789be8fd0b15dff3f325e28167f619d9ac6"
+      url "https://github.com/fortio/terminal/releases/download/v0.65.1/nocolor_0.65.1_darwin_amd64.zip"
+      sha256 "3098ac3b324cafdaf9354d603ab06cb41184d99cedfd67cfaca2ad817a609522"
 
       define_method(:install) do
         bin.install "nocolor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.0/nocolor_0.65.0_darwin_arm64.zip"
-      sha256 "5e04711efb241f64eb4cbc2836aa642be8971958b4ef224d0667d02f5f151d68"
+      url "https://github.com/fortio/terminal/releases/download/v0.65.1/nocolor_0.65.1_darwin_arm64.zip"
+      sha256 "e4100f4ff49121b5cd84ae2e7b6b48e0d984de104ffe7e1e83ac2e466e511f67"
 
       define_method(:install) do
         bin.install "nocolor"
@@ -29,15 +29,15 @@ class Nocolor < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.0/nocolor_0.65.0_linux_amd64.tar.gz"
-      sha256 "f7dd1201ba865777934951f5be5dbf05af0fdbb478e7f42e2357037103722ec7"
+      url "https://github.com/fortio/terminal/releases/download/v0.65.1/nocolor_0.65.1_linux_amd64.tar.gz"
+      sha256 "d0f50c5b7e292c9c26671b3d0cdd50ebd5edcaaf8a0dab25d408e9b9f25bb94f"
       define_method(:install) do
         bin.install "nocolor"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.0/nocolor_0.65.0_linux_arm64.tar.gz"
-      sha256 "9d62a18168760f14ff349f373ff8b0d53a98d82a9660c8453f58d8076e320ad5"
+      url "https://github.com/fortio/terminal/releases/download/v0.65.1/nocolor_0.65.1_linux_arm64.tar.gz"
+      sha256 "cab8f2bf7568a2ab297f1ce4998adba9af051906bc8c1a48b15831612a4d33fa"
       define_method(:install) do
         bin.install "nocolor"
       end
