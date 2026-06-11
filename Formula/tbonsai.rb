@@ -5,23 +5,23 @@
 class Tbonsai < Formula
   desc "Fortio tbonsai Ansipixels port of cbonsai"
   homepage "https://fortio.org/"
-  version "1.1.3"
+  version "1.1.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tbonsai/releases/download/v1.1.3/tbonsai_1.1.3_darwin_amd64.zip"
-      sha256 "189e6e3a523d5d238785e1e774dab49c1c287ed2949467cb2d754afd191e86ce"
+      url "https://github.com/fortio/tbonsai/releases/download/v1.1.4/tbonsai_1.1.4_darwin_amd64.zip"
+      sha256 "37cafbe4a480966079566bc88c3f725de8a1ef461a8de73a83c2097efab06a34"
 
-      def install
+      define_method(:install) do
         bin.install "tbonsai"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tbonsai/releases/download/v1.1.3/tbonsai_1.1.3_darwin_arm64.zip"
-      sha256 "26d15704f47c1ea90c8430f290dfd4a7a0965745db11524c6635766c0d24dd78"
+      url "https://github.com/fortio/tbonsai/releases/download/v1.1.4/tbonsai_1.1.4_darwin_arm64.zip"
+      sha256 "99a44e6f2f3aff656cabbf1357d910e565179dbf891dc51c71af637c00a6d2c3"
 
-      def install
+      define_method(:install) do
         bin.install "tbonsai"
       end
     end
@@ -29,16 +29,16 @@ class Tbonsai < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tbonsai/releases/download/v1.1.3/tbonsai_1.1.3_linux_amd64.tar.gz"
-      sha256 "da3e9f01fe8f2a9757c0840e5ef2675e24aa2b71d9d985a9db14268f202810e9"
-      def install
+      url "https://github.com/fortio/tbonsai/releases/download/v1.1.4/tbonsai_1.1.4_linux_amd64.tar.gz"
+      sha256 "ef3756e22c1a122c139200f5c1e712b257bea2660abcb01b0b169b4c6f55e197"
+      define_method(:install) do
         bin.install "tbonsai"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tbonsai/releases/download/v1.1.3/tbonsai_1.1.3_linux_arm64.tar.gz"
-      sha256 "33cf98fa7aee1cf6053bbd210850faacb80971c7280af3527b9643904419a811"
-      def install
+      url "https://github.com/fortio/tbonsai/releases/download/v1.1.4/tbonsai_1.1.4_linux_arm64.tar.gz"
+      sha256 "5fe80493572b68d23dccb1968c2623ba7c4270e2d8eb076c1acae61e26beac81"
+      define_method(:install) do
         bin.install "tbonsai"
       end
     end
