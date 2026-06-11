@@ -5,47 +5,41 @@
 class Logc < Formula
   desc "Fortio log JSON to (colorized) text converter"
   homepage "https://fortio.org/"
-  version "1.3.7"
+  version "1.3.8"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/logc/releases/download/v1.3.7/logc_1.3.7_darwin_amd64.zip"
-      sha256 "e91ea259cf163b7f49d881568ec9c837dad19866802c8b846d8559defd95ae46"
+      url "https://github.com/fortio/logc/releases/download/v1.3.8/logc_1.3.8_darwin_amd64.zip"
+      sha256 "fea7f1e319c8706392863ce40d3a8c37324f87a7f22065a5e5107d7a6835d091"
 
-      def install
+      define_method(:install) do
         bin.install "logc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/logc/releases/download/v1.3.7/logc_1.3.7_darwin_arm64.zip"
-      sha256 "627377f8102f165344ca53468ac747547fe15d6eed660114bd03154203a54a44"
+      url "https://github.com/fortio/logc/releases/download/v1.3.8/logc_1.3.8_darwin_arm64.zip"
+      sha256 "8a6afbbb81a2400b5e15bac570fc3c87a4bf3ff530a8a590c735ae4cb97a80aa"
 
-      def install
+      define_method(:install) do
         bin.install "logc"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/logc/releases/download/v1.3.7/logc_1.3.7_linux_amd64.tar.gz"
-        sha256 "bac555056cd461d360cdc5ffae4544b25bca5d97df2e6ed523c2e6cb3efe2a8e"
-
-        def install
-          bin.install "logc"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/logc/releases/download/v1.3.8/logc_1.3.8_linux_amd64.tar.gz"
+      sha256 "c61a8174d63f7f84d092299ad9acb8d0709cecc13037912c92e57619f1c77c05"
+      define_method(:install) do
+        bin.install "logc"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/fortio/logc/releases/download/v1.3.7/logc_1.3.7_linux_arm64.tar.gz"
-        sha256 "3c94952118613cc452d8a870a428748be8866c152d1485a362e30c64a271c4e3"
-
-        def install
-          bin.install "logc"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fortio/logc/releases/download/v1.3.8/logc_1.3.8_linux_arm64.tar.gz"
+      sha256 "f4a6e9e5e390f22e03143977b2c6faca05d7079f1e236202456b1abff3ff660f"
+      define_method(:install) do
+        bin.install "logc"
       end
     end
   end
