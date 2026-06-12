@@ -5,23 +5,23 @@
 class Tclock < Formula
   desc "Fortio terminal clock"
   homepage "https://fortio.org/"
-  version "1.15.6"
+  version "1.15.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tclock/releases/download/v1.15.6/tclock_1.15.6_darwin_amd64.zip"
-      sha256 "2da2f65b79ca0253ea5a3903e25d980bba7e51893439b7ab39386a6b94bf598e"
+      url "https://github.com/fortio/tclock/releases/download/v1.15.7/tclock_1.15.7_darwin_amd64.zip"
+      sha256 "9b8d7cb7b00627c61b4ad2a85c2bf8aa5edbf9cf925de036ef313ffd81b38062"
 
-      def install
+      define_method(:install) do
         bin.install "tclock"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tclock/releases/download/v1.15.6/tclock_1.15.6_darwin_arm64.zip"
-      sha256 "dc2b261365b95635819f6d71660334c63c5035e34970f086cb7e1c868f1108f8"
+      url "https://github.com/fortio/tclock/releases/download/v1.15.7/tclock_1.15.7_darwin_arm64.zip"
+      sha256 "9d48e0898ba386afe446cc8bcc227ff3d19023750043ac9e5b50cd62641fcda2"
 
-      def install
+      define_method(:install) do
         bin.install "tclock"
       end
     end
@@ -29,16 +29,16 @@ class Tclock < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tclock/releases/download/v1.15.6/tclock_1.15.6_linux_amd64.tar.gz"
-      sha256 "1caf3a502aa28eb0ef0fabc9ab4b1c87624b5ee54a6543d205d6ef725aa6a35b"
-      def install
+      url "https://github.com/fortio/tclock/releases/download/v1.15.7/tclock_1.15.7_linux_amd64.tar.gz"
+      sha256 "09b1478198886aa83187d4f7e2a55fbe3f183cecb35fe5d9ab2c950c6c32f27f"
+      define_method(:install) do
         bin.install "tclock"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tclock/releases/download/v1.15.6/tclock_1.15.6_linux_arm64.tar.gz"
-      sha256 "d8a1d724c0fda26b3f5bff39fe52ca507dfdb936d9268258b00ccf4cb2143eb9"
-      def install
+      url "https://github.com/fortio/tclock/releases/download/v1.15.7/tclock_1.15.7_linux_arm64.tar.gz"
+      sha256 "6244dff3a8e351c27dd0dbf107ea2d9f0e276022f238c84c9209cd83b1d41413"
+      define_method(:install) do
         bin.install "tclock"
       end
     end
