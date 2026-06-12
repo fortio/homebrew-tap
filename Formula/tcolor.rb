@@ -5,23 +5,23 @@
 class Tcolor < Formula
   desc "Fortio terminal color picker"
   homepage "https://fortio.org/"
-  version "1.5.6"
+  version "1.5.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tcolor/releases/download/v1.5.6/tcolor_1.5.6_darwin_amd64.zip"
-      sha256 "5fd010e116d85554b558f6e39b23359488095d04140364b594ec9454f9db81c8"
+      url "https://github.com/fortio/tcolor/releases/download/v1.5.7/tcolor_1.5.7_darwin_amd64.zip"
+      sha256 "596633573c3d07ab824ea95044e0af672bc74fa67c99c33d90a3c37ddf71b75e"
 
-      def install
+      define_method(:install) do
         bin.install "tcolor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tcolor/releases/download/v1.5.6/tcolor_1.5.6_darwin_arm64.zip"
-      sha256 "c62888a8a6d4ec5594fb83fcbd1d36146694f1e4cf0b8b68c79183135958014e"
+      url "https://github.com/fortio/tcolor/releases/download/v1.5.7/tcolor_1.5.7_darwin_arm64.zip"
+      sha256 "afd616a7cb955cbfbb26aba011cb380c1cf3dcfd06318a5abf18fe549eb2f008"
 
-      def install
+      define_method(:install) do
         bin.install "tcolor"
       end
     end
@@ -29,16 +29,16 @@ class Tcolor < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tcolor/releases/download/v1.5.6/tcolor_1.5.6_linux_amd64.tar.gz"
-      sha256 "79ec1bff275dc4bcc8efa1004ce95c4c97ec485fdd0783f97dd2d35ffa826ca7"
-      def install
+      url "https://github.com/fortio/tcolor/releases/download/v1.5.7/tcolor_1.5.7_linux_amd64.tar.gz"
+      sha256 "a85d6d16e00febaf576dca32271b0c6a4a9bfebcf44dfab6b31319ced72b1546"
+      define_method(:install) do
         bin.install "tcolor"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tcolor/releases/download/v1.5.6/tcolor_1.5.6_linux_arm64.tar.gz"
-      sha256 "1019295bde44aaa4402937ec5298098b6a2f0caea034bd585e1dd8a31749f375"
-      def install
+      url "https://github.com/fortio/tcolor/releases/download/v1.5.7/tcolor_1.5.7_linux_arm64.tar.gz"
+      sha256 "6bc0b96c8f6bfb4618c95260cc152998fb4af188de4d2f67df835c3d8e20a8d2"
+      define_method(:install) do
         bin.install "tcolor"
       end
     end
