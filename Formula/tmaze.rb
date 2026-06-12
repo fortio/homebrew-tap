@@ -5,23 +5,23 @@
 class Tmaze < Formula
   desc "Ansi pixels version of the C64 classic maze"
   homepage "https://fortio.org/"
-  version "1.5.5"
+  version "1.5.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tmaze/releases/download/v1.5.5/tmaze_1.5.5_darwin_amd64.zip"
-      sha256 "f4069b26d8bbe7bfa235149410b649fc9c0d825157a1aeaacf863dbef0fedd46"
+      url "https://github.com/fortio/tmaze/releases/download/v1.5.6/tmaze_1.5.6_darwin_amd64.zip"
+      sha256 "c1aacd1edd88f1199da9e5ca8774d33db7efabd226b7e8f5cdb8609acf6ede78"
 
-      def install
+      define_method(:install) do
         bin.install "tmaze"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tmaze/releases/download/v1.5.5/tmaze_1.5.5_darwin_arm64.zip"
-      sha256 "2c3600265eead9353da69bcdb8d5240b4f9fc7187c9085b2865db11efdc38f58"
+      url "https://github.com/fortio/tmaze/releases/download/v1.5.6/tmaze_1.5.6_darwin_arm64.zip"
+      sha256 "f2521fc2f88c756bfb38acb81e7dc5e24a3db10f55cf86d7b364b8ceaadb20ad"
 
-      def install
+      define_method(:install) do
         bin.install "tmaze"
       end
     end
@@ -29,16 +29,16 @@ class Tmaze < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tmaze/releases/download/v1.5.5/tmaze_1.5.5_linux_amd64.tar.gz"
-      sha256 "63f3ed14a4004e653b4c8f0939043fb2e86be75c71df1d6c146eeaf954a1f200"
-      def install
+      url "https://github.com/fortio/tmaze/releases/download/v1.5.6/tmaze_1.5.6_linux_amd64.tar.gz"
+      sha256 "02143700646a796940206ef9bed960836bfa399951df93528fb7bdaa08cddc1d"
+      define_method(:install) do
         bin.install "tmaze"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tmaze/releases/download/v1.5.5/tmaze_1.5.5_linux_arm64.tar.gz"
-      sha256 "6cc2add7be2e2dacddeef81bee76d98b13f240ca509594f7177fe74b53bbfe1e"
-      def install
+      url "https://github.com/fortio/tmaze/releases/download/v1.5.6/tmaze_1.5.6_linux_arm64.tar.gz"
+      sha256 "6dcdc8963fced842c753d15e87d6bcfa8c67cf5e3b68f818729f468536a24eb7"
+      define_method(:install) do
         bin.install "tmaze"
       end
     end
