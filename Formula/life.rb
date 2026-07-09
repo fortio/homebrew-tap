@@ -5,21 +5,21 @@
 class Life < Formula
   desc "Fortio terminal Conway's game of life demo"
   homepage "https://fortio.org/"
-  version "0.65.2"
+  version "0.65.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.2/life_0.65.2_darwin_amd64.zip"
-      sha256 "e786304143e0d6e42f3b47332f87385befb7f24ffffab4eae92c905bc6d15420"
+      url "https://github.com/fortio/terminal/releases/download/v0.65.3/life_0.65.3_darwin_amd64.zip"
+      sha256 "c258f7f91134eb6b1f57516b9a375f578924f1cf21664161d2c4f554cdd15327"
 
       define_method(:install) do
         bin.install "life"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.2/life_0.65.2_darwin_arm64.zip"
-      sha256 "96b06ea9bfbc0c58a362fc94bfa569fbc920ab4ab1d682f3fd5ae0ede1b775ac"
+      url "https://github.com/fortio/terminal/releases/download/v0.65.3/life_0.65.3_darwin_arm64.zip"
+      sha256 "dac56d8ac5912fc48ecf9d1170b7f816fdb261ab49a676f02de2a302e04d47b2"
 
       define_method(:install) do
         bin.install "life"
@@ -29,15 +29,15 @@ class Life < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.2/life_0.65.2_linux_amd64.tar.gz"
-      sha256 "fd4ec0d1bece56ddd69960ba363a44d8728a37aa3a886ab5e75143d2528b1ad6"
+      url "https://github.com/fortio/terminal/releases/download/v0.65.3/life_0.65.3_linux_amd64.tar.gz"
+      sha256 "841c7665e8731193f7ec24ee2fbdbdc5ce3283c1c88eba31c6a4f1ee048ae0e7"
       define_method(:install) do
         bin.install "life"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.2/life_0.65.2_linux_arm64.tar.gz"
-      sha256 "cdc6a62027f859136e7b5db4cc844d00ece6f3d8a8670b82e58888e84cb2d1d3"
+      url "https://github.com/fortio/terminal/releases/download/v0.65.3/life_0.65.3_linux_arm64.tar.gz"
+      sha256 "723b987525670504d54aba4d70acb882a78ead1f159f27e274c13aa8db91dc88"
       define_method(:install) do
         bin.install "life"
       end
