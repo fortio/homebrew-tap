@@ -5,21 +5,21 @@
 class Brick < Formula
   desc "Fortio terminal brick smashing game in the style of Breakout"
   homepage "https://fortio.org/"
-  version "0.65.2"
+  version "0.65.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.2/brick_0.65.2_darwin_amd64.zip"
-      sha256 "738ea0e5e82c59ac9c3c05e72b93193fb05edea3bac779683d020ed7a5df1adc"
+      url "https://github.com/fortio/terminal/releases/download/v0.65.3/brick_0.65.3_darwin_amd64.zip"
+      sha256 "c3ae2bfbd02bcb3cf96bb1d0178278983d7a8c9bda7e62109958639341fb60dc"
 
       define_method(:install) do
         bin.install "brick"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.2/brick_0.65.2_darwin_arm64.zip"
-      sha256 "30463148731aa3b7fef52a95b0caaf6bb71ac5a4cc402b37dbdaeed6ffdb1fa4"
+      url "https://github.com/fortio/terminal/releases/download/v0.65.3/brick_0.65.3_darwin_arm64.zip"
+      sha256 "b9f18c2ecf4c6ee0e72c55f2bba3f96ecbcf78d6227fab076bcc49cbeabcca7a"
 
       define_method(:install) do
         bin.install "brick"
@@ -29,15 +29,15 @@ class Brick < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.2/brick_0.65.2_linux_amd64.tar.gz"
-      sha256 "dff8bc76f9126d333460880c11fb94ddbba9c00e10df69157882a5256b911a8a"
+      url "https://github.com/fortio/terminal/releases/download/v0.65.3/brick_0.65.3_linux_amd64.tar.gz"
+      sha256 "72976da92f488f90f9f7167cc7cb2393e8d242e1d0181ee65ba6be2e047dfba9"
       define_method(:install) do
         bin.install "brick"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.2/brick_0.65.2_linux_arm64.tar.gz"
-      sha256 "7ef89c987b6c8663b0e17e18a01294a0ef7b4115db71f16a6901542363af040b"
+      url "https://github.com/fortio/terminal/releases/download/v0.65.3/brick_0.65.3_linux_arm64.tar.gz"
+      sha256 "b24897fa487957b0978713ca692998d0cce69bfd560bd37c7167f325e7bb4332"
       define_method(:install) do
         bin.install "brick"
       end
