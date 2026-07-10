@@ -5,23 +5,23 @@
 class Tsync < Formula
   desc "Fortio secure synchronization between machines"
   homepage "https://fortio.org/"
-  version "0.12.0"
+  version "0.12.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tsync/releases/download/v0.12.0/tsync_0.12.0_darwin_amd64.zip"
-      sha256 "e6aead779b46a9b9ae47a9c3627b555942e96c0b187623dbb57c9de966c95d2d"
+      url "https://github.com/fortio/tsync/releases/download/v0.12.1/tsync_0.12.1_darwin_amd64.zip"
+      sha256 "340acc835e2a8117a97a41f9e60205c284bee9700295bfe12ab3772859fecbaa"
 
-      def install
+      define_method(:install) do
         bin.install "tsync"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tsync/releases/download/v0.12.0/tsync_0.12.0_darwin_arm64.zip"
-      sha256 "dc799e9a824a305275f254aabe0e8cf70729a3feab1149ca9f98924f1bbcaab3"
+      url "https://github.com/fortio/tsync/releases/download/v0.12.1/tsync_0.12.1_darwin_arm64.zip"
+      sha256 "5986e19687f15bd667592947c725ddbe892f63b1471b11acf594c9553a4014d1"
 
-      def install
+      define_method(:install) do
         bin.install "tsync"
       end
     end
@@ -29,16 +29,16 @@ class Tsync < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tsync/releases/download/v0.12.0/tsync_0.12.0_linux_amd64.tar.gz"
-      sha256 "a36d4d1cb81b81ee6dd286b1110b7f4d0ca12dbf8d87a72de907439c56fc96ba"
-      def install
+      url "https://github.com/fortio/tsync/releases/download/v0.12.1/tsync_0.12.1_linux_amd64.tar.gz"
+      sha256 "341591a2ed6ae20c6b44429166ff544797d444a613886bf0ad84e1447073fb34"
+      define_method(:install) do
         bin.install "tsync"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tsync/releases/download/v0.12.0/tsync_0.12.0_linux_arm64.tar.gz"
-      sha256 "7e18ab189b534d32405f4c06d2b5578d71856dee41e82f5d61247da2f10bee9e"
-      def install
+      url "https://github.com/fortio/tsync/releases/download/v0.12.1/tsync_0.12.1_linux_arm64.tar.gz"
+      sha256 "4dc7adcf9ead6ba8a2e84905e4058ea35900dd83bc6672abb3fa4947cdb7bbf3"
+      define_method(:install) do
         bin.install "tsync"
       end
     end
