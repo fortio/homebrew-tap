@@ -5,23 +5,23 @@
 class Gvi < Formula
   desc "Fortio terminal vi like editor"
   homepage "https://fortio.org/"
-  version "0.8.3"
+  version "0.8.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/gvi/releases/download/v0.8.3/gvi_0.8.3_darwin_amd64.zip"
-      sha256 "b410729348ffc694badedc149ba3b1b7edb3b62cffcd168752ee24ea409a176c"
+      url "https://github.com/fortio/gvi/releases/download/v0.8.4/gvi_0.8.4_darwin_amd64.zip"
+      sha256 "8fd5378a9c71bfcc9021b4bee4c13c538ed9ca94aa1321655fb4e5de456ea0df"
 
-      def install
+      define_method(:install) do
         bin.install "gvi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/gvi/releases/download/v0.8.3/gvi_0.8.3_darwin_arm64.zip"
-      sha256 "984e8c52e19a4b236fa6a59be76743c6300d4f4f224faf27f248a448167e0fb4"
+      url "https://github.com/fortio/gvi/releases/download/v0.8.4/gvi_0.8.4_darwin_arm64.zip"
+      sha256 "ff637ecfd396653767bd0bd774879de13f2f418f4fa972519bb53890a03da0ec"
 
-      def install
+      define_method(:install) do
         bin.install "gvi"
       end
     end
@@ -29,16 +29,16 @@ class Gvi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/gvi/releases/download/v0.8.3/gvi_0.8.3_linux_amd64.tar.gz"
-      sha256 "2a63ababef2964c492f24619b56c2481b2c89778b805411ef86d1d30610f7979"
-      def install
+      url "https://github.com/fortio/gvi/releases/download/v0.8.4/gvi_0.8.4_linux_amd64.tar.gz"
+      sha256 "41c3774aa4d3cd0c49e4fa9e45254e403a7a4e5efe0aed9f414b075fb83c93e0"
+      define_method(:install) do
         bin.install "gvi"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/gvi/releases/download/v0.8.3/gvi_0.8.3_linux_arm64.tar.gz"
-      sha256 "50b1bc7574b4df3dc29103b2972b41412608b5a6233544d7e067fe3b3be85979"
-      def install
+      url "https://github.com/fortio/gvi/releases/download/v0.8.4/gvi_0.8.4_linux_arm64.tar.gz"
+      sha256 "4da8acfc39b5c4cec99789e82a613cfe5fd9869480f75c5bd55e242b46b38514"
+      define_method(:install) do
         bin.install "gvi"
       end
     end
