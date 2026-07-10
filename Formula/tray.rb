@@ -5,23 +5,23 @@
 class Tray < Formula
   desc "Fortio Ray tracing in the Terminal"
   homepage "https://fortio.org/"
-  version "1.5.5"
+  version "1.5.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tray/releases/download/v1.5.5/tray_1.5.5_darwin_amd64.zip"
-      sha256 "460899b2207ab35e1f23d0a39efd9c25392e055b9399928660e83e59212f8f51"
+      url "https://github.com/fortio/tray/releases/download/v1.5.6/tray_1.5.6_darwin_amd64.zip"
+      sha256 "dffeb72fb59ab718523b3efc9b5a516a09290d2bedfc38da630de991a100e91e"
 
-      def install
+      define_method(:install) do
         bin.install "tray"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tray/releases/download/v1.5.5/tray_1.5.5_darwin_arm64.zip"
-      sha256 "022ead7ad9ff625273db97577c9ef15ae23df7c084eab34ebfe18e3260dc459c"
+      url "https://github.com/fortio/tray/releases/download/v1.5.6/tray_1.5.6_darwin_arm64.zip"
+      sha256 "290667b66830db249646dc4a95fab972ff93b9448af18cd6ccee648f208d1f13"
 
-      def install
+      define_method(:install) do
         bin.install "tray"
       end
     end
@@ -29,16 +29,16 @@ class Tray < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tray/releases/download/v1.5.5/tray_1.5.5_linux_amd64.tar.gz"
-      sha256 "976973eeba39590612cc53045e186c5d551e75a2a67856509a5abdf2cdab35f9"
-      def install
+      url "https://github.com/fortio/tray/releases/download/v1.5.6/tray_1.5.6_linux_amd64.tar.gz"
+      sha256 "5aff11895beb2a93b24f427f49aacb6e2fda332bdf531bba58763e1359262031"
+      define_method(:install) do
         bin.install "tray"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tray/releases/download/v1.5.5/tray_1.5.5_linux_arm64.tar.gz"
-      sha256 "91708084887d67725e3df8efa8eb5187c91a63b3a758bd8716dee1201916568e"
-      def install
+      url "https://github.com/fortio/tray/releases/download/v1.5.6/tray_1.5.6_linux_arm64.tar.gz"
+      sha256 "e2672449073df2f06f6ee434b7b2b3b1e78378d124f6e7ea28d594eb6477dbe1"
+      define_method(:install) do
         bin.install "tray"
       end
     end
