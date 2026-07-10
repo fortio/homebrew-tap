@@ -5,21 +5,21 @@
 class Tmatrix < Formula
   desc "Simulate the matrix effect in your terminal"
   homepage "https://fortio.org/"
-  version "0.2.8"
+  version "0.2.9"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tmatrix/releases/download/v0.2.8/tmatrix_0.2.8_darwin_amd64.zip"
-      sha256 "8c92d6969c766e064d8d8d6926c9c3a5617acea635e97b8fbebb872c22718ec9"
+      url "https://github.com/fortio/tmatrix/releases/download/v0.2.9/tmatrix_0.2.9_darwin_amd64.zip"
+      sha256 "7b3e088e11cc9beecabad6c187733d0e79823a983cf10988f29d6db13d5df3f1"
 
       define_method(:install) do
         bin.install "tmatrix"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tmatrix/releases/download/v0.2.8/tmatrix_0.2.8_darwin_arm64.zip"
-      sha256 "3a580950ebcf92528a8cc310f14f20a64e3c17e1e40c22296e50ece6d7483666"
+      url "https://github.com/fortio/tmatrix/releases/download/v0.2.9/tmatrix_0.2.9_darwin_arm64.zip"
+      sha256 "6d3d9352538a2fd474b9f0853f46c897af45e00ddc7f9b16b661821a4057ecd1"
 
       define_method(:install) do
         bin.install "tmatrix"
@@ -29,15 +29,15 @@ class Tmatrix < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tmatrix/releases/download/v0.2.8/tmatrix_0.2.8_linux_amd64.tar.gz"
-      sha256 "3d3a1148152c05b594117169ea0248036e6764b6416ea3963aaec11a77f72b30"
+      url "https://github.com/fortio/tmatrix/releases/download/v0.2.9/tmatrix_0.2.9_linux_amd64.tar.gz"
+      sha256 "98ab50cb236ed41c1393c708d4cb4faab5e9a630cbf599cc1bb0c15bb62c3dad"
       define_method(:install) do
         bin.install "tmatrix"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tmatrix/releases/download/v0.2.8/tmatrix_0.2.8_linux_arm64.tar.gz"
-      sha256 "4da943966c35c7e5851b6874d5e1fe2f49623c467213269be57c318ce343d247"
+      url "https://github.com/fortio/tmatrix/releases/download/v0.2.9/tmatrix_0.2.9_linux_arm64.tar.gz"
+      sha256 "e7db107b89db658be0f71b9a4bd3d5b5ba2b3b4850ec12f8e8dba81ef4939851"
       define_method(:install) do
         bin.install "tmatrix"
       end
