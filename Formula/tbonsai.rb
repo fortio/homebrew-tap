@@ -5,21 +5,21 @@
 class Tbonsai < Formula
   desc "Fortio tbonsai Ansipixels port of cbonsai"
   homepage "https://fortio.org/"
-  version "1.1.4"
+  version "1.1.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tbonsai/releases/download/v1.1.4/tbonsai_1.1.4_darwin_amd64.zip"
-      sha256 "37cafbe4a480966079566bc88c3f725de8a1ef461a8de73a83c2097efab06a34"
+      url "https://github.com/fortio/tbonsai/releases/download/v1.1.5/tbonsai_1.1.5_darwin_amd64.zip"
+      sha256 "e5fd7efc7c140feb6127f9ed04c2791952d27b357dd065ce540310fcc4b41c79"
 
       define_method(:install) do
         bin.install "tbonsai"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tbonsai/releases/download/v1.1.4/tbonsai_1.1.4_darwin_arm64.zip"
-      sha256 "99a44e6f2f3aff656cabbf1357d910e565179dbf891dc51c71af637c00a6d2c3"
+      url "https://github.com/fortio/tbonsai/releases/download/v1.1.5/tbonsai_1.1.5_darwin_arm64.zip"
+      sha256 "0f726befe96903339228f089cd1a8a7d996398014dddde3331df5ec559cefcc1"
 
       define_method(:install) do
         bin.install "tbonsai"
@@ -29,15 +29,15 @@ class Tbonsai < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tbonsai/releases/download/v1.1.4/tbonsai_1.1.4_linux_amd64.tar.gz"
-      sha256 "ef3756e22c1a122c139200f5c1e712b257bea2660abcb01b0b169b4c6f55e197"
+      url "https://github.com/fortio/tbonsai/releases/download/v1.1.5/tbonsai_1.1.5_linux_amd64.tar.gz"
+      sha256 "3dc94d14d9715139a2110244d9f0c5ed15ce8242791016643cb6e89aa1b3b846"
       define_method(:install) do
         bin.install "tbonsai"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tbonsai/releases/download/v1.1.4/tbonsai_1.1.4_linux_arm64.tar.gz"
-      sha256 "5fe80493572b68d23dccb1968c2623ba7c4270e2d8eb076c1acae61e26beac81"
+      url "https://github.com/fortio/tbonsai/releases/download/v1.1.5/tbonsai_1.1.5_linux_arm64.tar.gz"
+      sha256 "d9457d5c2c3a4d9bd805547498e0e74fb6dd8eba0b55001636edae9965b8948e"
       define_method(:install) do
         bin.install "tbonsai"
       end
