@@ -5,23 +5,23 @@
 class Tsnake < Formula
   desc "Play the classic game of snake in the terminal"
   homepage "https://fortio.org/"
-  version "0.2.4"
+  version "0.2.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tsnake/releases/download/v0.2.4/tsnake_0.2.4_darwin_amd64.zip"
-      sha256 "2d03f8223490581024c17f8bcb15f816c8ff71077a4ccc6bc33db2fb4fefc710"
+      url "https://github.com/fortio/tsnake/releases/download/v0.2.5/tsnake_0.2.5_darwin_amd64.zip"
+      sha256 "5ab57f3b4ea755926aa0a16ae3a9788c0fbc6ec930c4cfb6f9779c4e62c1f3b8"
 
-      def install
+      define_method(:install) do
         bin.install "tsnake"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tsnake/releases/download/v0.2.4/tsnake_0.2.4_darwin_arm64.zip"
-      sha256 "b00343b2660ce80295d7cde13e3c20ca370e2b3617c4508cbc3622358ecde387"
+      url "https://github.com/fortio/tsnake/releases/download/v0.2.5/tsnake_0.2.5_darwin_arm64.zip"
+      sha256 "c345fc879571d3f3c18be409568db7aee7093faa95d312a28111b37fd8fce205"
 
-      def install
+      define_method(:install) do
         bin.install "tsnake"
       end
     end
@@ -29,16 +29,16 @@ class Tsnake < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tsnake/releases/download/v0.2.4/tsnake_0.2.4_linux_amd64.tar.gz"
-      sha256 "ac4b04649f480f912dcaecbcfbd118590150142bdde532f697515e2f63bcf960"
-      def install
+      url "https://github.com/fortio/tsnake/releases/download/v0.2.5/tsnake_0.2.5_linux_amd64.tar.gz"
+      sha256 "78ff481106c3f48539535178d25697d3f8aa5da362bca09853df663a09ad387d"
+      define_method(:install) do
         bin.install "tsnake"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tsnake/releases/download/v0.2.4/tsnake_0.2.4_linux_arm64.tar.gz"
-      sha256 "3ff0ba462a64522cb2cf5d1d597a333d86466b20899cd5984e04044d4f5b4dce"
-      def install
+      url "https://github.com/fortio/tsnake/releases/download/v0.2.5/tsnake_0.2.5_linux_arm64.tar.gz"
+      sha256 "946866c66406d65a23474cedd8c31b4b2bd8ab6a8557803ba5808ed2fc97739e"
+      define_method(:install) do
         bin.install "tsnake"
       end
     end
