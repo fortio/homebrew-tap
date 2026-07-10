@@ -5,23 +5,23 @@
 class PanicLinter < Formula
   desc "Go panic linter"
   homepage "https://fortio.org/"
-  version "0.2.6"
+  version "0.2.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.6/panic-linter_0.2.6_darwin_amd64.zip"
-      sha256 "b44046b74b7109b65099f18dbe7f07f8de74998ed2e69a6cba0e77462202b1d6"
+      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.7/panic-linter_0.2.7_darwin_amd64.zip"
+      sha256 "2a7eaaf1776cf108608c5cb15cc48f975474be1e47fc06d5b4f42bec07506540"
 
-      def install
+      define_method(:install) do
         bin.install "panic-linter"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.6/panic-linter_0.2.6_darwin_arm64.zip"
-      sha256 "817b5e83cd88c9aa04095a0c9e59590b0aecb36e52b3afd7a8649e30a7d24874"
+      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.7/panic-linter_0.2.7_darwin_arm64.zip"
+      sha256 "5ca0250f38834afff9bcc3643823a9d13732a433c54833018fa99c6e74a4926d"
 
-      def install
+      define_method(:install) do
         bin.install "panic-linter"
       end
     end
@@ -29,16 +29,16 @@ class PanicLinter < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.6/panic-linter_0.2.6_linux_amd64.tar.gz"
-      sha256 "52ba8fba0f66b199e7d2ff6b5402c1674ff6e12c18b2d34b8219cd37e0aeba08"
-      def install
+      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.7/panic-linter_0.2.7_linux_amd64.tar.gz"
+      sha256 "362b4d13217db788c003b642e86027c4c956eff8417886f42e569b973d56cd43"
+      define_method(:install) do
         bin.install "panic-linter"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.6/panic-linter_0.2.6_linux_arm64.tar.gz"
-      sha256 "25006ec3d047cc5b1162b48ea1944e48772b119df4a03ca23a98d1539429c068"
-      def install
+      url "https://github.com/ldemailly/panic-linter/releases/download/v0.2.7/panic-linter_0.2.7_linux_arm64.tar.gz"
+      sha256 "28cda4830a04952568eeb5bbd697130927b262a32a4e89c6f68d11eb4968eecd"
+      define_method(:install) do
         bin.install "panic-linter"
       end
     end
