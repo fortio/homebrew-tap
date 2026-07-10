@@ -5,21 +5,21 @@
 class Tev < Formula
   desc "Fortio terminal terminal event debug"
   homepage "https://fortio.org/"
-  version "0.13.1"
+  version "0.13.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tev/releases/download/v0.13.1/tev_0.13.1_darwin_amd64.zip"
-      sha256 "fa8bb41770f2b321c9b7d28d0bff70acb1d231736465ba191ba2a3ff9452078a"
+      url "https://github.com/fortio/tev/releases/download/v0.13.2/tev_0.13.2_darwin_amd64.zip"
+      sha256 "73d66285036a43f41e4def6ad574b80602e64eae36c81c6c0cb23189c56f3276"
 
       define_method(:install) do
         bin.install "tev"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tev/releases/download/v0.13.1/tev_0.13.1_darwin_arm64.zip"
-      sha256 "e43393d4a7c8a14bdc5c89a09f9fa19eeeea7e0bead1d68a1d1178a86a4c2c4d"
+      url "https://github.com/fortio/tev/releases/download/v0.13.2/tev_0.13.2_darwin_arm64.zip"
+      sha256 "eaf46a9feea49d8482e05a69bec79dbdb0188ab0b2fd068da6e1df82a1422761"
 
       define_method(:install) do
         bin.install "tev"
@@ -29,15 +29,15 @@ class Tev < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tev/releases/download/v0.13.1/tev_0.13.1_linux_amd64.tar.gz"
-      sha256 "ba5b26a1338f1a0dec382d5b4dd4e54a59df41557095e6581051c5fc27491d26"
+      url "https://github.com/fortio/tev/releases/download/v0.13.2/tev_0.13.2_linux_amd64.tar.gz"
+      sha256 "5d15ea7c74e9e0ddaf87c284c6ec45f66ca6af1f3cd122ce0487ea3d03b69dce"
       define_method(:install) do
         bin.install "tev"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tev/releases/download/v0.13.1/tev_0.13.1_linux_arm64.tar.gz"
-      sha256 "a4369116bbc3bd3077128bb36db98d5e9a9450e604b5dcf3cdcc121222782d3f"
+      url "https://github.com/fortio/tev/releases/download/v0.13.2/tev_0.13.2_linux_arm64.tar.gz"
+      sha256 "cae769f21fd5fbed7cf8073bd0f6e6a740fc717854da8f6d2408657b4be858e4"
       define_method(:install) do
         bin.install "tev"
       end
