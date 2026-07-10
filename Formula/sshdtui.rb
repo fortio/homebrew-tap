@@ -5,21 +5,21 @@
 class Sshdtui < Formula
   desc "Ansipixels sshd tui demoes menu server"
   homepage "https://fortio.org/"
-  version "0.7.5"
+  version "0.7.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/sshdtui/releases/download/v0.7.5/sshdtui_0.7.5_darwin_amd64.zip"
-      sha256 "70ee7072c9dcab80f14f3988e2909964cb88d15cba8ab79dbe5192091fcb1e9e"
+      url "https://github.com/fortio/sshdtui/releases/download/v0.7.6/sshdtui_0.7.6_darwin_amd64.zip"
+      sha256 "614d0cd714b163899887751ec1e1c241a0411b3bad68641ff5744f078b70eb73"
 
       define_method(:install) do
         bin.install "sshdtui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/sshdtui/releases/download/v0.7.5/sshdtui_0.7.5_darwin_arm64.zip"
-      sha256 "9a06a2a1980e17277b2dbd894d62dda89067814c4f0d7474fdba99a7fb7db9d5"
+      url "https://github.com/fortio/sshdtui/releases/download/v0.7.6/sshdtui_0.7.6_darwin_arm64.zip"
+      sha256 "825ba73895d679794c8ccae789bfd4d750cf33a9c6c4a1a2871d83819a37e445"
 
       define_method(:install) do
         bin.install "sshdtui"
@@ -29,15 +29,15 @@ class Sshdtui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/sshdtui/releases/download/v0.7.5/sshdtui_0.7.5_linux_amd64.tar.gz"
-      sha256 "6ef2188e65e80744f6981b59cfd88129a96a8be03f15a6d9aa1bf651e18f9ac1"
+      url "https://github.com/fortio/sshdtui/releases/download/v0.7.6/sshdtui_0.7.6_linux_amd64.tar.gz"
+      sha256 "80bb64a43b15c9c9b7a807bf7eaa79a818871317a27d8f2e594c7dfee9ba492c"
       define_method(:install) do
         bin.install "sshdtui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/sshdtui/releases/download/v0.7.5/sshdtui_0.7.5_linux_arm64.tar.gz"
-      sha256 "cc30e5ac52545c225250f74299b89de33d852d363b38dff71f93fcbb45ca5395"
+      url "https://github.com/fortio/sshdtui/releases/download/v0.7.6/sshdtui_0.7.6_linux_arm64.tar.gz"
+      sha256 "dc7bddc0cbcc40e0ed00f4f2fcceaf235186d3994242b96ffb69b07fee200b21"
       define_method(:install) do
         bin.install "sshdtui"
       end
