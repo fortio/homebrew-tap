@@ -5,21 +5,21 @@
 class Tclock < Formula
   desc "Fortio terminal clock"
   homepage "https://fortio.org/"
-  version "1.15.8"
+  version "1.15.9"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tclock/releases/download/v1.15.8/tclock_1.15.8_darwin_amd64.zip"
-      sha256 "c8cac2365ee95bb5f15eeb24e7fedd39a486483d89655382d7b325cc10603ece"
+      url "https://github.com/fortio/tclock/releases/download/v1.15.9/tclock_1.15.9_darwin_amd64.zip"
+      sha256 "a39f0569c8e448176a3370ce174b6e8f28e8afe869f3f3b402a66f4af83744ab"
 
       define_method(:install) do
         bin.install "tclock"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tclock/releases/download/v1.15.8/tclock_1.15.8_darwin_arm64.zip"
-      sha256 "100ea4c799af57f50cf19eee6c0fd2dec75325ef1547726bbeecd4cac68ddbca"
+      url "https://github.com/fortio/tclock/releases/download/v1.15.9/tclock_1.15.9_darwin_arm64.zip"
+      sha256 "0d866d628d40d45570ee09035fb08f7626f59d2fd8a9811fc98f1b81f1a5c281"
 
       define_method(:install) do
         bin.install "tclock"
@@ -29,15 +29,15 @@ class Tclock < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tclock/releases/download/v1.15.8/tclock_1.15.8_linux_amd64.tar.gz"
-      sha256 "97553ad9b3ce1c37f502498d93e2a8f54a507c028654b769ffd8999e3c8494e6"
+      url "https://github.com/fortio/tclock/releases/download/v1.15.9/tclock_1.15.9_linux_amd64.tar.gz"
+      sha256 "a72492f421778f064461f359c9df7e2c299b23345bbadaa1788aa92c3d9a9a03"
       define_method(:install) do
         bin.install "tclock"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tclock/releases/download/v1.15.8/tclock_1.15.8_linux_arm64.tar.gz"
-      sha256 "619398dca4a47613486d8dfa599cc6ab8b0140a48f69758dcfb00a55858e4a1e"
+      url "https://github.com/fortio/tclock/releases/download/v1.15.9/tclock_1.15.9_linux_arm64.tar.gz"
+      sha256 "4128094b28166e320a12614a6820b84c32b14394d8325f1fc297ced681396c6e"
       define_method(:install) do
         bin.install "tclock"
       end
