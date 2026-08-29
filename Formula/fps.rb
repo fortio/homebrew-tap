@@ -5,21 +5,21 @@
 class Fps < Formula
   desc "Fortio terminal fps checker"
   homepage "https://fortio.org/"
-  version "0.65.3"
+  version "0.65.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/fps/releases/download/v0.65.3/fps_0.65.3_darwin_amd64.zip"
-      sha256 "f0b643a89dd715cc0b7100e2e4353ebd561911a2bb831ab6e021a9935e4ff65d"
+      url "https://github.com/fortio/fps/releases/download/v0.65.4/fps_0.65.4_darwin_amd64.zip"
+      sha256 "5807e9283c7707c2d213827cafb526776132874f43005b41e724c5ef78d7ebf9"
 
       define_method(:install) do
         bin.install "fps"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/fps/releases/download/v0.65.3/fps_0.65.3_darwin_arm64.zip"
-      sha256 "1d39f0005f01ef8d2c984dc4ed71855d15bffb2bc8dc2c7a4718a04326fe48ea"
+      url "https://github.com/fortio/fps/releases/download/v0.65.4/fps_0.65.4_darwin_arm64.zip"
+      sha256 "0c1f687dfae454d49fc39155afdb39a293f41258bd4aaa92a5b5f4334b867be8"
 
       define_method(:install) do
         bin.install "fps"
@@ -29,15 +29,15 @@ class Fps < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/fps/releases/download/v0.65.3/fps_0.65.3_linux_amd64.tar.gz"
-      sha256 "2ec5acbeeba67feb8cd5b411ddbf23b759dc2d0627e9a0d3108a26aefdfda80e"
+      url "https://github.com/fortio/fps/releases/download/v0.65.4/fps_0.65.4_linux_amd64.tar.gz"
+      sha256 "d07528bf0fa9a00e6232f285909c81b285d092b6e37bde8bcb7a03589b213cc4"
       define_method(:install) do
         bin.install "fps"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/fps/releases/download/v0.65.3/fps_0.65.3_linux_arm64.tar.gz"
-      sha256 "baa6b9dcbec08972c632f282320931f2e19d4eca06dcd389debcccd8e9f44cb4"
+      url "https://github.com/fortio/fps/releases/download/v0.65.4/fps_0.65.4_linux_arm64.tar.gz"
+      sha256 "8d6c797d354fa2e6de86c818658fc607dcbff6c1180b208223c8faf3650f819c"
       define_method(:install) do
         bin.install "fps"
       end
