@@ -5,21 +5,21 @@
 class Blackjack < Formula
   desc "Fortio terminal blackjack card game"
   homepage "https://fortio.org/"
-  version "0.65.4"
+  version "0.66.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.4/blackjack_0.65.4_darwin_amd64.zip"
-      sha256 "f4210933f56588579677bb0c3fd5662f290dd0eb1bc71dd0ca3b07ae8bb1f37a"
+      url "https://github.com/fortio/terminal/releases/download/v0.66.0/blackjack_0.66.0_darwin_amd64.zip"
+      sha256 "8f43605e2e26cdd23c1b9bcff0322c5d25d5a06265d706ba32b6208b605becdf"
 
       define_method(:install) do
         bin.install "blackjack"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.4/blackjack_0.65.4_darwin_arm64.zip"
-      sha256 "2d455ba282cea390496d12288e9b4b42155e6f521f86e4a9a1b9bede79639900"
+      url "https://github.com/fortio/terminal/releases/download/v0.66.0/blackjack_0.66.0_darwin_arm64.zip"
+      sha256 "220325dbf167ed9124b7f932976323c921e4f8391162fcfce37c6c99f9f8d958"
 
       define_method(:install) do
         bin.install "blackjack"
@@ -29,15 +29,15 @@ class Blackjack < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.4/blackjack_0.65.4_linux_amd64.tar.gz"
-      sha256 "6849c420194d5d59c0995996b52e5159b85a6f9d8ebd9b02ee6601941e2f035a"
+      url "https://github.com/fortio/terminal/releases/download/v0.66.0/blackjack_0.66.0_linux_amd64.tar.gz"
+      sha256 "2b84b9bdb11ce7a7f44ffd6b706006e8d65925317a9f20307172fa85856aff72"
       define_method(:install) do
         bin.install "blackjack"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/terminal/releases/download/v0.65.4/blackjack_0.65.4_linux_arm64.tar.gz"
-      sha256 "0d53ae64f844c45a46997679e678ab2b2b8452df9de3a19b5223e6adabdb08d7"
+      url "https://github.com/fortio/terminal/releases/download/v0.66.0/blackjack_0.66.0_linux_arm64.tar.gz"
+      sha256 "5a0bee3fa36546e3d83defa398ed8676d9abfef32c808432f3e505053f7917b0"
       define_method(:install) do
         bin.install "blackjack"
       end
