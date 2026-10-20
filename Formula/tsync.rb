@@ -5,21 +5,21 @@
 class Tsync < Formula
   desc "Fortio secure synchronization between machines"
   homepage "https://fortio.org/"
-  version "0.15.2"
+  version "0.15.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tsync/releases/download/v0.15.2/tsync_0.15.2_darwin_amd64.zip"
-      sha256 "a88245d74aae99cd690e16e752d3fd40a2ed2aa16d269d424ee2ee1fd3dc5f3d"
+      url "https://github.com/fortio/tsync/releases/download/v0.15.3/tsync_0.15.3_darwin_amd64.zip"
+      sha256 "5f1debc8b0aa68b97f0145dda29816c9bcb869e74891e01e40006f20262aa2cb"
 
       define_method(:install) do
         bin.install "tsync"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tsync/releases/download/v0.15.2/tsync_0.15.2_darwin_arm64.zip"
-      sha256 "05d01f799dfd4903266ba612bfc19fa17cd80891f447b72a1f95c558ae0f7196"
+      url "https://github.com/fortio/tsync/releases/download/v0.15.3/tsync_0.15.3_darwin_arm64.zip"
+      sha256 "6ce40c6685437052f8700de0a8a816fe1195b142fe66f9c44e993fbb17e003cb"
 
       define_method(:install) do
         bin.install "tsync"
@@ -29,15 +29,15 @@ class Tsync < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tsync/releases/download/v0.15.2/tsync_0.15.2_linux_amd64.tar.gz"
-      sha256 "3fc544a43e41cd65a54cca17d4f518fccd6e6ac1cc9a0ee04af07d69017f3b95"
+      url "https://github.com/fortio/tsync/releases/download/v0.15.3/tsync_0.15.3_linux_amd64.tar.gz"
+      sha256 "2c220e6d8259f0b86f1aa2fc9db8c164fc0785a20a9e21533a724345e5c340d7"
       define_method(:install) do
         bin.install "tsync"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tsync/releases/download/v0.15.2/tsync_0.15.2_linux_arm64.tar.gz"
-      sha256 "79602fd79aa47bef63d915b577963bea186da20584af4b42f8d3aa7c8da18702"
+      url "https://github.com/fortio/tsync/releases/download/v0.15.3/tsync_0.15.3_linux_arm64.tar.gz"
+      sha256 "944dffd40fb81e6ac4ea0e6ea54fb5db0b3f3544b0fb200ccd01d17279d700c4"
       define_method(:install) do
         bin.install "tsync"
       end
