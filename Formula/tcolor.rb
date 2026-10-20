@@ -5,21 +5,21 @@
 class Tcolor < Formula
   desc "Fortio terminal color picker"
   homepage "https://fortio.org/"
-  version "1.5.8"
+  version "1.6.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tcolor/releases/download/v1.5.8/tcolor_1.5.8_darwin_amd64.zip"
-      sha256 "8737220a2528bbbf5bad07d2e72a633a85f27c4bf057bcff6b92285b59d1d129"
+      url "https://github.com/fortio/tcolor/releases/download/v1.6.0/tcolor_1.6.0_darwin_amd64.zip"
+      sha256 "adb72a65cdb50b53b7b9b2e08310a7c8be3af490278c30886d27f685996cbd8b"
 
       define_method(:install) do
         bin.install "tcolor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tcolor/releases/download/v1.5.8/tcolor_1.5.8_darwin_arm64.zip"
-      sha256 "b4a3acfb1c89a71d91e170f5cfd517778c93b47febe60f02e4f23a045f0e31f2"
+      url "https://github.com/fortio/tcolor/releases/download/v1.6.0/tcolor_1.6.0_darwin_arm64.zip"
+      sha256 "73e8894013d81ff66eaa3846195b7fc967f60b982b80dacb697873d1a03a1c73"
 
       define_method(:install) do
         bin.install "tcolor"
@@ -29,15 +29,15 @@ class Tcolor < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tcolor/releases/download/v1.5.8/tcolor_1.5.8_linux_amd64.tar.gz"
-      sha256 "bafbb0dd1e731be07bd9ee2d79d74484fe8c5bcfdd4da5a81fa24d8d9801d63d"
+      url "https://github.com/fortio/tcolor/releases/download/v1.6.0/tcolor_1.6.0_linux_amd64.tar.gz"
+      sha256 "1553a61aa6a6139f5426043e9ea648ef25184a1a2c3fa97d1c6ea737d81e97bd"
       define_method(:install) do
         bin.install "tcolor"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tcolor/releases/download/v1.5.8/tcolor_1.5.8_linux_arm64.tar.gz"
-      sha256 "40a41b48a7319473b006a96fd0418e44f5ba9ba5e2d382ff6d705a09fa7d30d4"
+      url "https://github.com/fortio/tcolor/releases/download/v1.6.0/tcolor_1.6.0_linux_arm64.tar.gz"
+      sha256 "3daf29c41cc6c29ddd8667f1c7ea15130d97937bf18a5f6c6cc408f3713a00ce"
       define_method(:install) do
         bin.install "tcolor"
       end
