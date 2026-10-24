@@ -5,21 +5,21 @@
 class Dnsping < Formula
   desc "Fortio DNSping checks packet loss and latency issues with DNS servers"
   homepage "https://fortio.org/"
-  version "1.11.3"
+  version "1.12.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/dnsping/releases/download/v1.11.3/dnsping_1.11.3_darwin_amd64.zip"
-      sha256 "fd15a42eaf41d94aafd48433524dcb3f003642ff62043dfc2e96bbc7291f4542"
+      url "https://github.com/fortio/dnsping/releases/download/v1.12.0/dnsping_1.12.0_darwin_amd64.zip"
+      sha256 "4c1d70ce20a3f9764cd0e335b4b1426a7d107447bb51f5dc3ad4ee20ef5a7d2c"
 
       define_method(:install) do
         bin.install "dnsping"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/dnsping/releases/download/v1.11.3/dnsping_1.11.3_darwin_arm64.zip"
-      sha256 "dfa1d6c7dd81ca272e6dc21daa409c0033df9b97ebd80df52954a50489366ba9"
+      url "https://github.com/fortio/dnsping/releases/download/v1.12.0/dnsping_1.12.0_darwin_arm64.zip"
+      sha256 "293044dc82d521a6c67845c7c0e285176a754d4f10239595ab9913a261f8d2b0"
 
       define_method(:install) do
         bin.install "dnsping"
@@ -29,15 +29,15 @@ class Dnsping < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/dnsping/releases/download/v1.11.3/dnsping_1.11.3_linux_amd64.tar.gz"
-      sha256 "0a6e97cc98157099f2279b9e343af3b603b0b0bf023c8a5b4e02fc5112532fc7"
+      url "https://github.com/fortio/dnsping/releases/download/v1.12.0/dnsping_1.12.0_linux_amd64.tar.gz"
+      sha256 "48ac073d4d7b73fa03c5d316599746a832b67d302f7c4392c9b53d58cec4a657"
       define_method(:install) do
         bin.install "dnsping"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/dnsping/releases/download/v1.11.3/dnsping_1.11.3_linux_arm64.tar.gz"
-      sha256 "0d3b10b387de4c98e538bd78bbf0e29ad418bd8cd5b58ac8b7fbb9a438c4fc63"
+      url "https://github.com/fortio/dnsping/releases/download/v1.12.0/dnsping_1.12.0_linux_arm64.tar.gz"
+      sha256 "2e301da459b1a542a818bb1543d06497cad5d272085b0682c71b948522ba3202"
       define_method(:install) do
         bin.install "dnsping"
       end
