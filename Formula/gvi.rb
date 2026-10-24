@@ -5,21 +5,21 @@
 class Gvi < Formula
   desc "Fortio terminal vi like editor"
   homepage "https://fortio.org/"
-  version "0.8.4"
+  version "0.9.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/gvi/releases/download/v0.8.4/gvi_0.8.4_darwin_amd64.zip"
-      sha256 "8fd5378a9c71bfcc9021b4bee4c13c538ed9ca94aa1321655fb4e5de456ea0df"
+      url "https://github.com/fortio/gvi/releases/download/v0.9.0/gvi_0.9.0_darwin_amd64.zip"
+      sha256 "3dae5cd6f8fd504d66e9c51f089d8a693f5ce7b588d4108beacf49ae7fd84d19"
 
       define_method(:install) do
         bin.install "gvi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/gvi/releases/download/v0.8.4/gvi_0.8.4_darwin_arm64.zip"
-      sha256 "ff637ecfd396653767bd0bd774879de13f2f418f4fa972519bb53890a03da0ec"
+      url "https://github.com/fortio/gvi/releases/download/v0.9.0/gvi_0.9.0_darwin_arm64.zip"
+      sha256 "22e70927f62ffbfb7a853985d691e1cc4bc416919f900b4c2d34bef4b15a0b5d"
 
       define_method(:install) do
         bin.install "gvi"
@@ -29,15 +29,15 @@ class Gvi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/gvi/releases/download/v0.8.4/gvi_0.8.4_linux_amd64.tar.gz"
-      sha256 "41c3774aa4d3cd0c49e4fa9e45254e403a7a4e5efe0aed9f414b075fb83c93e0"
+      url "https://github.com/fortio/gvi/releases/download/v0.9.0/gvi_0.9.0_linux_amd64.tar.gz"
+      sha256 "8364982d671530b418371d74db30e6ae6569bdac56fd5b505734ab4b63b8c1d7"
       define_method(:install) do
         bin.install "gvi"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/gvi/releases/download/v0.8.4/gvi_0.8.4_linux_arm64.tar.gz"
-      sha256 "4da8acfc39b5c4cec99789e82a613cfe5fd9869480f75c5bd55e242b46b38514"
+      url "https://github.com/fortio/gvi/releases/download/v0.9.0/gvi_0.9.0_linux_arm64.tar.gz"
+      sha256 "177f13ee01de0157dc5e4f72608b69ad83db4689b8f5b4bec643ca69242e5537"
       define_method(:install) do
         bin.install "gvi"
       end
