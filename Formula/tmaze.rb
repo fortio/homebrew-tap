@@ -5,21 +5,21 @@
 class Tmaze < Formula
   desc "Ansi pixels version of the C64 classic maze"
   homepage "https://fortio.org/"
-  version "1.5.7"
+  version "1.6.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/tmaze/releases/download/v1.5.7/tmaze_1.5.7_darwin_amd64.zip"
-      sha256 "24bf046fb897de279b8eb01d969b957940c6ca114a1d7c545c3be73373797540"
+      url "https://github.com/fortio/tmaze/releases/download/v1.6.0/tmaze_1.6.0_darwin_amd64.zip"
+      sha256 "8822d654c982d7c849a078861d713585411d48ce4164014f9dcd6c6d843ebe08"
 
       define_method(:install) do
         bin.install "tmaze"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/tmaze/releases/download/v1.5.7/tmaze_1.5.7_darwin_arm64.zip"
-      sha256 "df006b9b3842b049afe607d3e138f916ec46eec30e909c6fea28ca55f33b6147"
+      url "https://github.com/fortio/tmaze/releases/download/v1.6.0/tmaze_1.6.0_darwin_arm64.zip"
+      sha256 "8fc02b803f2f792c12cdde2a9b9b689cfcfeb1a4ca42401c3ad8ee491a5575f4"
 
       define_method(:install) do
         bin.install "tmaze"
@@ -29,15 +29,15 @@ class Tmaze < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tmaze/releases/download/v1.5.7/tmaze_1.5.7_linux_amd64.tar.gz"
-      sha256 "2a0e4c56df596d8253e58e583b3a660fd2ae1687103121d16c26d5b74e9528c5"
+      url "https://github.com/fortio/tmaze/releases/download/v1.6.0/tmaze_1.6.0_linux_amd64.tar.gz"
+      sha256 "00bfe17f7fa318e52da56819659b89020c3820d153289622738800e38d07505e"
       define_method(:install) do
         bin.install "tmaze"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/tmaze/releases/download/v1.5.7/tmaze_1.5.7_linux_arm64.tar.gz"
-      sha256 "e682984909d5e3dab6b9a18a1148c23940e270873d672a6c13a447ece163c3d3"
+      url "https://github.com/fortio/tmaze/releases/download/v1.6.0/tmaze_1.6.0_linux_arm64.tar.gz"
+      sha256 "5cbb015309a72d12787729e0a012650ef1c4d41c1ef246fa0823aab73afca2ce"
       define_method(:install) do
         bin.install "tmaze"
       end
