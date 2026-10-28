@@ -5,21 +5,21 @@
 class H2cli < Formula
   desc "Simple http 2.0 (h2 and h2c) client in go, including streaming"
   homepage "https://fortio.org/"
-  version "1.3.3"
+  version "1.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortio/h2cli/releases/download/v1.3.3/h2cli_1.3.3_darwin_amd64.zip"
-      sha256 "a673af68272bd36ddd8a6eeb50c0b5d2ab9f349b01263fbfbe2a746cd4474936"
+      url "https://github.com/fortio/h2cli/releases/download/v1.4.0/h2cli_1.4.0_darwin_amd64.zip"
+      sha256 "0a4cddb6b471619ddf4e61f9cecdaf62adef0c391d1360681d311a481cc0cc35"
 
       define_method(:install) do
         bin.install "h2cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortio/h2cli/releases/download/v1.3.3/h2cli_1.3.3_darwin_arm64.zip"
-      sha256 "e8b51c0dda6b01e0bc80a7052974a8b86101685e9fc36b531f60533c82332454"
+      url "https://github.com/fortio/h2cli/releases/download/v1.4.0/h2cli_1.4.0_darwin_arm64.zip"
+      sha256 "6153e0513ab6551b7f28c7001f46a6013a4e973091144f9dfc98fa0ae527f196"
 
       define_method(:install) do
         bin.install "h2cli"
@@ -29,15 +29,15 @@ class H2cli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/h2cli/releases/download/v1.3.3/h2cli_1.3.3_linux_amd64.tar.gz"
-      sha256 "1f61c004c7a2dace9386223de6bdaf46c0d538cee012e13b6f0920ce42d8f73d"
+      url "https://github.com/fortio/h2cli/releases/download/v1.4.0/h2cli_1.4.0_linux_amd64.tar.gz"
+      sha256 "112c21ff1b851c138bbf30c162813bf14b3f211d804917b152edfc5414944cf4"
       define_method(:install) do
         bin.install "h2cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortio/h2cli/releases/download/v1.3.3/h2cli_1.3.3_linux_arm64.tar.gz"
-      sha256 "515f34c584e932c17fa6412351a89a0633e1696d31456aa6f2821d7cc446bdd2"
+      url "https://github.com/fortio/h2cli/releases/download/v1.4.0/h2cli_1.4.0_linux_arm64.tar.gz"
+      sha256 "a73a6e26bcb4795076244ad8af72ae34102f4ce2746b4b792f9d3f0aef586b83"
       define_method(:install) do
         bin.install "h2cli"
       end
